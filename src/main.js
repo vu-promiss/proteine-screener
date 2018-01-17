@@ -6,9 +6,9 @@ import router from './router'
 import store from './store'
 import Vuex from 'vuex'
 import vuexI18n from 'vuex-i18n'
-const locale = new Vuex.Store();
-Vue.use(vuexI18n.plugin, locale);
-Vue.i18n.set('en');
+const locale = new Vuex.Store()
+Vue.use(vuexI18n.plugin, locale)
+Vue.i18n.set('en')
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
