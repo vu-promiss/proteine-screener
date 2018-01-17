@@ -1,0 +1,13 @@
+{
+    "content": "Proteine Screener",
+    "home": {
+        "button": {
+            "title": "Laten we beginnen"
+        }
+    },
+    "N05b_0": {
+      "question": "Hoeveel sneetjes brood heeft u gemiddeld per dag gegeten in de laatste 4 weken?"
+    },
+    "less_than_one": "Minder dan één",
+    "slice": "{count} Snee ::: {count} Sneetjes"
+}

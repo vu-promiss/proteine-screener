@@ -1,0 +1,14 @@
+{
+    "content": "Hello there",
+    "home": {
+        "button": {
+            "title": "Let's GOOOOO"
+        }
+    },
+    "N05b_0": {
+      "question": "In the last 4 weeks, how many slices of bread did you eat on an average day?"
+    },
+    "less_than_one": "Less than one",
+    "slice": "{count} slice ::: {count} slices"
+
+}
