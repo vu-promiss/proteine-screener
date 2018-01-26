@@ -5,18 +5,18 @@
         "answers": [
             {
                 "id": 1,
-                "title": "less_than_one",
-                "amount": 0
+                "text": "less_than_one",
+                "value": 0
             },
             {
                 "id": 2,
-                "title": "slice",
-                "amount": 1
+                "text": "slice",
+                "value": 1
             },
             {
                 "id": 3,
-                "title": "slice",
-                "amount": 4,
+                "text": "slice",
+                "value": 4,
                 "picture": "assets/plate.25.png"
             }
         ]
@@ -27,17 +27,17 @@
         "answers": [
             {
                 "id": 4,
-                "title": "A PHP framework",
+                "text": "A PHP framework",
                 "correct": false
             },
             {
                 "id": 5,
-                "title": "A JavaScript library",
+                "text": "A JavaScript library",
                 "correct": false
             },
             {
                 "id": 6,
-                "title": "A JavaScript framework",
+                "text": "A JavaScript framework",
                 "correct": true
             }
         ]
@@ -48,22 +48,22 @@
         "answers": [
             {
                 "id": 7,
-                "title": "Ribbit",
+                "text": "Ribbit",
                 "correct": false
             },
             {
                 "id": 8,
-                "title": "Woof",
+                "text": "Woof",
                 "correct": false
             },
             {
                 "id": 9,
-                "title": "Meow",
+                "text": "Meow",
                 "correct": true
             },
             {
                 "id": 10,
-                "title": "Moo",
+                "text": "Moo",
                 "correct": false
             }
         ]

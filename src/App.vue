@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <b-container style="max-width: 900px">
     <img src="./assets/logo_promiss.png">
     <router-view/>
-  </div>
+  </b-container>
 </template>
 
 <script>

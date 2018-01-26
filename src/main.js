@@ -6,8 +6,13 @@ import router from './router'
 import store from './store'
 import Vuex from 'vuex'
 import vuexI18n from 'vuex-i18n'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 const locale = new Vuex.Store()
 Vue.use(vuexI18n.plugin, locale)
+Vue.use(BootstrapVue)
 Vue.i18n.set('en')
 Vue.config.productionTip = false
 

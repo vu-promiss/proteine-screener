@@ -1,13 +1,15 @@
 <template>
-  <div class="hello">
+  <b-row>
+    <b-col>
     <h1>Screener</h1>
     <router-link :to="{ name: 'home', params: {} }">Back home</router-link>
     
-    <div class="col-sm-4" v-for="question in questions">
+    <div v-for="question in questions">
       <question :question="question"></question>
     </div>
-
-  </div>
+    
+    </b-col>
+  </b-row>
 </template>
 
 <script>
