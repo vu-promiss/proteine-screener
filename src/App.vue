@@ -31,3 +31,12 @@
     }
   }
 </script>
+
+<style>
+  .component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .5s;
+  }
+  .component-fade-enter, .component-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  }
+</style>
