@@ -1,5 +1,5 @@
 <template>
-  <b-row>
+  <b-row class="question">
     <b-col cols="12" md="6">
       <h3>{{ $t(question.title) }}</h3>
     </b-col>
