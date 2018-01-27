@@ -1,15 +1,17 @@
 <template>
-  <b-row>
-    <b-col>
-    <h1>Screener</h1>
-    <router-link :to="{ name: 'home', params: {} }">Back home</router-link>
-    
-    <div v-for="question in questions">
-      <question :question="question"></question>
-    </div>
-    
-    </b-col>
-  </b-row>
+  <div class="screener">
+    <b-row>
+      <b-col>
+      <h1>Screener</h1>
+      <router-link :to="{ name: 'home', params: {} }">Back home</router-link>
+      
+      <div v-for="question in questions">
+        <question :question="question"></question>
+      </div>
+      
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <script>

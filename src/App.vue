@@ -1,7 +1,9 @@
 <template>
   <b-container style="max-width: 900px">
     <img src="./assets/logo_promiss.png">
-    <router-view/>
+    <transition name="component-fade" mode="out-in">
+        <router-view/>
+    </transition>
   </b-container>
 </template>
 

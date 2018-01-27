@@ -28,16 +28,19 @@
             {
                 "id": 4,
                 "text": "A PHP framework",
+                "value": 1,
                 "correct": false
             },
             {
                 "id": 5,
                 "text": "A JavaScript library",
+                "value": 2,
                 "correct": false
             },
             {
                 "id": 6,
                 "text": "A JavaScript framework",
+                "value": 3,
                 "correct": true
             }
         ]
