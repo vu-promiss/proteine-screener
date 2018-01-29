@@ -32,7 +32,7 @@
         return this.question.answers.map((obj) => {
           return {
             text: this.$t(obj.text, {count: obj.value}, obj.value),
-            value: 'val' + obj.value
+            value: obj.value
           }
         })
       }
