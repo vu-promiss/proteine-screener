@@ -8,8 +8,12 @@
     "N05b_0": {
       "question": "In the last 4 weeks, how many slices of bread did you eat on an average day?"
     },
+    "N34b": {
+      "question": "How much meat did you on average eat on 1 day that you ate meat with your warm meal in the last 4 weeks?"
+    },
     "less_than_one": "Less than one",
     "slice": "{count} slice ::: {count} slices",
-    "more_than_slices": "> {count} slices"
-
+    "more_than_slices": "> {count} slices",
+    "no_meat": "Not applicable, does not eat meat",
+    "plate": "{count} plate"
 }

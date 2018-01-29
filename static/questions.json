@@ -71,32 +71,48 @@
             {
                 "id": 14,
                 "text": "more_than_slices",
-                "count": 12,
-                "picture": "assets/plate.25.png"
+                "count": 12
             }
         ]
     },
     {
-        "id": 2,
-        "title": "What is Vue?",
+        "id": "N34b",
+        "title": "N34b.question",
         "answers": [
             {
+                "id": 0,
+                "text": "no_meat",
+                "picture": "assets/plate.25.png"
+            },
+            {
+                "id": 1,
+                "text": "plate",
+                "count": "1/5",
+                "picture": "assets/plate.25.png"
+            },
+            {
+                "id": 2,
+                "text": "plate",
+                "count": "1/4",
+                "picture": "assets/plate.25.png"
+            },
+            {
+                "id": 3,
+                "text": "plate",
+                "count": "1/2",
+                "picture": "assets/plate.25.png"
+            },
+            {
                 "id": 4,
-                "text": "A PHP framework",
-                "count": 1,
-                "correct": false
+                "text": "plate",
+                "count": "2/3",
+                "picture": "assets/plate.25.png"
             },
             {
                 "id": 5,
-                "text": "A JavaScript library",
-                "count": 2,
-                "correct": false
-            },
-            {
-                "id": 6,
-                "text": "A JavaScript framework",
-                "count": 3,
-                "correct": true
+                "text": "plate",
+                "count": "3/4",
+                "picture": "assets/plate.25.png"
             }
         ]
     },
