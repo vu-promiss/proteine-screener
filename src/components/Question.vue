@@ -14,7 +14,6 @@
                             :options="translatedAnswers"
                             name="radioBtnStacked" />
       </b-form-group>
-      {{ translatedAnswers }}
     </b-col>
   </b-row>    
 </template>
@@ -31,8 +30,8 @@
       translatedAnswers () {
         return this.question.answers.map((obj) => {
           return {
-            text: this.$t(obj.text, {count: obj.value}, obj.value),
-            value: obj.value
+            text: this.$t(obj.text, {count: obj.count}, obj.count),
+            value: obj.id
           }
         })
       }

@@ -8,7 +8,7 @@
     </b-row>
     <b-row>
       <b-col>
-        {{ answers }}
+        {{ predprob }}
       </b-col>
     </b-row>
 

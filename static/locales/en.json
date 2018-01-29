@@ -9,6 +9,7 @@
       "question": "In the last 4 weeks, how many slices of bread did you eat on an average day?"
     },
     "less_than_one": "Less than one",
-    "slice": "{count} slice ::: {count} slices"
+    "slice": "{count} slice ::: {count} slices",
+    "more_than_slices": "> {count} slices"
 
 }
