@@ -10,7 +10,7 @@
                             button-variant="outline-secondary"
                             block
                             stacked
-                            v-model="answer"
+                            @change="selectedAnswer"
                             :options="translatedAnswers"
                             name="radioBtnStacked" />
       </b-form-group>
@@ -32,8 +32,16 @@
         return this.question.answers.map((obj) => {
           return {
             text: this.$t(obj.text, {count: obj.value}, obj.value),
-            value: "val" + obj.value 
+            value: 'val' + obj.value
           }
+        })
+      }
+    },
+    methods: {
+      selectedAnswer (answer) {
+        this.$store.commit('quiz/setAnswer', {
+          questionId: this.question.id,
+          answer: answer
         })
       }
     }

@@ -6,6 +6,12 @@
         <router-link :to="{ name: 'home', params: {} }">Back home</router-link>
       </b-col>
     </b-row>
+    <b-row>
+      <b-col>
+        {{ answers }}
+      </b-col>
+    </b-row>
+
 
     <template v-for="question in questions">
       <question :question="question"></question>
@@ -26,7 +32,9 @@
     },
     computed: {
       ...mapGetters({
-        questions: 'quiz/questions'
+        questions: 'quiz/questions',
+        answers: 'quiz/answers',
+        predprob: 'quiz/predprob'
       })
     }
   }
