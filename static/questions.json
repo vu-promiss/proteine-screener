@@ -1,5 +1,10 @@
 [
     {
+        "id": "info1",
+        "title": "info1.question",
+        "type": "info"
+    },
+    {
         "id": "N34b",
         "title": "N34b.question",
         "type": "picture",
@@ -7,7 +12,7 @@
             {
                 "id": 0,
                 "text": "no_meat",
-                "picture": "plate_25"
+                "picture": "plate_0"
             },
             {
                 "id": 1,
