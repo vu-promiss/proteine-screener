@@ -1,3 +1,4 @@
+/* eslint camelcase: "off" */
 export const questions = (state) => state.questions
 
 export const strQuestions = (state) => {
@@ -13,14 +14,16 @@ export const getAnswerById = (state) => (id) => {
 export const predprob = (state) => {
   // return state.answers
   let shrinkage_factor = 0.83
-  let amount_slice_breadd1 = 1 + (state.answers['N05b_0'] == 4 ? 1 : 0)
-  let amount_slice_breadd2 = 1 + (state.answers['N05b_0'] == 5 ? 1 : 0)
-  let amount_slice_breadd3 = 1 + (state.answers['N05b_0'] > 5 ? 1 : 0)
-  console.log(amount_slice_breadd1)
-  let z = shrinkage_factor * 22.606 - 0.229 * shrinkage_factor * amount_slice_breadd1 - 0.946 * shrinkage_factor * amount_slice_breadd2
-  - 2.177 * shrinkage_factor * amount_slice_breadd3
-  
-  return 1/(1 + Math.exp(-z)) 
+  let amount_slice_breadd1 = state.answers['N05b_0'] === 4 ? 2 : 1
+  let amount_slice_breadd2 = state.answers['N05b_0'] === 5 ? 2 : 1
+  let amount_slice_breadd3 = state.answers['N05b_0'] > 5 ? 2 : 1
+
+  let z = shrinkage_factor * 22.606 -
+      0.229 * shrinkage_factor * amount_slice_breadd1 -
+      0.946 * shrinkage_factor * amount_slice_breadd2 -
+      2.177 * shrinkage_factor * amount_slice_breadd3
+
+  return 1 / (1 + Math.exp(-z))
 }
 
 // COMPUTE z = shrinkage_factor *22.606 -0.229*shrinkage_factor *amount_slice_breadd1 -0.946*shrinkage_factor *amount_slice_breadd2
