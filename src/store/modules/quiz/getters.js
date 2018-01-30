@@ -17,11 +17,15 @@ export const predprob = (state) => {
   let amount_slice_breadd1 = state.answers['N05b_0'] === 4 ? 2 : 1
   let amount_slice_breadd2 = state.answers['N05b_0'] === 5 ? 2 : 1
   let amount_slice_breadd3 = state.answers['N05b_0'] > 5 ? 2 : 1
+  let amount_meatd1 = state.answers['N34b'] === 2 ? 2 : 1
+  let amount_meatd2 = state.answers['N34b'] >= 3 ? 2 : 1
 
   let z = shrinkage_factor * 22.606 -
       0.229 * shrinkage_factor * amount_slice_breadd1 -
       0.946 * shrinkage_factor * amount_slice_breadd2 -
-      2.177 * shrinkage_factor * amount_slice_breadd3
+      2.177 * shrinkage_factor * amount_slice_breadd3 -
+      0.906 * shrinkage_factor * amount_meatd1 -
+      2.193 * shrinkage_factor * amount_meatd2
 
   return 1 / (1 + Math.exp(-z))
 }
