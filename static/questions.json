@@ -1,7 +1,50 @@
 [
     {
+        "id": "N34b",
+        "title": "N34b.question",
+        "type": "picture",
+        "answers": [
+            {
+                "id": 0,
+                "text": "no_meat",
+                "picture": "plate_25"
+            },
+            {
+                "id": 1,
+                "text": "plate",
+                "count": "1/5",
+                "picture": "plate_20"
+            },
+            {
+                "id": 2,
+                "text": "plate",
+                "count": "1/4",
+                "picture": "plate_25"
+            },
+            {
+                "id": 3,
+                "text": "plate",
+                "count": "1/2",
+                "picture": "plate_50"
+            },
+            {
+                "id": 4,
+                "text": "plate",
+                "count": "2/3",
+                "picture": "plate_66"
+            },
+            {
+                "id": 5,
+                "text": "plate",
+                "count": "3/4",
+                "picture": "plate_75"
+            }
+        ]
+    },
+    {
         "id": "N05b_0",
         "title": "N05b_0.question",
+        "type": "text",
         "answers": [
             {
                 "id": 1,
@@ -76,49 +119,9 @@
         ]
     },
     {
-        "id": "N34b",
-        "title": "N34b.question",
-        "answers": [
-            {
-                "id": 0,
-                "text": "no_meat",
-                "picture": "assets/plate.25.png"
-            },
-            {
-                "id": 1,
-                "text": "plate",
-                "count": "1/5",
-                "picture": "assets/plate.25.png"
-            },
-            {
-                "id": 2,
-                "text": "plate",
-                "count": "1/4",
-                "picture": "assets/plate.25.png"
-            },
-            {
-                "id": 3,
-                "text": "plate",
-                "count": "1/2",
-                "picture": "assets/plate.25.png"
-            },
-            {
-                "id": 4,
-                "text": "plate",
-                "count": "2/3",
-                "picture": "assets/plate.25.png"
-            },
-            {
-                "id": 5,
-                "text": "plate",
-                "count": "3/4",
-                "picture": "assets/plate.25.png"
-            }
-        ]
-    },
-    {
         "id": 3,
         "title": "What sound does a cat make?",
+        "type": "text",
         "answers": [
             {
                 "id": 7,
