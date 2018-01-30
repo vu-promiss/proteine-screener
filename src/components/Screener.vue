@@ -3,12 +3,15 @@
     <b-row>
       <b-col>
         <h1>Screener</h1>
-        <router-link :to="{ name: 'home', params: {} }">Back home</router-link>
+        <router-link :to="{ name: 'home' }">Back home</router-link>
       </b-col>
     </b-row>
     <b-row>
       <b-col>
-        {{ predprob }}
+        {{ answers }}
+      </b-col>
+      <b-col>
+        Predprob: {{ predprob }}
       </b-col>
     </b-row>
 
@@ -16,7 +19,7 @@
     <template v-for="question in questions">
       <img-question v-if="question.type == 'picture'" :question="question"></img-question>
       <question v-if="question.type == 'text'" :question="question"></question>
-      {{ question.type }}
+      <info-question v-if="question.type == 'info'" :question="question"></info-question>
     </template>
       
   </div>
@@ -25,6 +28,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import ImgQuestion from './ImgQuestion'
+  import InfoQuestion from './InfoQuestion'
   import Question from './Question'
   // import QuestionsNavigation from './QuestionsNavigation'
 
@@ -32,7 +36,8 @@
     name: 'screener',
     components: {
       Question,
-      ImgQuestion
+      ImgQuestion,
+      InfoQuestion
     },
     computed: {
       ...mapGetters({
