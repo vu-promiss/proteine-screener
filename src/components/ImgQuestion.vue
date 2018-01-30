@@ -1,21 +1,18 @@
 <template>
   <b-row class="question">
     <b-col cols="12" md="6">
-      <h3>{{ $t(question.title) }}</h3>
+      <p>{{ $t(question.title) }}</p>
     </b-col>
     <b-col cols="12" md="6">
-        <b-card v-for="answer in translatedAnswers"
-          :img-src="answer.picture"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem;"
-          class="mb-2">
-          <p class="card-text">
-            <b-form-radio value="first">{{ answer.text }}</b-form-radio>
-          </p>
-      </b-card>
+      <b-button 
+        v-for="answer in translatedAnswers"
+        @click="selectedAnswer(answer)"
+        variant="outline-secondary"
+        :pressed="activeAnswer === answer.value"
+        :key="answer.value"
+      ><b-img block fluid :src="answer.picture"></b-img>{{ answer.text }}</b-button>
     </b-col>
+    
   </b-row>    
 </template>
 
@@ -23,7 +20,7 @@
   export default {
     data () {
       return {
-        answer: null
+        activeAnswer: null
       }
     },
     props: ['question'],
@@ -42,8 +39,9 @@
       selectedAnswer (answer) {
         this.$store.commit('quiz/setAnswer', {
           questionId: this.question.id,
-          answer: answer
+          answer: answer.value
         })
+        this.activeAnswer = answer.value
       }
     }
   }
