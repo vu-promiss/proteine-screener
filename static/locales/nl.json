@@ -1,13 +1,53 @@
 {
-    "content": "Proteine Screener",
-    "home": {
-        "button": {
-            "title": "Laten we beginnen"
-        }
-    },
-    "N05b_0": {
-      "question": "Hoeveel sneetjes brood heeft u gemiddeld per dag gegeten in de laatste 4 weken?"
-    },
-    "less_than_one": "Minder dan één",
-    "slice": "{count} Snee ::: {count} Sneetjes"
+  "content": "Welkom",
+  "home": {
+    "button": {
+      "title": "Naar de screener"
+    }
+  },
+  "info1": {
+    "text": "In de volgende vragen vragen we je hoeveel van een voedingsproduct je hebt gegeten"
+  },
+  "N05b_0": {
+    "text": "Hoeveel sneetjes brood hebt u de afgelopen 4 weken op een gemiddelde dag gegeten?"
+  },
+  "N15b_0": {
+    "text": "Hoeveel glazen / kopjes melk, karnemelk of sojamelk hebt u in de afgelopen 4 weken op een gemiddelde dag gedronken?"
+  },
+  "N34b": {
+    "text": "Hoeveel vlees at je gemiddeld op een dag dat je vlees hebt gegeten met je warme maaltijd in de afgelopen 4 weken?"
+  },
+  "frequency1": {
+    "text": "In de volgende vragen zullen we u vragen hoe vaak u een bepaald product hebt gegeten"
+  },
+  "N18a_0": {
+    "text": "Hoe vaak heb je de afgelopen 4 weken yoghurt, kwark, pudding op basis van melk of sojadessert) gebruikt?"
+  },
+  "N14a_0": {
+    "text": "Hoe vaak hebt u in de afgelopen 4 weken eieren gegeten met uw ontbijt, lunch, avondmaaltijd, als snack of tijdens een maaltijd?"
+  },
+  "N24a_0": {
+    "text": "Hoe vaak hebt u de afgelopen 4 weken pasta of noedels gegeten (zoals spaghetti, macaroni, lasagne, chow mein, noedels op basis van rijst of op basis van tarwe)?"
+  },
+  "N33a_0": {
+    "text": "Hoe vaak hebt u de afgelopen 4 weken vis gegeten bij uw broodmaaltijd, warme maaltijd of als tussendoortje? (Neem GEEN schelpdieren mee)."
+  },
+  "N62a_0": {
+    "text": "Hoe vaak hebt u de afgelopen 4 weken noten of pinda's als tussendoortje gegeten?"
+  },
+  "N08a_0": {
+    "text": "Hoe vaak hebt u in de afgelopen 4 weken kaas of kaas op uw brood, broodje, beschuit, cracker, enz. Gegeten?"
+  },
+  "N08b_0": {
+    "text": "Hoeveel plakjes brood, broodje, beschuit, cracker, enz. Met kaas- of kaaspasta at je gemiddeld op een dag dat je kaas of kaas smeerde?"
+  },
+  "less_than_one": "Minder dan een",
+  "slice": "{count} snee ::: {count} sneetjes",
+  "more_than_slices": "> {count} sneetjes",
+  "glass": "{count} glas ::: {count} glazen",
+  "more_than_glasses": "> {count} glazen",
+  "no_meat": "Niet van toepassing, eet geen vlees",
+  "plate": "{count} bord",
+  "not_in_four_weeks": "Niet in deze 4 weken",
+  "day_week": "{count} dag/week ::: {count} dagen/week"
 }
