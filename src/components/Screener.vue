@@ -17,9 +17,8 @@
 
 
     <template v-for="question in questions">
-      <img-question v-if="question.type == 'picture'" :question="question"></img-question>
-      <question v-if="question.type == 'text'" :question="question"></question>
       <info-question v-if="question.type == 'info'" :question="question"></info-question>
+      <question v-else :question="question"></question>
     </template>
       
   </div>
@@ -27,7 +26,6 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import ImgQuestion from './ImgQuestion'
   import InfoQuestion from './InfoQuestion'
   import Question from './Question'
   // import QuestionsNavigation from './QuestionsNavigation'
@@ -36,7 +34,6 @@
     name: 'screener',
     components: {
       Question,
-      ImgQuestion,
       InfoQuestion
     },
     computed: {
