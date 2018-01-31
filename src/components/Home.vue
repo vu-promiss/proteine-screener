@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <img src="../assets/logo_promiss.png">
+
     <h1>{{ $t('content') }}</h1>
     <router-link class="btn btn-primary btn-lg" :to="{ name: 'screener'}">{{ $t('home.button.title') }}</router-link>
     <hr>
