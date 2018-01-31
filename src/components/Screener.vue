@@ -1,25 +1,14 @@
 <template>
   <div class="screener">
+    
     <navbar></navbar>
-    <b-row>
-      <b-col>
-        <router-link :to="{ name: 'home' }">Back home</router-link>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        {{ answers }}
-      </b-col>
-      <b-col>
-        Predprob: {{ predprob }}
-      </b-col>
-    </b-row>
-
-
+    
     <template v-for="question in questions">
       <info-question v-if="question.type == 'info'" :question="question"></info-question>
       <question v-else :question="question"></question>
     </template>
+      
+      Predicted probability: {{ predprob }}
       
   </div>
 </template>
