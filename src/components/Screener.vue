@@ -1,8 +1,8 @@
 <template>
   <div class="screener">
+    <navbar></navbar>
     <b-row>
       <b-col>
-        <h1>Screener</h1>
         <router-link :to="{ name: 'home' }">Back home</router-link>
       </b-col>
     </b-row>
@@ -28,11 +28,13 @@
   import { mapGetters } from 'vuex'
   import InfoQuestion from './InfoQuestion'
   import Question from './Question'
+  import Navbar from './Navbar'
   // import QuestionsNavigation from './QuestionsNavigation'
 
   export default {
     name: 'screener',
     components: {
+      Navbar,
       Question,
       InfoQuestion
     },
@@ -45,3 +47,7 @@
     }
   }
 </script>
+
+<style media="screen">
+  .screener { margin-top: 80px}
+</style>
