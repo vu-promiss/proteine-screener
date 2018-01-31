@@ -9,11 +9,16 @@
           v-for="answer in translatedAnswers"
           @click="selectedAnswer(answer)"
           variant="outline-secondary"
+          size="lg"
           :pressed="getSelectedAnswerValue(question.id) === answer.value"
           :key="answer.value"
         >
           <b-img v-if="answer.picture" block fluid :src="answer.picture"></b-img>
           {{ answer.text }}
+          <font-awesome-icon 
+            icon="check-circle"
+            v-if="getSelectedAnswerValue(question.id) === answer.value"
+          />
         </b-button>
       </b-button-group>
     </b-col>
@@ -23,8 +28,12 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   export default {
     props: ['question'],
+    components: {
+      FontAwesomeIcon
+    },
     computed: {
       ...mapGetters({
         getSelectedAnswerValue: 'quiz/getSelectedAnswer'

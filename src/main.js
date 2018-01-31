@@ -9,6 +9,10 @@ import vuexI18n from 'vuex-i18n'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import fontawesome from '@fortawesome/fontawesome'
+import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
+
+fontawesome.library.add(faCheckCircle)
 
 const locale = new Vuex.Store()
 Vue.use(vuexI18n.plugin, locale)

@@ -5,6 +5,7 @@
     <h1>{{ $t('content') }}</h1>
     <router-link class="btn btn-primary btn-lg" :to="{ name: 'screener'}">{{ $t('home.button.title') }}</router-link>
     <hr>
+    
     <button 
         v-on:click.stop="$i18n.set('nl')"
         :disabled="$i18n.locale() == 'nl'"
@@ -17,7 +18,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Home'
 }
