@@ -1,7 +1,7 @@
 <template>
   <b-row class="question">
     <b-col cols="12" md="6">
-      <p>{{ $t(question.title) }}</p>
+      <p>{{ $t(question.id + '.text') }}</p>
     </b-col>
     <b-col cols="12" md="6">
       <b-button-group vertical style="width: 100%;">

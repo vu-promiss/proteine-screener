@@ -1,7 +1,7 @@
 <template lang="html">
   <b-row class="question">
     <b-col cols="12">
-      <p>{{ $t(question.title) }}</p>
+      <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
     </b-col>
   </b-row>
 </template>
