@@ -8,6 +8,6 @@
 
 <script>
 export default {
-    props: ['question']
+  props: ['question']
 }
 </script>

@@ -4,27 +4,28 @@
       <p>{{ $t(question.title) }}</p>
     </b-col>
     <b-col cols="12" md="6">
-      <b-button 
-        v-for="answer in translatedAnswers"
-        @click="selectedAnswer(answer)"
-        variant="outline-secondary"
-        :pressed="activeAnswer === answer.value"
-        :key="answer.value"
-      ><b-img block fluid :src="answer.picture"></b-img>{{ answer.text }}</b-button>
+      <b-button-group vertical>
+        <b-button 
+          v-for="answer in translatedAnswers"
+          @click="selectedAnswer(answer)"
+          variant="outline-secondary"
+          :pressed="getSelectedAnswerValue(question.id) === answer.value"
+          :key="answer.value"
+        ><b-img block fluid :src="answer.picture"></b-img>{{ answer.text }}</b-button>
+      </b-button-group>
     </b-col>
     
   </b-row>    
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   export default {
-    data () {
-      return {
-        activeAnswer: null
-      }
-    },
     props: ['question'],
     computed: {
+      ...mapGetters({
+        getSelectedAnswerValue: 'quiz/getSelectedAnswer'
+      }),
       translatedAnswers () {
         return this.question.answers.map((obj) => {
           return {
@@ -41,7 +42,6 @@
           questionId: this.question.id,
           answer: answer.value
         })
-        this.activeAnswer = answer.value
       }
     }
   }
