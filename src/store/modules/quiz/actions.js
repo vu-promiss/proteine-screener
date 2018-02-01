@@ -10,5 +10,7 @@ export const getQuestions = ({ commit }) => {
       return obj
     })
     commit('setQuestions', questions)
+    commit('setQuestionNumber', 1)
+    commit('updateCurrentQuestion')
   })
 }

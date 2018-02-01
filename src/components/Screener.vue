@@ -2,20 +2,16 @@
   <div class="screener">
     
     <navbar></navbar>
+        
+    <question v-if="currentQuestion" :question="currentQuestion"></question>
     
-    <template v-for="question in questions">
-      <info-question v-if="question.type == 'info'" :question="question"></info-question>
-      <question v-else :question="question"></question>
-    </template>
-      
-      Predicted probability: {{ predprob }}
+    Predicted probability: {{ predprob }}
       
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
-  import InfoQuestion from './InfoQuestion'
   import Question from './Question'
   import Navbar from './Navbar'
   // import QuestionsNavigation from './QuestionsNavigation'
@@ -24,12 +20,13 @@
     name: 'screener',
     components: {
       Navbar,
-      Question,
-      InfoQuestion
+      Question
     },
     computed: {
       ...mapGetters({
         questions: 'quiz/questions',
+        currentQuestionNumber: 'quiz/currentQuestionNumber',
+        currentQuestion: 'quiz/currentQuestion',
         answers: 'quiz/answers',
         predprob: 'quiz/predprob'
       })

@@ -5,6 +5,10 @@ export const strQuestions = (state) => {
   return JSON.stringify(state.questions, null, 4)
 }
 
+export const currentQuestionNumber = (state) => state.currentQuestionNumber
+
+export const currentQuestion = (state) => state.currentQuestion
+
 export const answers = (state) => state.answers
 
 export const getSelectedAnswer = (state) => (questionId) => {
