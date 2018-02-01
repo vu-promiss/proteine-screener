@@ -1,41 +1,55 @@
 <template>
-  <b-row class="question">
-    <template v-if="question.type === 'info'">
-      <b-col cols="12">
-        <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
-      </b-col>
-    </template>
+  <div class="question">
+    <b-row class="question">
+      <template v-if="question.type === 'info'">
+        <b-col cols="12">
+          <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
+        </b-col>
+      </template>
 
-    <template v-else>
-      <b-col cols="12" md="6">
-        <p>{{ $t(question.id + '.text') }}</p>
-      </b-col>
-      <b-col cols="12" md="6">
-        <b-button-group vertical style="width: 100%;">
-          <b-button 
-            v-for="answer in translatedAnswers"
-            @click="selectedAnswer(answer)"
-            variant="outline-secondary"
+      <template v-else>
+        <b-col cols="12" md="6">
+          <p>{{ $t(question.id + '.text') }}</p>
+        </b-col>
+        <b-col cols="12" md="6">
+          <b-button-group vertical style="width: 100%;">
+            <b-button 
+              v-for="answer in translatedAnswers"
+              @click="selectedAnswer(answer)"
+              variant="outline-secondary"
+              size="lg"
+              :pressed="getSelectedAnswerValue(question.id) === answer.value"
+              :key="answer.value"
+            >
+              <b-img v-if="answer.picture" block fluid :src="answer.picture"></b-img>
+              {{ answer.text }}
+              <font-awesome-icon 
+                icon="check-circle"
+                v-if="getSelectedAnswerValue(question.id) === answer.value"
+              />
+            </b-button>
+          </b-button-group>
+        </b-col>
+      </template>
+    </b-row>
+    <b-row align-h="center">
+      <b-col v-if="question.type === 'info'" class="my-3" cols="12" md="6">
+        <b-button
+            block
             size="lg"
-            :pressed="getSelectedAnswerValue(question.id) === answer.value"
-            :key="answer.value"
-          >
-            <b-img v-if="answer.picture" block fluid :src="answer.picture"></b-img>
-            {{ answer.text }}
-            <font-awesome-icon 
-              icon="check-circle"
-              v-if="getSelectedAnswerValue(question.id) === answer.value"
-            />
-          </b-button>
-        </b-button-group>
+            @click="nextQuestion"
+          >Ok, let's go</b-button>
       </b-col>
-    </template>
-    <b-col>
-      <b-button
-          @click="nextQuestion"
-        >Ok</b-button>
-    </b-col>
-  </b-row>
+      <b-col v-else class="my-3" cols="12" md="6">
+        <b-button
+            block
+            :disabled="getSelectedAnswerValue(question.id) === undefined"
+            size="lg"
+            @click="nextQuestion"
+          >{{ $t('nav.next_question') }}</b-button>
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <script>

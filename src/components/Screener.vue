@@ -4,6 +4,7 @@
     <navbar></navbar>
         
     <question v-if="currentQuestion" :question="currentQuestion"></question>
+    <results v-if="currentQuestionNumber > questions.length"></results>
           
   </div>
 </template>
@@ -11,6 +12,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import Question from './Question'
+  import Results from './Results'
   import Navbar from './Navbar'
   // import QuestionsNavigation from './QuestionsNavigation'
 
@@ -18,7 +20,8 @@
     name: 'screener',
     components: {
       Navbar,
-      Question
+      Question,
+      Results
     },
     computed: {
       ...mapGetters({

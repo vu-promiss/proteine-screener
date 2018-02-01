@@ -16,3 +16,5 @@ export const updateCurrentQuestion = (state) => {
 export const setAnswer = (state, {questionId, answer}) => {
   Vue.set(state.answers, questionId, answer)
 }
+
+export const resetAnswers = (state) => { state.answers = [] }

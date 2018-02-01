@@ -5,6 +5,10 @@
             "title": "To the screener"
         }
     },
+    "nav": {
+      "next_question": "Next question",
+      "prev_question": "Previous question"
+    },
     "info1": {
       "text": "In the following questions, we ask how much of a food product you ate"
     },
