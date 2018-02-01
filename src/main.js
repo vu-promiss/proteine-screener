@@ -19,7 +19,9 @@ Vue.use(vuexI18n.plugin, locale)
 Vue.use(BootstrapVue)
 Vue.i18n.set('en')
 Vue.config.productionTip = false
-
+Vue.filter('decimal', function (value) {
+  return value.toFixed(2)
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -4,9 +4,7 @@
     <navbar></navbar>
         
     <question v-if="currentQuestion" :question="currentQuestion"></question>
-    
-    Predicted probability: {{ predprob }}
-      
+          
   </div>
 </template>
 
