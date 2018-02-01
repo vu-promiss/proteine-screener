@@ -8,7 +8,8 @@
   "nav": {
     "continue": "Ga door",
     "next_question": "Volgende vraag",
-    "prev_question": "Vorige vraag"
+    "prev_question": "Vorige vraag",
+    "start_over": "Begin opnieuw"
   },
   "info1": {
     "text": "In de volgende vragen vragen we je hoeveel van een voedingsproduct je hebt gegeten"
@@ -46,7 +47,7 @@
   "N08b_0": {
     "text": "Hoeveel plakjes brood, broodje, beschuit, cracker, enz. Met kaas- of kaaspasta at je gemiddeld op een dag dat je kaas of kaas smeerde?"
   },
-  "less_than_one": "Minder dan een",
+  "less_than_one": "Minder dan één",
   "slice": "{count} snee ::: {count} sneetjes",
   "more_than_slices": "> {count} snee ::: > {count} sneetjes",
   "glass": "{count} glas ::: {count} glazen",
@@ -54,5 +55,7 @@
   "no_meat": "Niet van toepassing, eet geen vlees",
   "plate": "{fraction} bord",
   "not_in_four_weeks": "Niet in deze 4 weken",
+  "1_in_four_weeks": "1 dag in 4 weken",
+  "2_3_in_four_weeks": "1-3 dagen in 4 weken",
   "day_week": "{count} dag/week ::: {count} dagen/week"
 }

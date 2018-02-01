@@ -8,7 +8,8 @@
     "nav": {
       "continue": "Continue",
       "next_question": "Next question",
-      "prev_question": "Previous question"
+      "prev_question": "Previous question",
+      "start_over": "Start over"
     },
     "info1": {
       "text": "In the following questions, we ask how much of a food product you ate"
