@@ -6,12 +6,12 @@
         },
         {
             "id": "N05b_0",
-            "type": "text",
+            "type": "question",
             "answers": "slices"
         },
         {
             "id": "N15b_0",
-            "type": "text",
+            "type": "question",
             "answers": "glasses"
         },
         {
@@ -20,42 +20,42 @@
         },
         {
             "id": "N34b",
-            "type": "picture",
+            "type": "question",
             "answers": "meat"
         },
         {
             "id": "N18a_0",
-            "type": "text",
+            "type": "question",
             "answers": "weekly_intake"
         },
         {
             "id": "N14a_0",
-            "type": "text",
+            "type": "question",
             "answers": "weekly_intake"
         },
         {
             "id": "N24a_0",
-            "type": "text",
+            "type": "question",
             "answers": "weekly_intake"
         },
         {
             "id": "N33a_0",
-            "type": "text",
+            "type": "question",
             "answers": "weekly_intake"
         },
         {
             "id": "N62a_0",
-            "type": "text",
+            "type": "question",
             "answers": "weekly_intake"
         },
         {
             "id": "N08a_0",
-            "type": "text",
+            "type": "question",
             "answers": "weekly_intake"
         },
         {
             "id": "N08b_0",
-            "type": "text",
+            "type": "question",
             "answers": "slices"
         }
     ],
