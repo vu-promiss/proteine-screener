@@ -23,5 +23,9 @@ export default new Router({
       name: 'editor',
       component: Editor
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    console.log('scrollup')
+    return { x: 0, y: 0 }
+  }
 })
