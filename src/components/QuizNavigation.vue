@@ -1,26 +1,23 @@
 <template lang="html">
-  <div class="quiz-navigation">
-    <b-row align-h="center">
-      <b-col class="my-3" cols="12" md="6">
-        <b-button-group>
-          <b-button
-              size="lg"
-              :disabled="! prevEnabled"
-              @click="prevQuestion"
-          >
-            {{ $t('nav.prev_question') }}
-          </b-button>
-          <b-button
-              :disabled="! nextEnabled"
-              size="lg"
-              @click="nextQuestion"
-          >
-            {{ $t('nav.next_question') }}
-          </b-button>
-        </b-button-group>
-      </b-col>
-    </b-row>
-  </div>
+  <b-navbar class="quiz-navigation" fixed="bottom" type="dark" variant="info">
+    <b-navbar-nav>
+      <b-nav-item
+        :disabled="! prevEnabled"
+        @click.prevent="prevQuestion"
+      >
+        ‹ {{ $t('nav.prev_question') }}
+      </b-nav-item>
+    </b-navbar-nav>
+    <b-navbar-nav>
+      <b-nav-item
+        href="#"
+        :disabled="! nextEnabled"
+        @click.prevent="nextQuestion"
+      >
+        {{ $t('nav.next_question') }} ›
+      </b-nav-item>
+    </b-navbar-nav>
+  </b-navbar>
 </template>
 
 <script>

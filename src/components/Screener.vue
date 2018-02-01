@@ -36,5 +36,5 @@
 </script>
 
 <style media="screen">
-  .screener { margin-top: 80px}
+  .screener { margin-top: 80px; margin-bottom:80px}
 </style>
