@@ -6,7 +6,6 @@
           <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
         </b-col>
       </template>
-
       <template v-else>
         <b-col cols="12" md="6">
           <p>{{ $t(question.id + '.text') }}</p>
@@ -32,33 +31,19 @@
         </b-col>
       </template>
     </b-row>
-    <b-row align-h="center">
-      <b-col v-if="question.type === 'info'" class="my-3" cols="12" md="6">
-        <b-button
-            block
-            size="lg"
-            @click="nextQuestion"
-          >Ok, let's go</b-button>
-      </b-col>
-      <b-col v-else class="my-3" cols="12" md="6">
-        <b-button
-            block
-            :disabled="getSelectedAnswerValue(question.id) === undefined"
-            size="lg"
-            @click="nextQuestion"
-          >{{ $t('nav.next_question') }}</b-button>
-      </b-col>
-    </b-row>
+    <quiz-navigation :question="question"></quiz-navigation>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+  import QuizNavigation from './QuizNavigation'
   export default {
     props: ['question'],
     components: {
-      FontAwesomeIcon
+      FontAwesomeIcon,
+      QuizNavigation
     },
     computed: {
       ...mapGetters({
@@ -83,12 +68,7 @@
           questionId: this.question.id,
           answer: answer.value
         })
-      },
-      nextQuestion () {
-        this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
-        this.$store.commit('quiz/updateCurrentQuestion')
       }
-
     }
   }
 </script>

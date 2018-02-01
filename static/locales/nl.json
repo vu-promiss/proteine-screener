@@ -5,6 +5,11 @@
       "title": "Naar de screener"
     }
   },
+  "nav": {
+    "continue": "Ga door",
+    "next_question": "Volgende vraag",
+    "prev_question": "Vorige vraag"
+  },
   "info1": {
     "text": "In de volgende vragen vragen we je hoeveel van een voedingsproduct je hebt gegeten"
   },
