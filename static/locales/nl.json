@@ -43,11 +43,11 @@
   },
   "less_than_one": "Minder dan een",
   "slice": "{count} snee ::: {count} sneetjes",
-  "more_than_slices": "> {count} sneetjes",
+  "more_than_slices": "> {count} snee ::: > {count} sneetjes",
   "glass": "{count} glas ::: {count} glazen",
-  "more_than_glasses": "> {count} glazen",
+  "more_than_glasses": "> {count} glas ::: > {count} glazen",
   "no_meat": "Niet van toepassing, eet geen vlees",
-  "plate": "{count} bord",
+  "plate": "{fraction} bord",
   "not_in_four_weeks": "Niet in deze 4 weken",
   "day_week": "{count} dag/week ::: {count} dagen/week"
 }

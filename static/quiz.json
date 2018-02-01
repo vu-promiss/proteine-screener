@@ -63,8 +63,7 @@
         "slices": [
             {
                 "id": 1,
-                "text": "less_than_one",
-                "count": 0
+                "text": "less_than_one"
             },
             {
                 "id": 2,
@@ -135,8 +134,7 @@
         "glasses": [
             {
                 "id": 1,
-                "text": "less_than_one",
-                "count": 0
+                "text": "less_than_one"
             },
             {
                 "id": 2,
@@ -213,49 +211,46 @@
             {
                 "id": 1,
                 "text": "plate",
-                "count": "1/5",
+                "fraction": "1/5",
                 "picture": "plate_20"
             },
             {
                 "id": 2,
                 "text": "plate",
-                "count": "1/4",
+                "fraction": "1/4",
                 "picture": "plate_25"
             },
             {
                 "id": 3,
                 "text": "plate",
-                "count": "1/2",
+                "fraction": "1/2",
                 "picture": "plate_50"
             },
             {
                 "id": 4,
                 "text": "plate",
-                "count": "2/3",
+                "fraction": "2/3",
                 "picture": "plate_66"
             },
             {
                 "id": 5,
                 "text": "plate",
-                "count": "3/4",
+                "fraction": "3/4",
                 "picture": "plate_75"
             }
         ],
         "weekly_intake": [
             {
                 "id": 1,
-                "text": "not_in_four_weeks",
-                "count": 0
+                "text": "not_in_four_weeks"
             },
             {
                 "id": 2,
-                "text": "1_in_four_weeks",
-                "count": 1
+                "text": "1_in_four_weeks"
             },
             {
                 "id": 3,
-                "text": "2_3_in_four_weeks",
-                "count": 2
+                "text": "2_3_in_four_weeks"
             },
             {
                 "id": 4,
