@@ -1,13 +1,13 @@
 <template>
   <div class="question">
-    <transition name="component-fade" mode="out-in">
+    <transition name="component-fade" mode="out-in" v-on:enter="scrollup">
       <b-row v-if="question.type === 'info'">
         <b-col cols="12">
           <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
         </b-col>
         <b-col cols="12" class="text-center d-md-none">
           <b-button
-            @click="nextQuestion"
+            @click.stop="nextQuestion"
           >{{ $t('nav.continue') }}
           </b-button>
         </b-col>
@@ -20,7 +20,7 @@
           <b-button-group vertical style="width: 100%;">
             <b-button 
               v-for="answer in translatedAnswers"
-              @click="selectedAnswer(answer)"
+              @click.stop="selectedAnswer(answer)"
               variant="outline-secondary"
               size="lg"
               :pressed="getSelectedAnswerValue(question.id) === answer.value"
@@ -81,6 +81,9 @@
           this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
           this.$store.commit('quiz/updateCurrentQuestion')
         }
+      },
+      scrollup () {
+        this.$scrollTo('body')
       }
     }
   }
