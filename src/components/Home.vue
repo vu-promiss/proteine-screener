@@ -14,12 +14,32 @@
         v-on:click.stop="$i18n.set('en')"
         :disabled="$i18n.locale() == 'en'"
         class="btn btn-primary btn-lg">EN</button>
+    <hr>
+    <b-form-checkbox id="checkbox1"
+      :checked="autoNext"
+      @change="changeAutoNext"
+      value="1"
+      unchecked-value="0">
+      Auto Next
+    </b-form-checkbox>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  computed: {
+    ...mapGetters({
+      autoNext: 'quiz/autoNext'
+    })
+  },
+  methods: {
+    changeAutoNext (val) {
+      this.$store.commit('quiz/setAutoNext', val)
+    }
+  }
 }
 </script>
 

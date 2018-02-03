@@ -18,3 +18,5 @@ export const setAnswer = (state, {questionId, answer}) => {
 }
 
 export const resetAnswers = (state) => { state.answers = [] }
+
+export const setAutoNext = (state, val) => { state.autoNext = val }

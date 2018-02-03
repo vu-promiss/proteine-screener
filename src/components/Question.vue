@@ -1,13 +1,11 @@
 <template>
   <div class="question">
-    <transition name="question-fade" mode="out-in">
+    <transition name="component-fade" mode="out-in">
       <b-row v-if="question.type === 'info'">
         <b-col cols="12">
           <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
         </b-col>
       </b-row>
-    </transition>
-    <transition name="question-fade" mode="out-in">
       <b-row v-if="question.type === 'question'" v-bind:key="question.id">
         <b-col cols="12" md="6">
           <p>{{ $t(question.id + '.text') }}</p>
@@ -68,18 +66,15 @@
           questionId: this.question.id,
           answer: answer.value
         })
-        // this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
-        // this.$store.commit('quiz/updateCurrentQuestion')
+
+        if (this.$store.getters['quiz/autoNext'] === '1') {
+          this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
+          this.$store.commit('quiz/updateCurrentQuestion')
+        }
       }
     }
   }
 </script>
 
 <style media="screen">
-.question-fade-enter-active, .component-fade-leave-active {
-transition: opacity .5s;
-}
-.question-fade-enter, .component-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-opacity: 0;
-}
 </style>

@@ -15,6 +15,8 @@ export const getSelectedAnswer = (state) => (questionId) => {
   return state.answers[questionId]
 }
 
+export const autoNext = (state) => state.autoNext
+
 export const predprob = (state) => {
   // Shrinkage Factor
   let shrinkage_factor = 0.83
