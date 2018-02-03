@@ -55,7 +55,7 @@
   "no_meat": "Niet van toepassing, eet geen vlees",
   "plate": "{fraction} bord",
   "not_in_four_weeks": "Niet in deze 4 weken",
-  "1_in_four_weeks": "1 dag in 4 weken",
-  "2_3_in_four_weeks": "1-3 dagen in 4 weken",
+  "one_in_four_weeks": "1 dag in 4 weken",
+  "two_three_in_four_weeks": "1-3 dagen in 4 weken",
   "day_week": "{count} dag/week ::: {count} dagen/week"
 }

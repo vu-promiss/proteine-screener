@@ -1,0 +1,61 @@
+{
+  "content": "Tervetuloa proteiinin tarkkailijalle",
+  "home": {
+    "button": {
+      "title": "Siirry sovellukseen"
+    }
+  },
+  "nav": {
+    "continue": "Jatka",
+    "next_question": "Seuraava kysymys",
+    "prev_question": "Edellinen kysymys",
+    "start_over": "Aloita yli"
+  },
+  "info1": {
+    "text": "Seuraavissa kysymyksissä kysytään, kuinka paljon elintarvikkeita, joita syöt"
+  },
+  "N05b_0": {
+    "text": "Viimeksi kuluneiden neljän viikon aikana, kuinka monta leipää oli syöt keskimäärin päivässä?"
+  },
+  "N15b_0": {
+    "text": "Kuinka monta lasia / kuppia maitoa, kirnupiimää tai soijamaitoa käytit viimeisen neljän viikon aikana keskimäärin päivässä?"
+  },
+  "N34b": {
+    "text": "Kuinka paljon lihaa syöt keskimäärin 1 päivä, kun söi lihaa lämpimän aterian kanssa viimeisten 4 viikon aikana?"
+  },
+  "frequency1": {
+    "text": "Seuraavissa kysymyksissä kysytään kuinka usein olet syönyt tietyn tuotteen"
+  },
+  "N18a_0": {
+    "text": "Viimeisen neljän viikon aikana, kuinka usein oletko jogurtti, quark, maitopohjainen vanukas tai soijakakku)?"
+  },
+  "N14a_0": {
+    "text": "Viimeisen neljän viikon aikana, kuinka usein syöt munia joko aamiaisella, lounaalla, illalla, välipalalla tai aterialla?"
+  },
+  "N24a_0": {
+    "text": "Viimeisen neljän viikon aikana, kuinka usein syöt makaronista tai nuudeleista (kuten spagetti, makaroni, lasagne, chow mein, riisi- tai vehnäpohjaiset nuudelit)?"
+  },
+  "N33a_0": {
+    "text": "Viimeisen neljän viikon aikana, kuinka usein syöt kalasta leipää, lämpimällä ateriannolla tai välipalalla? (ÄLÄ sisällytä äyriäisiä)."
+  },
+  "N62a_0": {
+    "text": "Viimeisen neljän viikon aikana, kuinka usein syöt pähkinöitä tai maapähkinöitä välipalaksi?"
+  },
+  "N08a_0": {
+    "text": "Viimeksi kuluneiden neljän viikon aikana kuinka usein syöt juustoa tai juustoa levitettäessä leipääsi, pullaa, rusketta, krakkausta jne."
+  },
+  "N08b_0": {
+    "text": "uinka monta leipää, pullaa, rusketta, krakkausta jne. juustoa tai juustoa levitettiin keskimäärin syödä päivänä, jona juustot tai juustoa levitettiin?"
+  },
+  "less_than_one": "Alle yksi",
+  "slice": "{count} viipale ::: {count} viipaleita",
+  "more_than_slices": "{count} viipale :::> {count} viipaleita",
+  "glass": "{count} lasit ::: {count} lasit",
+  "more_than_glasses": "> {count} lasit :::> {count} lasit",
+  "no_meat": "Ei sovelleta, ei syö lihaa",
+  "plate": "{fraction} levy",
+  "not_in_four_weeks": "Ei näissä 4 viikkoina",
+  "one_in_four_weeks": "1 päivä 4 viikossa",
+  "two_three_in_four_weeks": "1-3 päivää 4 viikon kuluessa",
+  "day_week": "{count} päivä / viikko ::: {count} päivää / viikko"
+}

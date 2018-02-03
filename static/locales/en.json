@@ -55,7 +55,7 @@
     "no_meat": "Not applicable, does not eat meat",
     "plate": "{fraction} plate",
     "not_in_four_weeks": "Not in these 4 weeks",
-    "1_in_four_weeks": "1 day in 4 weeks",
-    "2_3_in_four_weeks": "1-3 days in 4 weeks",
+    "one_in_four_weeks": "1 day in 4 weeks",
+    "two_three_in_four_weeks": "1-3 days in 4 weeks",
     "day_week": "{count} day/week ::: {count} days/week"
 }

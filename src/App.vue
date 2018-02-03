@@ -25,7 +25,10 @@
       axios.get('static/locales/nl.json').then((response) => {
         this.$i18n.add('nl', response.data)
       })
-
+      axios.get('static/locales/fi.json').then((response) => {
+        this.$i18n.add('fi', response.data)
+      })
+      // fixme: make dynamic
       this.$i18n.set('en')
     }
   }
