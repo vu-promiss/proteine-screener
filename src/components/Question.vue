@@ -5,6 +5,12 @@
         <b-col cols="12">
           <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
         </b-col>
+        <b-col cols="12" class="text-center d-md-none">
+          <b-button
+            @click="nextQuestion"
+          >{{ $t('nav.continue') }}
+          </b-button>
+        </b-col>
       </b-row>
       <b-row v-if="question.type === 'question'" v-bind:key="question.id">
         <b-col cols="12" md="6">
@@ -61,6 +67,10 @@
       }
     },
     methods: {
+      nextQuestion () {
+        this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
+        this.$store.commit('quiz/updateCurrentQuestion')
+      },
       selectedAnswer (answer) {
         this.$store.commit('quiz/setAnswer', {
           questionId: this.question.id,
