@@ -1,6 +1,5 @@
 <template>
   <div class="question">
-    <transition name="component-fade" mode="out-in" v-on:enter="scrollup">
       <b-row v-if="question.type === 'info'">
         <b-col cols="12">
           <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
@@ -12,7 +11,7 @@
           </b-button>
         </b-col>
       </b-row>
-      <b-row v-if="question.type === 'question'" v-bind:key="question.id">
+      <b-row v-if="question.type === 'question'">
         <b-col cols="12" md="6">
           <p>{{ $t(question.id + '.text') }}</p>
         </b-col>
@@ -36,8 +35,6 @@
           </b-button-group>
         </b-col>
       </b-row>
-    </transition>
-    <quiz-navigation :question="question"></quiz-navigation>
   </div>
 </template>
 
@@ -81,9 +78,6 @@
           this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
           this.$store.commit('quiz/updateCurrentQuestion')
         }
-      },
-      scrollup () {
-        this.$scrollTo('body')
       }
     }
   }
