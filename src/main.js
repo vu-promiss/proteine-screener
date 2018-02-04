@@ -24,6 +24,10 @@ Vue.config.productionTip = false
 Vue.filter('decimal', function (value) {
   return value.toFixed(2)
 })
+Vue.filter('uppercase', function (value) {
+  return value.toUpperCase()
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
