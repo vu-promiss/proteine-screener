@@ -13,20 +13,24 @@
     name: 'app',
     methods: {
       ...mapActions({
-        getQuestions: 'quiz/getQuestions'
+        getQuestions: 'quiz/getQuestions',
+        getConfig: 'config/getConfig'
       })
     },
     mounted () {
-      this.getQuestions()
-      // this should be somewhere else, but where?
-      axios.get('static/locales/en.json').then((response) => {
-        this.$i18n.add('en', response.data)
-      })
-      axios.get('static/locales/nl.json').then((response) => {
-        this.$i18n.add('nl', response.data)
-      })
-      axios.get('static/locales/fi.json').then((response) => {
-        this.$i18n.add('fi', response.data)
+      // axios.all([this.getQuestions(), getUserPermissions()])
+      //   .then(axios.spread(function (acct, perms) {
+      //     // Both requests are now complete
+      // }));
+      this.getConfig().then(() => {
+        let config = this.$store.getters['config/config']
+        let loadedLocales = []
+        config.locales.forEach((locale) => {
+          loadedLocales.push(axios.get('static/locales/' + locale + '.json').then((response) => {
+            this.$i18n.add(locale, response.data)
+          }))
+        })
+        this.getQuestions()
       })
       // fixme: make dynamic
       this.$i18n.set('en')

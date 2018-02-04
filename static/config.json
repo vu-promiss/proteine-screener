@@ -1,0 +1,8 @@
+{
+  "locales": [
+    "en",
+    "nl",
+    "fi"
+  ],
+  "cutoff": 0.7
+}

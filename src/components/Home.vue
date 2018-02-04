@@ -6,21 +6,12 @@
     <router-link class="btn btn-primary btn-lg" :to="{ name: 'screener'}">{{ $t('home.button.title') }}</router-link>
     <hr>
     
-    <button 
-      v-on:click.stop="$i18n.set('en')"
-      :disabled="$i18n.locale() == 'en'"
-      class="btn btn-primary btn-lg">EN
-    </button>
-    <button 
-      v-on:click.stop="$i18n.set('nl')"
-      :disabled="$i18n.locale() == 'nl'"
-      class="btn btn-primary btn-lg">NL
-    </button>
-    <button 
-      v-on:click.stop="$i18n.set('fi')"
-      :disabled="$i18n.locale() == 'fi'"
-      class="btn btn-primary btn-lg">FI
-    </button>
+    <b-button v-for="locale in locales"
+      v-on:click.stop="$i18n.set(locale)"
+      :pressed="$i18n.locale() === locale"
+      variant="outline-primary"
+      > {{ locale | uppercase }}
+    </b-button>
     <hr>
     <b-form-checkbox id="checkbox1"
       :checked="autoNext"
@@ -39,7 +30,8 @@ export default {
   name: 'Home',
   computed: {
     ...mapGetters({
-      autoNext: 'quiz/autoNext'
+      autoNext: 'quiz/autoNext',
+      locales: 'config/locales'
     })
   },
   methods: {
