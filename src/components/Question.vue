@@ -76,7 +76,9 @@
 
         if (this.$store.getters['quiz/autoNext'] === '1') {
           this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
-          this.$store.commit('quiz/updateCurrentQuestion')
+          setTimeout(() => {
+            this.$store.commit('quiz/updateCurrentQuestion')
+          }, 300)
         }
       }
     }

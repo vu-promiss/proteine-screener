@@ -18,10 +18,6 @@
       })
     },
     mounted () {
-      // axios.all([this.getQuestions(), getUserPermissions()])
-      //   .then(axios.spread(function (acct, perms) {
-      //     // Both requests are now complete
-      // }));
       this.getConfig().then(() => {
         let config = this.$store.getters['config/config']
         let loadedLocales = []
@@ -40,7 +36,7 @@
 
 <style>
   .component-fade-enter-active, .component-fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity .2s;
   }
   .component-fade-enter, .component-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
