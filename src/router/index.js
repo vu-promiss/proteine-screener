@@ -14,7 +14,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/screener',
+      path: '/screener/:question',
       name: 'screener',
       component: Screener
     },
