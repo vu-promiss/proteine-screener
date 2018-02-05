@@ -1,16 +1,22 @@
 <template>
-  <b-container style="max-width: 900px">
-    <transition name="component-fade" mode="out-in">
-        <router-view/>
-    </transition>
-  </b-container>
+  <div class="app">
+    <navbar></navbar>
+      <transition name="component-fade" mode="out-in">
+          <router-view/>
+      </transition>
+  </div>
 </template>
 
 <script>
   import { mapActions } from 'vuex'
   import axios from 'axios'
+  import Navbar from './components/Navbar'
+
   export default {
     name: 'app',
+    components: {
+      Navbar
+    },
     methods: {
       ...mapActions({
         getQuestions: 'quiz/getQuestions',
@@ -35,6 +41,8 @@
 </script>
 
 <style>
+  .app { margin-top: 80px; margin-bottom:80px}
+
   .component-fade-enter-active, .component-fade-leave-active {
   transition: opacity .2s;
   }
