@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <b-container class="home">
     <b-row class="pt-2">
       <b-col cols="12" md="6">
         <img class="img-fluid" src="../assets/logo_promiss.png" />
@@ -23,7 +23,7 @@
     </b-row>
     <b-row>
     </b-row>
-  </div>
+  </b-container>
 </template>
 
 <script>

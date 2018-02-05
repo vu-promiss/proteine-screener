@@ -1,6 +1,6 @@
 <template>
   <div class="screener">
-    <div class="container">
+    <b-container>
       <div v-if="currentQuestion">
         <b-row>
           <b-col>
@@ -22,7 +22,7 @@
           <results v-if="currentQuestionNumber > questions.length"></results>
         </div>
       </transition>
-    </div>
+    </b-container>
 
     <quiz-navigation-fixed v-if="currentQuestion" :question="currentQuestion"></quiz-navigation-fixed>
 
