@@ -1,6 +1,10 @@
 {
     "questions": [
         {
+            "id": "intro",
+            "type": "info"
+        },
+        {
             "id": "info1",
             "type": "info"
         },
