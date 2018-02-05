@@ -5,6 +5,8 @@ export const strQuestions = (state) => {
   return JSON.stringify(state.questions, null, 4)
 }
 
+export const totalQuestions = (state) => state.questions.length
+
 export const currentQuestionNumber = (state) => state.currentQuestionNumber
 
 export const currentQuestion = (state) => state.currentQuestion

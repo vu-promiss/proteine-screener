@@ -2,6 +2,19 @@
   <div class="screener">
     
     <navbar></navbar>
+    <div v-if="currentQuestion" v-bind:key="currentQuestion.id">
+      <b-row>
+        <b-col>
+          <b-progress 
+            :value="currentQuestionNumber" 
+            :max="totalQuestions + 1" 
+            class="mb-3"
+            variant="info"
+            show-value
+          ></b-progress>
+        </b-col>
+      </b-row>
+    </div>
     <transition name="component-fade" mode="out-in" v-on:enter="scrollup">
       <div v-if="currentQuestion" v-bind:key="currentQuestion.id">
         <question v-if="currentQuestion" :question="currentQuestion"></question>
@@ -37,6 +50,7 @@
     computed: {
       ...mapGetters({
         questions: 'quiz/questions',
+        totalQuestions: 'quiz/totalQuestions',
         currentQuestionNumber: 'quiz/currentQuestionNumber',
         currentQuestion: 'quiz/currentQuestion',
         answers: 'quiz/answers',
