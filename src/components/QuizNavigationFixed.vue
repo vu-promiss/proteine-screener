@@ -1,22 +1,24 @@
 <template lang="html">
   <div class="quiz-navigation-fixed">
     <b-navbar class="quiz-navigation d-md-none" fixed="bottom" type="dark" variant="info">
-      <b-navbar-nav>
-        <b-nav-item
-          :disabled="! prevEnabled"
-          @click.prevent="prevQuestion"
-        >
-          ‹ {{ $t('nav.prev_question') }}
-        </b-nav-item>
-      </b-navbar-nav>
-      <b-navbar-nav>
-        <b-nav-item
-          :disabled="! nextEnabled"
-          @click.prevent="nextQuestion"
-        >
-          {{ $t('nav.next_question') }} ›
-        </b-nav-item>
-      </b-navbar-nav>
+      <div class="container d-flex justify-content-between">
+        <b-navbar-nav>
+          <b-nav-item
+            :disabled="! prevEnabled"
+            @click.prevent="prevQuestion"
+          >
+            ‹ {{ $t('nav.prev_question') }}
+          </b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav>
+          <b-nav-item
+            :disabled="! nextEnabled"
+            @click.prevent="nextQuestion"
+          >
+            {{ $t('nav.next_question') }} ›
+          </b-nav-item>
+        </b-navbar-nav>
+      </div>
     </b-navbar>
   </div>
 </template>
