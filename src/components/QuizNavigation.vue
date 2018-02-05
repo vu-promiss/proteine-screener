@@ -6,14 +6,14 @@
           <b-button
             :disabled="! prevEnabled"
             @click.stop="prevQuestion"
-          >‹ {{ $t('nav.prev_question') }}
+          >‹ {{ $t('nav.previous') }}
           </b-button>
         </b-button-group>
         <b-button-group class="mx-1">
           <b-button
             :disabled="! nextEnabled"
             @click.stop="nextQuestion"
-          >{{ $t('nav.next_question') }} ›
+          >{{ $t('nav.next') }} ›
           </b-button>
         </b-button-group>
       </b-col>
