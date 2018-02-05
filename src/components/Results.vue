@@ -7,10 +7,14 @@
           <h1>{{ predprob | decimal }}</h1>
           <p v-if="predprob < cutoff"> {{ $t("sufficient_protein_intake") }} </p>
           <p v-else> {{ $t("low_protein_intake") }} </p>
+          <p><b-btn v-b-modal.modal1>Show recoded values</b-btn></p>
         </b-alert>
         <b-button size="lg" @click="startOver">{{ $t('nav.start_over') }}</b-button>
       </b-col>
-    </b-row>  
+    </b-row>
+    <b-modal ok-only id="modal1" title="Recoded values">
+      <b-table striped hover :items="recodedAnswersArray"></b-table>
+    </b-modal>
   </div>
 </template>
 
@@ -21,8 +25,15 @@ export default {
   computed: {
     ...mapGetters({
       predprob: 'quiz/predprob',
-      cutoff: 'config/cutoff'
-    })
+      cutoff: 'config/cutoff',
+      answers: 'quiz/answers',
+      recodedAnswers: 'quiz/recodedAnswers'
+    }),
+    recodedAnswersArray () {
+      return Object.entries(this.recodedAnswers).map(obj => {
+        return {Recoded: obj[0], value: obj[1]}
+      })
+    }
   },
   methods: {
     startOver () {
