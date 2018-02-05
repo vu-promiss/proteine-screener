@@ -7,8 +7,8 @@
   },
   "nav": {
     "continue": "Jatka",
-    "next_question": "Seuraava kysymys",
-    "prev_question": "Edellinen kysymys",
+    "next": "Seuraava",
+    "previous": "Edellinen",
     "start_over": "Aloita yli"
   },
   "info1": {

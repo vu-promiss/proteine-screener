@@ -7,9 +7,12 @@
     },
     "nav": {
       "continue": "Continue",
-      "next_question": "Next question",
-      "prev_question": "Previous question",
+      "next": "Next",
+      "previous": "Previous",
       "start_over": "Start over"
+    },
+    "intro": {
+      "text": "The following questions are about your dietary habits. It is very important that you give an honest response. We would like to know what you ate or drank in the last 4 weeks (irrespective of week days, weekend days, at home or someplace else). If the last 4 weeks were very special (for example you were sick or you went on a vacation and this had a major influence on your usual diet), please recall the 4 weeks before this period."
     },
     "info1": {
       "text": "In the following questions, we ask how much of a food product you ate"

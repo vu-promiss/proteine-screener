@@ -7,8 +7,8 @@
   },
   "nav": {
     "continue": "Ga door",
-    "next_question": "Volgende vraag",
-    "prev_question": "Vorige vraag",
+    "next": "Volgende",
+    "previous": "Vorige",
     "start_over": "Begin opnieuw"
   },
   "info1": {
