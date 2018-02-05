@@ -7,7 +7,9 @@
         <question v-if="currentQuestion" :question="currentQuestion"></question>
         <quiz-navigation v-if="currentQuestion" :question="currentQuestion"></quiz-navigation>
       </div>
-      <results v-if="currentQuestionNumber > questions.length"></results>
+      <div v-else>
+        <results v-if="currentQuestionNumber > questions.length"></results>
+      </div>
     </transition>
 
     <quiz-navigation-fixed v-if="currentQuestion" :question="currentQuestion"></quiz-navigation-fixed>

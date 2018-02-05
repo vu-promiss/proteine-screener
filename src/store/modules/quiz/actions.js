@@ -14,3 +14,13 @@ export const getQuestions = ({ commit }) => {
     commit('updateCurrentQuestion')
   })
 }
+
+export const nextQuestion = ({ commit, state }) => {
+  commit('setQuestionNumber', state.currentQuestionNumber + 1)
+  commit('updateCurrentQuestion')
+}
+
+export const prevQuestion = ({ commit, state }) => {
+  commit('setQuestionNumber', state.currentQuestionNumber - 1)
+  commit('updateCurrentQuestion')
+}
