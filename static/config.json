@@ -4,5 +4,6 @@
     "nl",
     "fi"
   ],
-  "cutoff": 0.3
+  "cutoff": 0.3,
+  "debug": true
 }

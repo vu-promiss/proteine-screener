@@ -7,7 +7,9 @@
           <h1>{{ predprob | decimal }}</h1>
           <p v-if="predprob < cutoff"> {{ $t("sufficient_protein_intake") }} </p>
           <p v-else> {{ $t("low_protein_intake") }} </p>
-          <p><b-btn v-b-modal.modal1>Show recoded values</b-btn></p>
+          <p v-if="debug">
+            <b-btn v-b-modal.modal1>Show recoded values</b-btn>
+          </p>
         </b-alert>
         <b-button size="lg" @click="startOver">{{ $t('nav.start_over') }}</b-button>
       </b-col>
@@ -25,6 +27,7 @@ export default {
   computed: {
     ...mapGetters({
       predprob: 'quiz/predprob',
+      debug: 'config/debug',
       cutoff: 'config/cutoff',
       answers: 'quiz/answers',
       recodedAnswers: 'quiz/recodedAnswers'
