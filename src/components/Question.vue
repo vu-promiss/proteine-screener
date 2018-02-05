@@ -39,7 +39,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import QuizNavigation from './QuizNavigation'
   export default {
@@ -64,10 +64,9 @@
       }
     },
     methods: {
-      nextQuestion () {
-        this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
-        this.$store.commit('quiz/updateCurrentQuestion')
-      },
+      ...mapActions({
+        nextQuestion: 'quiz/nextQuestion'
+      }),
       selectedAnswer (answer) {
         this.$store.commit('quiz/setAnswer', {
           questionId: this.question.id,
@@ -76,8 +75,10 @@
 
         if (this.$store.getters['quiz/autoNext'] === '1') {
           this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
+          // Short delay to show checkmark
           setTimeout(() => {
             this.$store.commit('quiz/updateCurrentQuestion')
+            // this.$router.push({ name: 'screener', params: { question: this.currentQuestionNumber + 1 }})
           }, 300)
         }
       }

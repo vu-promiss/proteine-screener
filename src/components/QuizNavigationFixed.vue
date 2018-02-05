@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   props: [
@@ -44,14 +44,10 @@ export default {
     }
   },
   methods: {
-    nextQuestion () {
-      this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
-      this.$store.commit('quiz/updateCurrentQuestion')
-    },
-    prevQuestion () {
-      this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber - 1)
-      this.$store.commit('quiz/updateCurrentQuestion')
-    }
+    ...mapActions({
+      nextQuestion: 'quiz/nextQuestion',
+      prevQuestion: 'quiz/prevQuestion'
+    })
   }
 }
 </script>
