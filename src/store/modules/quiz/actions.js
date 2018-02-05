@@ -17,10 +17,14 @@ export const getQuestions = ({ commit }) => {
 
 export const nextQuestion = ({ commit, state }) => {
   commit('setQuestionNumber', state.currentQuestionNumber + 1)
-  commit('updateCurrentQuestion')
+  setTimeout(() => {
+    commit('updateCurrentQuestion')
+  }, 300)
 }
 
 export const prevQuestion = ({ commit, state }) => {
   commit('setQuestionNumber', state.currentQuestionNumber - 1)
-  commit('updateCurrentQuestion')
+  setTimeout(() => {
+    commit('updateCurrentQuestion')
+  }, 300)
 }
