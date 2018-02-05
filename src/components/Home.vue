@@ -5,11 +5,11 @@
         <img class="img-fluid" src="../assets/logo_promiss.png" />
       </b-col>
       <b-col cols="6" >
-        <b-button-toolbar class="float-right" key-nav  aria-label="Toolbar with button groups">
+        <b-button-toolbar class="float-right" aria-label="Toolbar with button groups">
           <b-button-group class="mx-1">
             <b-button v-for="locale in locales"
               :key="locale"
-              v-on:click.stop="$i18n.set(locale)"
+              v-on:click.prevent="$i18n.set(locale)"
               :pressed="$i18n.locale() === locale"
               variant="outline-secondary"
               > {{ locale | uppercase }}
