@@ -57,5 +57,6 @@
   "not_in_four_weeks": "Ei näissä 4 viikkoina",
   "one_in_four_weeks": "1 päivä 4 viikossa",
   "two_three_in_four_weeks": "2-3 päivää 4 viikon kuluessa",
-  "day_week": "{count} päivä / viikko ::: {count} päivää / viikko"
+  "day_week": "{count} päivä / viikko ::: {count} päivää / viikko",
+  "question_number": "Kysymys {number}"
 }

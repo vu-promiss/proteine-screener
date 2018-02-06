@@ -62,5 +62,6 @@
     "two_three_in_four_weeks": "2-3 days in 4 weeks",
     "day_week": "{count} day/week ::: {count} days/week",
     "sufficient_protein_intake": "No, does not have low protein intake",
-    "low_protein_intake": "YES, has low protein intake --> include"
+    "low_protein_intake": "YES, has low protein intake --> include",
+    "question_number": "Question {number}"
 }

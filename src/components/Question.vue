@@ -13,6 +13,7 @@
       </b-row>
       <b-row v-if="question.type === 'question'">
         <b-col cols="12" md="6">
+          <h3> {{ $t('question_number', {number: question.number}) }} </h3>
           <p>{{ $t(question.id + '.text') }}</p>
         </b-col>
         <b-col cols="12" md="6">
