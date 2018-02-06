@@ -20,6 +20,7 @@
               :key="locale"
               v-on:click.prevent="$i18n.set(locale)"
               :active="$i18n.locale() === locale"
+              active-class="protein"
               variant="outline-secondary"
               > {{ locale | uppercase }}
             </b-dropdown-item>
@@ -44,4 +45,8 @@ export default {
 </script>
 
 <style lang="css">
+.dropdown-item.protein {
+  background-color: #17a2b8;
+  color: #fff
+}
 </style>
