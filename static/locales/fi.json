@@ -1,5 +1,5 @@
 {
-  "content": "Tervetuloa proteiinin tarkkailijalle",
+  "content": "Tervetuloa tekemään proteiinikyselyä",
   "home": {
     "button": {
       "title": "Siirry sovellukseen"
@@ -12,7 +12,7 @@
     "start_over": "Aloita yli"
   },
   "info1": {
-    "text": "Seuraavissa kysymyksissä kysytään, kuinka paljon elintarvikkeita, joita syöt"
+    "text": "Seuraavissa kysymyksissä kysytään, kuinka paljon söit kysymyksissä mainittuja ruokia"
   },
   "N05b_0": {
     "text": "Viimeksi kuluneiden neljän viikon aikana, kuinka monta leipää oli syöt keskimäärin päivässä?"
