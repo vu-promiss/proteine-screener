@@ -11,6 +11,9 @@
     "previous": "Edellinen",
     "start_over": "Aloita yli"
   },
+  "intro": {
+    "text": "De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie ging of ziek werd."
+  },
   "info1": {
     "text": "Seuraavissa kysymyksissä kysytään, kuinka paljon söit kysymyksissä mainittuja ruokia"
   },
