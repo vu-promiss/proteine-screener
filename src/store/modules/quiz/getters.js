@@ -149,10 +149,10 @@ export const predprob = (state, getters) => {
   // berekenen weight_adj
   if (bmi < 18.5 && state.age < 71) weight_adj = (height_m) * (height_m) * 18.5
   if (bmi > 25.0 && state.age < 71) weight_adj = (height_m) * (height_m) * 25
-  //if (bmi >= 18.5 && bmi <= 25 && state.age < 71) weight_adj = state.weight
+  // if (bmi >= 18.5 && bmi <= 25 && state.age < 71) weight_adj = state.weight
   if (bmi < 22.0 & state.age >= 71) weight_adj = (height_m) * (height_m) * 22
   if (bmi > 27.0 & state.age >= 71) weight_adj = (height_m) * (height_m) * 27
-  //if (bmi >= 22.0 & bmi <= 27.0 & state.age >= 71) weight_adj = state.weight
+  // if (bmi >= 22.0 & bmi <= 27.0 & state.age >= 71) weight_adj = state.weight
 
   let z = shrinkage_factor * 19.361 +
       0.106 * shrinkage_factor * weight_adj -
