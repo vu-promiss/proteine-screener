@@ -5,6 +5,12 @@ export const setQuestions = (state, questions) => {
   // this.updateCurrentQuestion()
 }
 
+export const setAge = (state, val) => { state.age = val }
+
+export const setWeight = (state, val) => { state.weight = val }
+
+export const setLength = (state, val) => { state.length = val }
+
 export const setQuestionNumber = (state, questionNumber) => {
   state.currentQuestionNumber = questionNumber
 }

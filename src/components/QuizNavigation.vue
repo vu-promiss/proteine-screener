@@ -31,10 +31,12 @@ export default {
   computed: {
     ...mapGetters({
       getSelectedAnswerValue: 'quiz/getSelectedAnswer',
-      currentQuestionNumber: 'quiz/currentQuestionNumber'
+      currentQuestionNumber: 'quiz/currentQuestionNumber',
+      validBmi: 'quiz/validBmi'
     }),
     nextEnabled () {
       if (this.question.type === 'info') return true
+      if (this.question.type === 'bmi') return this.validBmi 
       return this.getSelectedAnswerValue(this.question.id) !== undefined
     },
     prevEnabled () {

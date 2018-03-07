@@ -5,6 +5,10 @@
             "type": "info"
         },
         {
+            "id": "bmi1",
+            "type": "bmi"
+        },
+        {
             "id": "info1",
             "type": "info"
         },

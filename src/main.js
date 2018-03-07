@@ -27,6 +27,9 @@ Vue.filter('decimal', function (value) {
 Vue.filter('uppercase', function (value) {
   return value.toUpperCase()
 })
+Vue.filter('integer', function (value) {
+  return parseInt(value, 10)
+})
 
 /* eslint-disable no-new */
 new Vue({

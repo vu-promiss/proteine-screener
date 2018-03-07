@@ -1,6 +1,30 @@
 /* eslint camelcase: "off" */
 export const questions = (state) => state.questions
 
+export const age = (state) => state.age
+
+export const validAge = (state) => {
+  if (state.age === '') return null
+  return state.age >= 1 && state.age < 130
+}
+
+export const length = (state) => state.length
+
+export const validLength = (state) => {
+  if (state.length === '') return null
+  return state.length >= 30 && state.length < 300
+}
+
+export const weight = (state) => state.weight
+
+export const validWeight = (state) => {
+  if (state.weight === '') return null
+  return state.weight >= 3 && state.weight < 400
+}
+
+export const validBmi = (state, getters) => getters.validAge && getters.validWeight && getters.validLength 
+
+
 export const strQuestions = (state) => {
   return JSON.stringify(state.questions, null, 4)
 }

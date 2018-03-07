@@ -14,6 +14,9 @@
     "intro": {
       "text": "The following questions are about your dietary habits. It is very important that you give an honest response. We would like to know what you ate or drank in the last 4 weeks (irrespective of week days, weekend days, at home or someplace else). If the last 4 weeks were very special (for example you were sick or you went on a vacation and this had a major influence on your usual diet), please recall the 4 weeks before this period."
     },
+    "bmi1": {
+      "text": "Please enter your body measurements."
+    },
     "info1": {
       "text": "In the following questions, we ask how much of a food product you ate"
     },
@@ -63,5 +66,23 @@
     "day_week": "{count} day/week ::: {count} days/week",
     "sufficient_protein_intake": "No, does not have low protein intake",
     "low_protein_intake": "YES, has low protein intake --> include",
-    "question_number": "Question {number}"
+    "question_number": "Question {number}",
+    "age": {
+      "label": "Age",
+      "placeholder": "Please enter your age.",
+      "invalid": "Please enter a valid age.",
+      "append": "year"
+    },
+    "weight": {
+      "label": "Weight",
+      "placeholder": "Please enter your weight in kilograms.",
+      "invalid": "Please enter a valid weight.",
+      "append": "kg"
+    },
+    "length": {
+      "label": "Length",
+      "placeholder": "Please enter your length in centimeters.",
+      "invalid": "Please enter a valid length.",
+      "append": "cm"
+    }
 }

@@ -11,6 +11,9 @@
           </b-button>
         </b-col>
       </b-row>
+      <template v-if="question.type === 'bmi'">
+        <bmi-question :question="question"/>
+      </template>
       <b-row v-if="question.type === 'question'">
         <b-col cols="12" md="6">
           <h3> {{ $t('question_number', {number: question.number}) }} </h3>
@@ -43,11 +46,13 @@
   import { mapGetters, mapActions } from 'vuex'
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import QuizNavigation from './QuizNavigation'
+  import BmiQuestion from './BmiQuestion'
   export default {
     props: ['question'],
     components: {
       FontAwesomeIcon,
-      QuizNavigation
+      QuizNavigation,
+      BmiQuestion
     },
     computed: {
       ...mapGetters({
@@ -73,7 +78,6 @@
           questionId: this.question.id,
           answer: answer.value
         })
-
         if (this.$store.getters['quiz/autoNext'] === '1') {
           this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
           // Short delay to show checkmark
