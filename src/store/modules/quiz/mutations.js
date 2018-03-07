@@ -23,6 +23,11 @@ export const setAnswer = (state, {questionId, answer}) => {
   Vue.set(state.answers, questionId, answer)
 }
 
-export const resetAnswers = (state) => { state.answers = [] }
+export const resetAnswers = (state) => {
+  state.answers = []
+  state.age = ''
+  state.weight = ''
+  state.length = ''
+}
 
 export const setAutoNext = (state, val) => { state.autoNext = val }
