@@ -11,7 +11,7 @@
           :state="validAge">
         <b-input-group size="lg" :append="$t('age.append')">
           <b-form-input 
-              type="number"
+              pattern="[0-9]*"
               id="ageInput"
               :placeholder="$t('age.placeholder')"
               :state="validAge"
@@ -26,7 +26,7 @@
           :state="validWeight">
         <b-input-group size="lg" :append="$t('weight.append')">
           <b-form-input 
-            type="number"
+            pattern="[0-9]*"
             id="weightInput"
             :placeholder="$t('weight.placeholder')"
             :state="validWeight"
@@ -41,7 +41,7 @@
           :state="validLength">
         <b-input-group size="lg" :append="$t('length.append')">
           <b-form-input 
-            type="number"
+            pattern="[0-9]*"
             id="lengthInput"
             :placeholder="$t('length.placeholder')"
             :state="validLength"
@@ -53,6 +53,7 @@
     <b-col cols="12" class="text-center d-md-none">
       <b-button
         @click.stop="nextQuestion"
+        :disabled="! validBmi"
       >{{ $t('nav.continue') }}
       </b-button>
     </b-col>
@@ -71,7 +72,8 @@ export default {
       length: 'quiz/length',
       validAge: 'quiz/validAge',
       validWeight: 'quiz/validWeight',
-      validLength: 'quiz/validLength'
+      validLength: 'quiz/validLength',
+      validBmi: 'quiz/validBmi'
     }),
     ageValue: {
       get () {
