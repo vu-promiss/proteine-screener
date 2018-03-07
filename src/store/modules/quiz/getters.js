@@ -22,8 +22,7 @@ export const validWeight = (state) => {
   return state.weight >= 3 && state.weight < 400
 }
 
-export const validBmi = (state, getters) => getters.validAge && getters.validWeight && getters.validLength 
-
+export const validBmi = (state, getters) => getters.validAge && getters.validWeight && getters.validLength
 
 export const strQuestions = (state) => {
   return JSON.stringify(state.questions, null, 4)
@@ -136,33 +135,49 @@ export const recodedAnswers = (state) => {
 
 export const predprob = (state, getters) => {
   // Shrinkage Factor
-  let shrinkage_factor = 0.83
+  let shrinkage_factor = 0.92
+  let bmi
+  let height_m = state.length / 100.0
+  let weight_adj = state.weight
+
   // Initialize variables
   let r = getters.recodedAnswers
 
-  let z = shrinkage_factor * 22.606 -
-      0.229 * shrinkage_factor * r.amount_slice_breadd1 -
-      0.946 * shrinkage_factor * r.amount_slice_breadd2 -
-      2.177 * shrinkage_factor * r.amount_slice_breadd3 -
-      0.252 * shrinkage_factor * r.amount_milkd1 -
-      1.36 * shrinkage_factor * r.amount_milkd2 -
-      0.906 * shrinkage_factor * r.amount_meatd1 -
-      2.193 * shrinkage_factor * r.amount_meatd2 -
-      0.178 * shrinkage_factor * r.freq_dairy_dessert -
-      0.380 * shrinkage_factor * r.freq_eggd1 -
-      0.607 * shrinkage_factor * r.freq_eggd2 -
-      1.422 * shrinkage_factor * r.freq_eggd3 -
-      0.329 * shrinkage_factor * r.freq_pastad1 -
-      0.666 * shrinkage_factor * r.freq_pastad2 -
-      1.348 * shrinkage_factor * r.freq_pastad3 -
-      0.496 * shrinkage_factor * r.freq_fishd1 -
-      0.671 * shrinkage_factor * r.freq_fishd2 -
-      0.970 * shrinkage_factor * r.freq_fishd3 -
-      0.275 * shrinkage_factor * r.freq_peanutsd1 -
-      0.742 * shrinkage_factor * r.freq_peanutsd2 -
-      0.166 * shrinkage_factor * r.freq_cheese_on_bread -
-      0.554 * shrinkage_factor * r.amount_bread_with_cheesed1 -
-      1.06 * shrinkage_factor * r.amount_bread_with_cheesed2
+  // berekenen bmi
+  bmi = state.weight / (height_m * height_m)
+
+  // berekenen weight_adj
+  if (bmi < 18.5 && state.age < 71) weight_adj = (height_m) * (height_m) * 18.5
+  if (bmi > 25.0 && state.age < 71) weight_adj = (height_m) * (height_m) * 25
+  //if (bmi >= 18.5 && bmi <= 25 && state.age < 71) weight_adj = state.weight
+  if (bmi < 22.0 & state.age >= 71) weight_adj = (height_m) * (height_m) * 22
+  if (bmi > 27.0 & state.age >= 71) weight_adj = (height_m) * (height_m) * 27
+  //if (bmi >= 22.0 & bmi <= 27.0 & state.age >= 71) weight_adj = state.weight
+
+  let z = shrinkage_factor * 19.361 +
+      0.106 * shrinkage_factor * weight_adj -
+      0.326 * shrinkage_factor * r.amount_slice_breadd1 -
+      1.175 * shrinkage_factor * r.amount_slice_breadd2 -
+      2.750 * shrinkage_factor * r.amount_slice_breadd3 -
+      0.344 * shrinkage_factor * r.amount_milkd1 -
+      1.681 * shrinkage_factor * r.amount_milkd2 -
+      1.326 * shrinkage_factor * r.amount_meatd1 -
+      3.074 * shrinkage_factor * r.amount_meatd2 -
+      0.175 * shrinkage_factor * r.freq_dairy_dessert -
+      0.256 * shrinkage_factor * r.freq_eggd1 -
+      0.636 * shrinkage_factor * r.freq_eggd2 -
+      1.480 * shrinkage_factor * r.freq_eggd3 -
+      0.432 * shrinkage_factor * r.freq_pastad1 -
+      0.713 * shrinkage_factor * r.freq_pastad2 -
+      1.409 * shrinkage_factor * r.freq_pastad3 -
+      0.454 * shrinkage_factor * r.freq_fishd1 -
+      0.757 * shrinkage_factor * r.freq_fishd2 -
+      1.100 * shrinkage_factor * r.freq_fishd3 -
+      0.393 * shrinkage_factor * r.freq_peanutsd1 -
+      0.888 * shrinkage_factor * r.freq_peanutsd2 -
+      0.177 * shrinkage_factor * r.freq_cheese_on_bread -
+      0.654 * shrinkage_factor * r.amount_bread_with_cheesed1 -
+      1.214 * shrinkage_factor * r.amount_bread_with_cheesed2
 
   return 1 / (1 + Math.exp(-z))
 }
