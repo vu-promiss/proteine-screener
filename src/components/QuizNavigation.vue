@@ -36,7 +36,7 @@ export default {
     }),
     nextEnabled () {
       if (this.question.type === 'info') return true
-      if (this.question.type === 'bmi') return this.validBmi 
+      if (this.question.type === 'bmi') return this.validBmi
       return this.getSelectedAnswerValue(this.question.id) !== undefined
     },
     prevEnabled () {
