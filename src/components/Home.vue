@@ -12,7 +12,7 @@
         <router-link class="btn btn-secondary btn-lg" :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}</router-link>
       </b-col>
       <b-col cols="12" class="text-center">
-        <b-form-checkbox id="checkbox1"
+        <b-form-checkbox v-if="allowAutoNext" id="checkbox1"
           :checked="autoNext"
           @change="changeAutoNext"
           value="1"
@@ -34,7 +34,8 @@ export default {
   computed: {
     ...mapGetters({
       autoNext: 'quiz/autoNext',
-      locales: 'config/locales'
+      locales: 'config/locales',
+      allowAutoNext: 'config/show_autonext_button'
     })
   },
   methods: {

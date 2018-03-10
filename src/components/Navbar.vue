@@ -2,7 +2,7 @@
   <b-navbar fixed="top" toggleable="md" type="dark" variant="info">
     <div class="container d-flex justify-content-between">
       <b-navbar-brand :to="{ name: 'home' }" href="#">Protein Screener</b-navbar-brand>
-      <b-nav-text>
+      <b-nav-text v-if="debug">
         PP: {{ predprob | decimal }}
       </b-nav-text>
 
@@ -38,7 +38,8 @@ export default {
   computed: {
     ...mapGetters({
       predprob: 'quiz/predprob',
-      locales: 'config/locales'
+      locales: 'config/locales',
+      debug: 'config/debug'
     })
   }
 }
