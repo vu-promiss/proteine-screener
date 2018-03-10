@@ -9,7 +9,12 @@
       </b-col>
 
       <b-col cols="12" class="text-center">
-        <router-link class="btn btn-secondary btn-lg" :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}</router-link>
+        <router-link 
+          class="btn 
+          btn-info 
+          btn-lg" 
+          :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}
+        </router-link>
       </b-col>
       <b-col cols="12" class="text-center">
         <b-form-checkbox v-if="allowAutoNext" id="checkbox1"
