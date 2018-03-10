@@ -11,7 +11,11 @@
             <b-btn v-b-modal.modal1>Show recoded values</b-btn>
           </p>
         </b-alert>
-        <b-button size="lg" @click="startOver">{{ $t('nav.start_over') }}</b-button>
+        <b-button 
+          size="lg" 
+          @click="startOver">
+          {{ $t('nav.start_over') }}
+        </b-button>
       </b-col>
     </b-row>
     <b-modal ok-only id="modal1" title="Recoded values">
@@ -43,6 +47,7 @@ export default {
       this.$store.commit('quiz/resetAnswers')
       this.$store.commit('quiz/setQuestionNumber', 1)
       this.$store.commit('quiz/updateCurrentQuestion')
+      this.$router.push({ name: 'home' })
     }
   }
 }
