@@ -6,4 +6,4 @@ export const cutoff = (state) => state.config.cutoff
 
 export const debug = (state) => state.config.debug
 
-export const show_autonext_button = (state) => state.config.show_autonext_button
+export const showAutonextButton = (state) => state.config.showAutonextButton

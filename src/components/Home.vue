@@ -40,7 +40,7 @@ export default {
     ...mapGetters({
       autoNext: 'quiz/autoNext',
       locales: 'config/locales',
-      allowAutoNext: 'config/show_autonext_button'
+      allowAutoNext: 'config/showAutonextButton'
     })
   },
   methods: {

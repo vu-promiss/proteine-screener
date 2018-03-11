@@ -10,7 +10,7 @@
           :invalid-feedback="$t('age.invalid')"
           :state="validAge">
         <b-input-group size="lg" :append="$t('age.append')">
-          <b-form-input 
+          <b-form-input
               pattern="[0-9]*"
               id="ageInput"
               :placeholder="$t('age.placeholder')"
