@@ -3,16 +3,16 @@
     <b-row align-h="center">
       <b-col cols="12" md="6" class="text-center">
         <b-alert show >
-          Predicted Probability: 
-          <h1>{{ predprob | decimal }}</h1>
+          Predicted Probability:
+          <h1>{{ predprob * 100 | integer }}%</h1>
           <p v-if="predprob < cutoff"> {{ $t("sufficient_protein_intake") }} </p>
           <p v-else> {{ $t("low_protein_intake") }} </p>
           <p v-if="debug">
             <b-btn v-b-modal.modal1>Show recoded values</b-btn>
           </p>
         </b-alert>
-        <b-button 
-          size="lg" 
+        <b-button
+          size="lg"
           @click="startOver">
           {{ $t('nav.start_over') }}
         </b-button>

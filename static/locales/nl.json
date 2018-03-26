@@ -1,17 +1,10 @@
 {
-  "content": "Welkom bij de Eiwit Screener (Pro55+)
-  
-De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage eiwit inname (<1.0 gram /kilogram lichaamsgewicht/dag) voor ouderen te berekenen. De Eiwit Screener (Pro55+) is ontwikkeld door de Vrije Universiteit Amsterdam.
-
-De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna u direct de uitslag ontvangt. De uitslag wordt uitgedrukt als de kans op een lage eiwitinname (0-100%). Een kans van meer dan 30% beschouwen wij als een hoog risico op een lage eiwit inname. 
-
-Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke eiwitinname, dient een volledige voedingsanamnese gedaan te worden door bijvoorbeeld een diëtist.
-
-Meer informatie over de ontwikkeling en validatie van de Eiwit Screener (Pro55+) vindt u hier ",
   "home": {
     "button": {
       "title": "Naar de screener"
-    }
+    },
+    "title": "Welkom bij de eiwit screener (Pro55+)",
+    "text": "De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage eiwit inname (<1.0 gram /kilogram lichaamsgewicht/dag) voor ouderen te berekenen. De Eiwit Screener (Pro55+) is ontwikkeld door de Vrije Universiteit Amsterdam. De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna u direct de uitslag ontvangt. De uitslag wordt uitgedrukt als de kans op een lage eiwitinname (0-100%). Een kans van meer dan 30% beschouwen wij als een hoog risico op een lage eiwit inname. Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke eiwitinname, dient een volledige voedingsanamnese gedaan te worden door bijvoorbeeld een diëtist. Meer informatie over de ontwikkeling en validatie van de Eiwit Screener (Pro55+) vindt u hier."
   },
   "nav": {
     "continue": "Ga door",
