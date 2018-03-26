@@ -1,15 +1,15 @@
 <template>
   <b-container class="home">
     <b-row class="pt-2">
-      <b-col cols="12" md="6">
+      <b-col cols="12" md="4">
         <img class="img-fluid" src="../assets/logo_promiss.png" />
       </b-col>
-      <b-col cols="12" md="6">
+      <b-col cols="12" md="8">
         <h2>{{ $t('home.title') }}</h2>
-        <p>{{ $t('home.text') }}</p>
-      </b-col>
-
-      <b-col cols="12" class="text-center">
+        <p>{{ $t('home.paragraph1') }}</p>
+        <p>{{ $t('home.paragraph2') }}</p>
+        <p>{{ $t('home.paragraph3') }}</p>
+        <p class="d-none">{{ $t('home.paragraph4') }}</p>
         <router-link
           class="btn
           btn-info

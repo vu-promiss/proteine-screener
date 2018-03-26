@@ -4,7 +4,10 @@
             "title": "To the screener"
         },
         "title": "Welcome to the Protein Screener (Pro55+)",
-        "text": "The Protein Screener (Pro55+) is a short (10 food items) questionnaire that estimates the chance on a low protein intake (<1.0 gram /per kilogram body weight/day) for older adults. The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands). You can use the Protein Screener (Pro55+) here for free. After completing the questions, you will immediately see the chance (0-100%) on a low protein intake. We consider a chance of more than 30% as a high risk on a low protein intake. To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian. You can find more information on the development and validation of the Protein screener (Pro55+) here"
+        "paragraph1": "The Protein Screener (Pro55+) is a short (10 food items) questionnaire that estimates the chance on a low protein intake (<1.0 gram /per kilogram body weight/day) for older adults. The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands).",
+        "paragraph2": "You can use the Protein Screener (Pro55+) here for free. After completing the questions, you will immediately see the chance (0-100%) on a low protein intake. We consider a chance of more than 30% as a high risk on a low protein intake.",
+        "paragraph3": "To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian.",
+        "paragraph4": "You can find more information on the development and validation of the Protein screener (Pro55+) here: %s"
     },
     "nav": {
       "continue": "Continue",

@@ -3,8 +3,11 @@
     "button": {
       "title": "Naar de screener"
     },
-    "title": "Welkom bij de eiwit screener (Pro55+)",
-    "text": "De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage eiwit inname (<1.0 gram /kilogram lichaamsgewicht/dag) voor ouderen te berekenen. De Eiwit Screener (Pro55+) is ontwikkeld door de Vrije Universiteit Amsterdam. De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna u direct de uitslag ontvangt. De uitslag wordt uitgedrukt als de kans op een lage eiwitinname (0-100%). Een kans van meer dan 30% beschouwen wij als een hoog risico op een lage eiwit inname. Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke eiwitinname, dient een volledige voedingsanamnese gedaan te worden door bijvoorbeeld een diëtist. Meer informatie over de ontwikkeling en validatie van de Eiwit Screener (Pro55+) vindt u hier."
+    "title": "Welkom bij de Eiwit Screener (Pro55+)",
+    "paragraph1": "De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage eiwit inname (<1.0 gram /kilogram lichaamsgewicht/dag) voor ouderen te berekenen. De Eiwit Screener (Pro55+) is ontwikkeld door de Vrije Universiteit Amsterdam.",
+    "paragraph2": "De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna u direct de uitslag ontvangt. De uitslag wordt uitgedrukt als de kans op een lage eiwitinname (0-100%). Een kans van meer dan 30% beschouwen wij als een hoog risico op een lage eiwit inname.",
+    "paragraph3": "Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke eiwitinname, dient een volledige voedingsanamnese gedaan te worden door bijvoorbeeld een diëtist.",
+    "paragraph4": "Meer informatie over de ontwikkeling en validatie van de Eiwit Screener (Pro55+) vindt u hier: %s"
   },
   "nav": {
     "continue": "Ga door",
@@ -14,6 +17,9 @@
   },
   "intro": {
     "text": "De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie ging of ziek werd."
+  },
+  "bmi1": {
+    "text": "Please enter your body measurements."
   },
   "info1": {
     "text": "In de volgende vragen vragen we u hoeveel van een voedingsproduct u heeft gegeten"
@@ -62,5 +68,23 @@
   "one_in_four_weeks": "1 dag per 4 weken",
   "two_three_in_four_weeks": "2-3 dagen per 4 weken",
   "day_week": "{count} dag per week ::: {count} dagen per week",
-  "question_number": "Vraag {number}"
+  "question_number": "Vraag {number}",
+  "age": {
+    "label": "Age",
+    "placeholder": "Please enter your age.",
+    "invalid": "Please enter a valid age.",
+    "append": "year"
+  },
+  "weight": {
+    "label": "Weight",
+    "placeholder": "Please enter your weight in kilograms.",
+    "invalid": "Please enter a valid weight.",
+    "append": "kg"
+  },
+  "length": {
+    "label": "Length",
+    "placeholder": "Please enter your length in centimeters.",
+    "invalid": "Please enter a valid length.",
+    "append": "cm"
+  }
 }

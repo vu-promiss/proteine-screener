@@ -4,8 +4,10 @@
       "title": "Siirry sovellukseen"
     },
     "title": "Tervetuloa tekemään proteiinikyselyä",
-    "text": "The Protein Screener (Pro55+) is a short (10 food items) questionnaire that estimates the chance on a low protein intake (<1.0 gram /per kilogram body weight/day) for older adults. The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands). You can use the Protein Screener (Pro55+) here for free. After completing the questions, you will immediately see the chance (0-100%) on a low protein intake. We consider a chance of more than 30% as a high risk on a low protein intake. To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian. You can find more information on the development and validation of the Protein screener (Pro55+) here"
-
+    "paragraph1": "The Protein Screener (Pro55+) is a short (10 food items) questionnaire that estimates the chance on a low protein intake (<1.0 gram /per kilogram body weight/day) for older adults. The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands).",
+    "paragraph2": "You can use the Protein Screener (Pro55+) here for free. After completing the questions, you will immediately see the chance (0-100%) on a low protein intake. We consider a chance of more than 30% as a high risk on a low protein intake.",
+    "paragraph3": "To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian.",
+    "paragraph4": "You can find more information on the development and validation of the Protein screener (Pro55+) here: %s"
   },
   "nav": {
     "continue": "Jatka",
@@ -15,6 +17,9 @@
   },
   "intro": {
     "text": "De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie ging of ziek werd."
+  },
+  "bmi1": {
+    "text": "Please enter your body measurements."
   },
   "info1": {
     "text": "Seuraavissa kysymyksissä kysytään, kuinka paljon söit kysymyksissä mainittuja ruokia"
@@ -63,5 +68,23 @@
   "one_in_four_weeks": "1 päivä 4 viikossa",
   "two_three_in_four_weeks": "2-3 päivää 4 viikon kuluessa",
   "day_week": "{count} päivä / viikko ::: {count} päivää / viikko",
-  "question_number": "Kysymys {number}"
+  "question_number": "Kysymys {number}",
+  "age": {
+    "label": "Age",
+    "placeholder": "Please enter your age.",
+    "invalid": "Please enter a valid age.",
+    "append": "year"
+  },
+  "weight": {
+    "label": "Weight",
+    "placeholder": "Please enter your weight in kilograms.",
+    "invalid": "Please enter a valid weight.",
+    "append": "kg"
+  },
+  "length": {
+    "label": "Length",
+    "placeholder": "Please enter your length in centimeters.",
+    "invalid": "Please enter a valid length.",
+    "append": "cm"
+  }
 }
