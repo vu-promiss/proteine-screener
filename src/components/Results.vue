@@ -5,8 +5,7 @@
         <b-alert show >
           Predicted Probability:
           <h1>{{ predprob * 100 | integer }}%</h1>
-          <p v-if="predprob < cutoff"> {{ $t("sufficient_protein_intake") }} </p>
-          <p v-else> {{ $t("low_protein_intake") }} </p>
+          <p class="d-none">{{ $t("result_explanation") }}</p>
           <p v-if="debug">
             <b-btn v-b-modal.modal1>Show recoded values</b-btn>
           </p>

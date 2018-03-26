@@ -7,7 +7,7 @@
       <b-col cols="12" md="8">
         <h2>{{ $t('home.title') }}</h2>
         <p>{{ $t('home.paragraph1') }}</p>
-        <p>{{ $t('home.paragraph2') }}</p>
+        <p>{{ $t('home.paragraph2', {cutoff: cutoffPercentage}) }}</p>
         <p>{{ $t('home.paragraph3') }}</p>
         <p class="d-none">{{ $t('home.paragraph4') }}</p>
         <router-link
@@ -41,6 +41,7 @@ export default {
     ...mapGetters({
       autoNext: 'quiz/autoNext',
       locales: 'config/locales',
+      cutoffPercentage: 'config/cutoffPercentage',
       allowAutoNext: 'config/showAutonextButton'
     })
   },
