@@ -1,5 +1,14 @@
 {
-    "content": "Welcome to the protein screener",
+    "content": "Welcome to the Protein Screener (Pro55+)
+  
+The Protein Screener (Pro55+) is a short (10 food items) questionnaire that estimates the chance on a low protein intake (<1.0 gram /per kilogram body weight/day) for older adults. The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands).
+
+You can use the Protein Screener (Pro55+) here for free. After completing the questions, you will immediately see the chance (0-100%) on a low protein intake. We consider a chance of more than 30% as a high risk on a low protein intake. 
+
+To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian. 
+
+You can find more information on the development and validation of the Protein screener (Pro55+) here 
+",
     "home": {
         "button": {
             "title": "To the screener"
@@ -27,7 +36,7 @@
       "text": "In the last 4 weeks, how many glasses/cups of milk, buttermilk or soy milk did you drink on an average day?"
     },
     "N34b": {
-      "text": "How much meat did you on average eat on 1 day that you ate meat with your warm meal in the last 4 weeks?"
+      "text": "How much meat did you on average eat on a day that you ate meat with your warm meal in the last 4 weeks?"
     },
     "frequency1": {
       "text": "In the following questions, we will ask how often you ate a certain product"
