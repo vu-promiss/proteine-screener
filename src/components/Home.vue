@@ -5,14 +5,15 @@
         <img class="img-fluid" src="../assets/logo_promiss.png" />
       </b-col>
       <b-col cols="12" md="6">
-        <p>{{ $t('content') }}</p>
+        <h2>{{ $t('home.title') }}</h2>
+        <p>{{ $t('home.text') }}</p>
       </b-col>
 
       <b-col cols="12" class="text-center">
-        <router-link 
-          class="btn 
-          btn-info 
-          btn-lg" 
+        <router-link
+          class="btn
+          btn-info
+          btn-lg"
           :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}
         </router-link>
       </b-col>
@@ -50,4 +51,3 @@ export default {
   }
 }
 </script>
-
