@@ -1,9 +1,6 @@
 <template>
   <b-container class="home">
     <b-row class="pt-2">
-      <b-col cols="12" md="4">
-        <img class="img-fluid" src="../assets/logo_promiss.png" />
-      </b-col>
       <b-col cols="12" md="8">
         <h2>{{ $t('home.title') }}</h2>
         <p>{{ $t('home.paragraph1') }}</p>
@@ -17,6 +14,9 @@
           :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}
         </router-link>
       </b-col>
+      <b-col cols="12" md="4" class="d-none d-md-block">
+        <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
+      </b-col>
       <b-col cols="12" class="text-center">
         <b-form-checkbox v-if="allowAutoNext" id="checkbox1"
           :checked="autoNext"
@@ -27,7 +27,17 @@
         </b-form-checkbox>
       </b-col>
     </b-row>
-    <b-row>
+    <b-row class="pt-2">
+      <b-col cols="12" md="8">
+        <b-row>
+          <b-col cols="6">
+              <img class="img-fluid" src="../assets/VUlogo.svg" />
+          </b-col>
+          <b-col cols="6">
+              <img class="img-fluid" src="../assets/promiss_logo.svg" />
+          </b-col>
+        </b-row>
+      </b-col>
     </b-row>
   </b-container>
 </template>
