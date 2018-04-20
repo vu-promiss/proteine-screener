@@ -57,7 +57,7 @@
   "N08b_0": {
     "text": "Hoeveel sneden brood/crackers/bolletjes etc. met kaas of smeerkaas heeft u in de afgelopen 4 weken gemiddeld per dag gegeten?"
   },
-  "less_than_one": "Minder dan één",
+  "less_than_one": "Minder dan één of niet van toepassing",
   "slice": "{count} snee ::: {count} sneden",
   "more_than_slices": "> {count} snee ::: > {count} sneden",
   "glass": "{count} glas ::: {count} glazen",
@@ -71,21 +71,21 @@
   "question_number": "Vraag {number}",
   "result_explanation": "Some explanation about the results.",
   "age": {
-    "label": "Age",
-    "placeholder": "Please enter your age.",
-    "invalid": "Please enter a valid age.",
-    "append": "year"
+    "label": "Leeftijd",
+    "placeholder": "Wat is uw leeftijd?",
+    "invalid": "Dit is geen valide antwoord.",
+    "append": "jaar"
   },
   "weight": {
-    "label": "Weight",
-    "placeholder": "Please enter your weight in kilograms.",
-    "invalid": "Please enter a valid weight.",
+    "label": "Gewicht",
+    "placeholder": "Wat is uw gewicht in kilogram?",
+    "invalid": "Dit is geen valide antwoord.",
     "append": "kg"
   },
   "length": {
-    "label": "Length",
-    "placeholder": "Please enter your length in centimeters.",
-    "invalid": "Please enter a valid length.",
+    "label": "Lengte",
+    "placeholder": "Wat is uw lengte in centimeters",
+    "invalid": "Dit is geen valide antwoord.",
     "append": "cm"
   }
 }
