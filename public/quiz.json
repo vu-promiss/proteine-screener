@@ -23,13 +23,13 @@
             "answers": "glasses"
         },
         {
-            "id": "frequency1",
-            "type": "info"
-        },
-        {
             "id": "N34b",
             "type": "question",
             "answers": "meat"
+        },
+        {
+            "id": "frequency1",
+            "type": "info"
         },
         {
             "id": "N18a_0",
