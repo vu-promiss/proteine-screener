@@ -57,7 +57,7 @@
     "N08b_0": {
       "text": "How many slices of bread, bun, rusk, cracker, etc. with cheese or cheese spread did you on average eat on a day that you ate cheese or cheese spread?"
     },
-    "less_than_one": "Less than one",
+    "less_than_one": "Less than one or not applicable",
     "slice": "{count} slice ::: {count} slices",
     "more_than_slices": "> {count} slice ::: > {count} slices",
     "glass": "{count} glass ::: {count} glasses",
