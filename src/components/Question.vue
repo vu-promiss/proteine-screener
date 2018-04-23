@@ -64,7 +64,7 @@
           return {
             text: this.$t(obj.text, {count: obj.count, fraction: obj.fraction}, obj.count),
             value: obj.id,
-            picture: obj.picture ? 'static/img/' + obj.picture + '.png' : null
+            picture: obj.picture ? 'static/img/' + obj.picture + '.jpg' : null
           }
         })
       }
