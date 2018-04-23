@@ -1,11 +1,11 @@
 <?php
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+  return 'Protein Screener Backend';
 });
 
 //$router->get('/results', 'ResultsController@store');
 
 
-$router->post('/api/results', 'ResultsController@store');
-$router->get('/api/export', 'ResultsController@export');
+$router->post('/store-results', 'ResultsController@store');
+$router->get('/export', 'ResultsController@export');
