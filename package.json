@@ -24,6 +24,7 @@
     "bootstrap-vue": "^2.0.0-rc.0",
     "es6-promise": "^4.2.4",
     "es6-promise-promise": "^1.0.0",
+    "npm": "^5.8.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.8.0"
