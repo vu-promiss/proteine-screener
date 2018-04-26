@@ -20,3 +20,5 @@ vendor
 *.sln
 
 static/config.json
+
+public/config.json
