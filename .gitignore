@@ -18,3 +18,5 @@ vendor
 *.ntvs*
 *.njsproj
 *.sln
+
+static/config.json

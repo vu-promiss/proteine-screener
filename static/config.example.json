@@ -1,0 +1,11 @@
+{
+  "locales": [
+    "en",
+    "nl",
+    "fi"
+  ],
+  "cutoff": 0.3,
+  "showAutonextButton": false,
+  "debug": false,
+  "apiBaseUrl": "http://localhost:8888/api/"
+}
