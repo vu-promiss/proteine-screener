@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const getQuestions = ({ commit }) => {
-  return axios.get('static/quiz.json').then((response) => {
+  return axios.get('quiz.json').then((response) => {
     // assemble questions
     let counter = 1
     let questions = response.data.questions.map((obj) => {

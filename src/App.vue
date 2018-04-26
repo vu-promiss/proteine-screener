@@ -28,7 +28,7 @@
         let config = this.$store.getters['config/config']
         let loadedLocales = []
         config.locales.forEach((locale) => {
-          loadedLocales.push(axios.get('static/locales/' + locale + '.json').then((response) => {
+          loadedLocales.push(axios.get('locales/' + locale + '.json').then((response) => {
             this.$i18n.add(locale, response.data)
           }))
         })
