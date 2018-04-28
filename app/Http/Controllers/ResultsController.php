@@ -24,22 +24,26 @@ class ResultsController extends Controller
     public function store(Request $request, Result $result){
       
       // dd($result);
-      
-      if ($request->has('name')) {
-          $result->answers = $request->input('name');
-          $result->save();
+      if (!$request->has('answers')) {
+          return response()->json(['error' => 'Data incomplete'], 400);
       }
+      
+      if (!$request->has('unique_id')) {
+          return response()->json(['error' => 'Unique_id missing'], 400);
+      }
+      
+      if (!$result = $result->where('unique_id', $request->unique_id)->first()){
+        return response()->json(['error' => 'Unique_id not found'], 400);
+      }
+
+      $result->answers = json_encode($request->answers);
+      $result->save();
     }
-    
-    public function get(Result $result)
-    {
-       dd($result->all());
-    }
-    
+  
     public function export(Result $result)
     {
         $result = $result->all();
-        $this->createCsv($result, 'results');
+        $this->createCsv($result, 'proteinScreenerResults');
     }
     
     /**
@@ -56,7 +60,11 @@ class ResultsController extends Controller
         //$csv->insertOne(Schema::getColumnListing($tableName));
 
         foreach ($modelCollection as $data){
-            $csv->insertOne($data->toArray());
+          $row = $data->toArray();
+          $answers = json_decode($row['answers']);
+          if(is_object($answers)){
+            $csv->insertOne( (array) $answers);
+          }
         }
 
         $csv->output($tableName . '.csv');

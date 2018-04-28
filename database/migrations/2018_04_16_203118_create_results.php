@@ -15,9 +15,11 @@ class CreateResults extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('unique_id');
+            $table->string('reg_id');
             $table->json('answers');
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

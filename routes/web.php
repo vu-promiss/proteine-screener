@@ -6,6 +6,6 @@ $router->get('/', function () use ($router) {
 
 //$router->get('/results', 'ResultsController@store');
 
-
+$router->post('/init-quiz', 'QuizController@init');
 $router->post('/store-results', 'ResultsController@store');
 $router->get('/export', 'ResultsController@export');
