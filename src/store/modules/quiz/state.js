@@ -1,5 +1,5 @@
 export default {
-  unique_id,
+  unique_id: '',
   questions: [],
   age: '',
   weight: '',
