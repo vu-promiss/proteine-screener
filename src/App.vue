@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" v-if="configLoaded">
     <navbar></navbar>
       <transition name="component-fade" mode="out-in">
           <router-view/>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
   import axios from 'axios'
   import Navbar from './components/Navbar'
 
@@ -16,6 +16,11 @@
     name: 'app',
     components: {
       Navbar
+    },
+    computed: {
+      ...mapGetters({
+        configLoaded: 'config/configLoaded'
+      })
     },
     methods: {
       ...mapActions({
