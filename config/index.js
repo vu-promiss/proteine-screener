@@ -10,7 +10,28 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:8800',
+        changeOrigin: true
+      },
+      '/icons': {
+        target: 'http://localhost:8800',
+        changeOrigin: true
+      },
+      '/locales': {
+        target: 'http://localhost:8800',
+        changeOrigin: true
+      },
+      '/config.json': {
+        target: 'http://localhost:8800/config.json',
+        changeOrigin: true
+      },
+      '/quiz.json': {
+        target: 'http://localhost:8800/quiz.json',
+        changeOrigin: true
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
