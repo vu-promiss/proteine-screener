@@ -25,13 +25,27 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import axios from 'axios'
 
 export default {
+  mounted () {
+    // send results to api
+    axios.post(this.storeResultsEndpoint, {
+      answers: this.answers
+    })
+    .then(function (response) {
+      // console.log(response)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+  },
   computed: {
     ...mapGetters({
       predprob: 'quiz/predprob',
       debug: 'config/debug',
       cutoff: 'config/cutoff',
+      storeResultsEndpoint: 'config/storeResultsEndpoint',
       answers: 'quiz/answers',
       recodedAnswers: 'quiz/recodedAnswers'
     }),
