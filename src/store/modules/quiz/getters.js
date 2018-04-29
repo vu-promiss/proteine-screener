@@ -1,4 +1,7 @@
 /* eslint camelcase: "off" */
+
+export const unique_id = (state) => state.unique_id
+
 export const questions = (state) => state.questions
 
 export const age = (state) => state.age

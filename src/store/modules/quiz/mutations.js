@@ -1,5 +1,7 @@
 import Vue from 'vue'
 
+export const setUniqueId = (state, val) => { state.unique_id = val }
+
 export const setQuestions = (state, questions) => {
   state.questions = questions
   // this.updateCurrentQuestion()
