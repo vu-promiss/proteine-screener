@@ -20,6 +20,14 @@ export const getQuestions = ({ commit }) => {
   })
 }
 
+export const initQuiz = ({ commit, rootGetters }) => {
+  return axios.post(rootGetters['config/initQuizEndpoint']).then((response) => {
+    if(response.data.unique_id){
+      commit('setUniqueId', response.data.unique_id)
+    }
+  })
+}
+
 export const nextQuestion = ({ commit, state }) => {
   commit('setQuestionNumber', state.currentQuestionNumber + 1)
   setTimeout(() => {

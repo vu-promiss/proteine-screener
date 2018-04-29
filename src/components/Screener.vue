@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
   import Question from './Question'
   import Results from './Results'
   import QuizNavigation from './QuizNavigation'
@@ -38,6 +38,9 @@
 
   export default {
     name: 'screener',
+    mounted () {
+      this.initQuiz()
+    },
     components: {
       Question,
       QuizNavigation,
@@ -55,6 +58,9 @@
       })
     },
     methods: {
+      ...mapActions({
+        initQuiz: 'quiz/initQuiz'
+      }),
       scrollup () {
         this.$scrollTo('body')
       }
