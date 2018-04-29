@@ -59,13 +59,16 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
-// ]);
-
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
+
+// Only run CORS plugin on development
+if ($app->environment('local')) {
+    $app->middleware([
+       palanik\lumen\Middleware\LumenCors::class
+    ]);
+}
 
 /*
 |--------------------------------------------------------------------------
