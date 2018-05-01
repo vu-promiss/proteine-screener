@@ -23,6 +23,10 @@ module.exports = {
         target: 'http://localhost:8800',
         changeOrigin: true
       },
+      '/img': {
+        target: 'http://localhost:8800',
+        changeOrigin: true
+      },
       '/config.json': {
         target: 'http://localhost:8800/config.json',
         changeOrigin: true
