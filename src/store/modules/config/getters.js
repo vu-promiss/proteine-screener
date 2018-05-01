@@ -15,3 +15,5 @@ export const showAutonextButton = (state) => state.config.showAutonextButton
 export const storeResultsEndpoint = (state) => state.config.apiBaseUrl + 'store-results'
 
 export const initQuizEndpoint = (state) => state.config.apiBaseUrl + 'init-quiz'
+
+export const statsEndpoint = (state) => state.config.apiBaseUrl + 'stats'

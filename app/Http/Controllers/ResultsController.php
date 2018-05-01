@@ -46,6 +46,16 @@ class ResultsController extends Controller
         $this->createCsv($result, 'proteinScreenerResults');
     }
     
+    public function stats(Result $result)
+    {
+        $completedCount = $result->where('answers', 'NOT LIKE', 'null')->count();
+        $incompleteCount = $result->where('answers', 'LIKE', 'null')->count();
+        return response()->json([
+          'completed' => $completedCount,
+          'incomplete' => $incompleteCount,
+        ]);
+    }
+    
     /**
     * A function to generate a CSV for a given model collection.
     *
@@ -55,14 +65,21 @@ class ResultsController extends Controller
     private function createCsv(Collection $modelCollection, $tableName){
 
         $csv = Writer::createFromFileObject(new SplTempFileObject());
-
-        // This creates header columns in the CSV file - probably not needed in some cases.
-        //$csv->insertOne(Schema::getColumnListing($tableName));
-
+        
+        $header = false;
         foreach ($modelCollection as $data){
           $row = $data->toArray();
           $answers = json_decode($row['answers']);
-          if(is_object($answers)){
+          if (is_object($answers)) {
+            // Add additional Data
+            $answers->start = $row['created_at'];
+            $answers->finish = $row['updated_at'];
+            $answers->unique_id = $row['unique_id'];
+            $answers->reg_id = $row['reg_id'];
+            
+            if (!$header) {
+              $header = $csv->insertOne( array_keys( (array) $answers));
+            }
             $csv->insertOne( (array) $answers);
           }
         }

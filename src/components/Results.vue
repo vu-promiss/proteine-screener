@@ -31,6 +31,7 @@ export default {
   mounted () {
     // send results to api
     axios.post(this.storeResultsEndpoint, {
+      unique_id: this.unique_id,
       answers: this.answers
     })
     .then(function (response) {
@@ -46,6 +47,7 @@ export default {
       debug: 'config/debug',
       cutoff: 'config/cutoff',
       storeResultsEndpoint: 'config/storeResultsEndpoint',
+      unique_id: 'quiz/unique_id',
       answers: 'quiz/answers',
       recodedAnswers: 'quiz/recodedAnswers'
     }),

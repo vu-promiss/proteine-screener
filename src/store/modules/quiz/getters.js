@@ -4,25 +4,25 @@ export const unique_id = (state) => state.unique_id
 
 export const questions = (state) => state.questions
 
-export const age = (state) => state.age
+export const age = (state) => state.answers.age
 
 export const validAge = (state) => {
-  if (state.age === '') return null
-  return state.age >= 1 && state.age < 130
+  if (state.answers.age === '') return null
+  return state.answers.age >= 1 && state.answers.age < 130
 }
 
-export const length = (state) => state.length
+export const length = (state) => state.answers.length
 
 export const validLength = (state) => {
-  if (state.length === '') return null
-  return state.length >= 30 && state.length < 300
+  if (state.answers.length === '') return null
+  return state.answers.length >= 30 && state.answers.length < 300
 }
 
-export const weight = (state) => state.weight
+export const weight = (state) => state.answers.weight
 
 export const validWeight = (state) => {
-  if (state.weight === '') return null
-  return state.weight >= 3 && state.weight < 400
+  if (state.answers.weight === '') return null
+  return state.answers.weight >= 3 && state.answers.weight < 400
 }
 
 export const validBmi = (state, getters) => getters.validAge && getters.validWeight && getters.validLength
@@ -140,22 +140,22 @@ export const predprob = (state, getters) => {
   // Shrinkage Factor
   let shrinkage_factor = 0.92
   let bmi
-  let height_m = state.length / 100.0
-  let weight_adj = state.weight
+  let height_m = state.answers.length / 100.0
+  let weight_adj = state.answers.weight
 
   // Initialize variables
   let r = getters.recodedAnswers
 
   // berekenen bmi
-  bmi = state.weight / (height_m * height_m)
+  bmi = state.answers.weight / (height_m * height_m)
 
   // berekenen weight_adj
-  if (bmi < 18.5 && state.age < 71) weight_adj = (height_m) * (height_m) * 18.5
-  if (bmi > 25.0 && state.age < 71) weight_adj = (height_m) * (height_m) * 25
-  // if (bmi >= 18.5 && bmi <= 25 && state.age < 71) weight_adj = state.weight
-  if (bmi < 22.0 & state.age >= 71) weight_adj = (height_m) * (height_m) * 22
-  if (bmi > 27.0 & state.age >= 71) weight_adj = (height_m) * (height_m) * 27
-  // if (bmi >= 22.0 & bmi <= 27.0 & state.age >= 71) weight_adj = state.weight
+  if (bmi < 18.5 && state.answers.age < 71) weight_adj = (height_m) * (height_m) * 18.5
+  if (bmi > 25.0 && state.answers.age < 71) weight_adj = (height_m) * (height_m) * 25
+  // if (bmi >= 18.5 && bmi <= 25 && state.answers.age < 71) weight_adj = state.answers.weight
+  if (bmi < 22.0 & state.answers.age >= 71) weight_adj = (height_m) * (height_m) * 22
+  if (bmi > 27.0 & state.answers.age >= 71) weight_adj = (height_m) * (height_m) * 27
+  // if (bmi >= 22.0 & bmi <= 27.0 & state.answers.age >= 71) weight_adj = state.answers.weight
 
   let z = shrinkage_factor * 19.361 +
       0.106 * shrinkage_factor * weight_adj -

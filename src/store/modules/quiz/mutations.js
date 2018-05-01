@@ -7,11 +7,11 @@ export const setQuestions = (state, questions) => {
   // this.updateCurrentQuestion()
 }
 
-export const setAge = (state, val) => { state.age = val }
+export const setAge = (state, val) => { state.answers.age = val }
 
-export const setWeight = (state, val) => { state.weight = val }
+export const setWeight = (state, val) => { state.answers.weight = val }
 
-export const setLength = (state, val) => { state.length = val }
+export const setLength = (state, val) => { state.answers.length = val }
 
 export const setQuestionNumber = (state, questionNumber) => {
   state.currentQuestionNumber = questionNumber
@@ -26,10 +26,11 @@ export const setAnswer = (state, {questionId, answer}) => {
 }
 
 export const resetAnswers = (state) => {
-  state.answers = []
-  state.age = ''
-  state.weight = ''
-  state.length = ''
+  state.answers = {
+    age: '',
+    weight: '',
+    length: ''
+  }
 }
 
 export const setAutoNext = (state, val) => { state.autoNext = val }
