@@ -37,5 +37,5 @@ Install the dependencies:
 composer install --no-dev --no-suggest --optimize-autoloader
 ```
 
-When all installations have completed, continue with the [configuration](Configuration.md)
+When all installations have completed, continue with the [Configuration](Configuration.md)
 
