@@ -22,3 +22,5 @@ vendor
 static/config.json
 
 public/config.json
+
+.env
