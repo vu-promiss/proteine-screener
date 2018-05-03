@@ -29,6 +29,8 @@
       })
     },
     mounted () {
+      let browserLocale = navigator.language.split('-')[0]
+
       this.getConfig().then(() => {
         let config = this.$store.getters['config/config']
         let loadedLocales = []
@@ -37,10 +39,13 @@
             this.$i18n.add(locale, response.data)
           }))
         })
+        if (config.locales.includes(browserLocale)) {
+          this.$i18n.set(browserLocale)
+        } else {
+          this.$i18n.set('en')
+        }
         this.getQuestions()
       })
-      // fixme: make dynamic
-      this.$i18n.set('en')
     }
   }
 </script>
