@@ -24,3 +24,5 @@ static/config.json
 public/config.json
 
 .env
+
+database/database.sqlite
