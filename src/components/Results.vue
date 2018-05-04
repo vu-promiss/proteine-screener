@@ -48,6 +48,7 @@ export default {
       cutoff: 'config/cutoff',
       storeResultsEndpoint: 'config/storeResultsEndpoint',
       unique_id: 'quiz/unique_id',
+      reg_id: 'quiz/reg_id',
       answers: 'quiz/answers',
       recodedAnswers: 'quiz/recodedAnswers'
     }),

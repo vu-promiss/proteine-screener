@@ -21,7 +21,7 @@ export default new Router({
     },
     {
       path: '/register/:reg_number',
-      name: 'screener',
+      name: 'register',
       component: Screener
     },
     {

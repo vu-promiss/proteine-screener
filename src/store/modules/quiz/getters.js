@@ -2,6 +2,8 @@
 
 export const unique_id = (state) => state.unique_id
 
+export const reg_id = (state) => state.reg_id
+
 export const questions = (state) => state.questions
 
 export const age = (state) => state.answers.age

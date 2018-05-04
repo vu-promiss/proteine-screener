@@ -1,5 +1,6 @@
 export default {
   unique_id: '',
+  reg_id: '',
   questions: [],
   currentQuestion: null,
   currentQuestionNumber: 0,
