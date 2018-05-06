@@ -32,6 +32,7 @@ export default {
     // send results to api
     axios.post(this.storeResultsEndpoint, {
       unique_id: this.unique_id,
+      reg_id: this.reg_id,
       answers: this.answers
     })
     .then(function (response) {

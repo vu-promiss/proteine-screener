@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Screener from '@/components/Screener'
 import Editor from '@/components/Editor'
+import Register from '@/components/Register'
 import Admin from '@/components/Admin'
 
 Vue.use(Router)
@@ -20,9 +21,10 @@ export default new Router({
       component: Screener
     },
     {
-      path: '/register/:reg_number',
+      path: '/register/:reg_id',
+      props: true,
       name: 'register',
-      component: Screener
+      component: Register
     },
     {
       path: '/editor',

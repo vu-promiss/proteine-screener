@@ -18,11 +18,16 @@ class QuizController extends Controller
     }
     
     public function init(Request $request, Result $result){
-      
+
       if ($request->has('reg_id')) {
-          // todo: check if reg_id is already in db
-          $result->reg_id = $request->reg_id;
+          if ($result->where('reg_id', $request->reg_id)->first()){
+            return response()->json(['error' => 'Session ID already used'], 400);
+          }
+          else{
+            $result->reg_id = $request->reg_id;
+          }
       }
+
       
       // Generate unique_id
       $result->unique_id = md5($_SERVER['REMOTE_ADDR'] . time());

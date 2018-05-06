@@ -35,6 +35,13 @@ class ResultsController extends Controller
       if (!$result = $result->where('unique_id', $request->unique_id)->first()){
         return response()->json(['error' => 'Unique_id not found'], 400);
       }
+      
+      if ($request->has('reg_id')) {
+          if ($result->where('reg_id', $request->reg_id)->first()){
+            return response()->json(['error' => 'Session ID already used'], 400);
+          }
+      }
+
 
       $result->answers = json_encode($request->answers);
       $result->save();
