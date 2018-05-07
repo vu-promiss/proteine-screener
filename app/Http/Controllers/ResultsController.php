@@ -72,6 +72,7 @@ class ResultsController extends Controller
     private function createCsv(Collection $modelCollection, $tableName){
 
         $csv = Writer::createFromFileObject(new SplTempFileObject());
+        $csv->setDelimiter(';');
 
         $header = false;
         foreach ($modelCollection as $data){
@@ -90,7 +91,6 @@ class ResultsController extends Controller
             $csv->insertOne( (array) $answers);
           }
         }
-        $csv->setDelimiter(';');
         $csv->output($tableName . '.csv');
 
     }
