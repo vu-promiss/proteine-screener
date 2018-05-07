@@ -20,22 +20,22 @@ class ResultsController extends Controller
     {
         //
     }
-    
+
     public function store(Request $request, Result $result){
-      
+
       // dd($result);
       if (!$request->has('answers')) {
           return response()->json(['error' => 'Data incomplete'], 400);
       }
-      
+
       if (!$request->has('unique_id')) {
           return response()->json(['error' => 'Unique_id missing'], 400);
       }
-      
+
       if (!$result = $result->where('unique_id', $request->unique_id)->first()){
         return response()->json(['error' => 'Unique_id not found'], 400);
       }
-      
+
       if ($request->has('reg_id')) {
           if ($result->where('reg_id', $request->reg_id)->first()){
             return response()->json(['error' => 'Session ID already used'], 400);
@@ -46,13 +46,13 @@ class ResultsController extends Controller
       $result->answers = json_encode($request->answers);
       $result->save();
     }
-  
+
     public function export(Result $result)
     {
         $result = $result->all();
         $this->createCsv($result, 'proteinScreenerResults');
     }
-    
+
     public function stats(Result $result)
     {
         $completedCount = $result->where('answers', 'NOT LIKE', 'null')->count();
@@ -62,7 +62,7 @@ class ResultsController extends Controller
           'incomplete' => $incompleteCount,
         ]);
     }
-    
+
     /**
     * A function to generate a CSV for a given model collection.
     *
@@ -72,7 +72,7 @@ class ResultsController extends Controller
     private function createCsv(Collection $modelCollection, $tableName){
 
         $csv = Writer::createFromFileObject(new SplTempFileObject());
-        
+
         $header = false;
         foreach ($modelCollection as $data){
           $row = $data->toArray();
@@ -83,14 +83,14 @@ class ResultsController extends Controller
             $answers->finish = $row['updated_at'];
             $answers->unique_id = $row['unique_id'];
             $answers->reg_id = $row['reg_id'];
-            
+
             if (!$header) {
               $header = $csv->insertOne( array_keys( (array) $answers));
             }
             $csv->insertOne( (array) $answers);
           }
         }
-
+        $csv->setDelimiter(';');
         $csv->output($tableName . '.csv');
 
     }
