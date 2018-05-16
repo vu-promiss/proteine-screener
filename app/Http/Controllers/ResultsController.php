@@ -24,15 +24,16 @@ class ResultsController extends Controller
     public function store(Request $request, Result $result){
 
       // dd($result);
-      if (!$request->has('answers')) {
+      if ( ! $request->has('answers')) {
           return response()->json(['error' => 'Data incomplete'], 400);
+          $result->answers = json_encode($request->answers);
       }
 
-      if (!$request->has('unique_id')) {
+      if ( ! $request->has('unique_id')) {
           return response()->json(['error' => 'Unique_id missing'], 400);
       }
 
-      if (!$result = $result->where('unique_id', $request->unique_id)->first()){
+      if ( ! $result = $result->where('unique_id', $request->unique_id)->first()){
         return response()->json(['error' => 'Unique_id not found'], 400);
       }
 
@@ -40,10 +41,13 @@ class ResultsController extends Controller
           if ($result->where('reg_id', $request->reg_id)->first()){
             return response()->json(['error' => 'Session ID already used'], 400);
           }
+          $result->reg_id = $request->reg_id;
+      }
+      
+      if ($request->has('pred_prob')) {
+          $result->pred_prob = floatval($request->pred_prob);
       }
 
-
-      $result->answers = json_encode($request->answers);
       $result->save();
     }
 

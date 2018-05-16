@@ -34,6 +34,7 @@ export default {
     axios.post(this.storeResultsEndpoint, {
       unique_id: this.unique_id,
       reg_id: this.reg_id,
+      pred_prob: this.predprob,
       answers: this.answers
     })
     .then(function (response) {
