@@ -3,9 +3,10 @@
     <b-row align-h="center">
       <b-col cols="12" md="6" class="text-center">
         <b-alert show >
-          Predicted Probability:
+          {{ $t('results.predicted_probability') }}:
           <h1>{{ predprob * 100 | integer }}%</h1>
-          <p class="d-none">{{ $t("result_explanation") }}</p>
+          <p>{{ $t('results.paragraph1', {cutoff: cutoffPercentage}) }}</p>
+          <p>{{ $t('results.paragraph2') }}</p>
           <p v-if="debug">
             <b-btn v-b-modal.modal1>Show recoded values</b-btn>
           </p>

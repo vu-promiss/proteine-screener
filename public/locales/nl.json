@@ -9,6 +9,14 @@
     "paragraph3": "Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke eiwitinname, dient een volledige voedingsanamnese gedaan te worden door bijvoorbeeld een diëtist.",
     "paragraph4": "Meer informatie over de ontwikkeling en validatie van de Eiwit Screener (Pro55+) vindt u hier: {link}"
   },
+  "results": {
+      "predicted_probability": "Predicted Probability",
+      "paragraph1": "We consider a chance of more than {cutoff}% as a high risk on a low protein intake.",
+      "paragraph2": "To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian.",
+  },
+  "session": {
+      "your_id": "Your session ID is: {session_id}"
+  },
   "nav": {
     "continue": "Ga door",
     "next": "Volgende",
