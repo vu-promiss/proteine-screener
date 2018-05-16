@@ -52,6 +52,7 @@ export default {
       unique_id: 'quiz/unique_id',
       reg_id: 'quiz/reg_id',
       answers: 'quiz/answers',
+      cutoffPercentage: 'config/cutoffPercentage',
       recodedAnswers: 'quiz/recodedAnswers'
     }),
     recodedAnswersArray () {

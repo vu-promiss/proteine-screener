@@ -12,7 +12,7 @@
   "results": {
       "predicted_probability": "Predicted Probability",
       "paragraph1": "We consider a chance of more than {cutoff}% as a high risk on a low protein intake.",
-      "paragraph2": "To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian.",
+      "paragraph2": "To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian."
   },
   "session": {
       "your_id": "Your session ID is: {session_id}"
