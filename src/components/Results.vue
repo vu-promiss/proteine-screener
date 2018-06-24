@@ -67,6 +67,7 @@ export default {
       this.$store.commit('quiz/resetAnswers')
       this.$store.commit('quiz/setQuestionNumber', 1)
       this.$store.commit('quiz/updateCurrentQuestion')
+      this.$store.commit('quiz/setRegId', '')
       this.$router.push({ name: 'home' })
     }
   }

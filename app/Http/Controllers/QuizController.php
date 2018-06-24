@@ -19,9 +19,9 @@ class QuizController extends Controller
     
     public function init(Request $request, Result $result){
 
-      if ($request->has('reg_id')) {
+      if ($request->has('reg_id') && ! empty($request->reg_id)) {
           if ($result->where('reg_id', $request->reg_id)->first()){
-            return response()->json(['error' => 'Session ID already used'], 400);
+            return response()->json(['error' => 'session_id_already_used'], 400);
           }
           else{
             $result->reg_id = $request->reg_id;

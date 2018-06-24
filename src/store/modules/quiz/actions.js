@@ -21,10 +21,14 @@ export const getQuestions = ({ commit }) => {
 }
 
 export const initQuiz = ({ commit, rootGetters }) => {
-  return axios.post(rootGetters['config/initQuizEndpoint']).then((response) => {
+  axios.post(rootGetters['config/initQuizEndpoint'], {reg_id: rootGetters['quiz/reg_id']})
+  .then((response) => {
     if (response.data.unique_id) {
       commit('setUniqueId', response.data.unique_id)
     }
+  })
+  .catch((error) => {
+    console.log(error.response)
   })
 }
 
