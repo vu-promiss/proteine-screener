@@ -34,8 +34,7 @@ Prerequisites:
 Install the dependencies:
 
 ```
-composer install --no-dev --no-suggest --optimize-autoloader
+composer install --no-dev --no-suggest
 ```
 
 When all installations have completed, continue with the [Configuration](Configuration.md)
-
