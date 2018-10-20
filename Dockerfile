@@ -32,6 +32,8 @@ WORKDIR $APP_DIR
 
 RUN npm install
 
+RUN npm run build
+
 RUN composer install --no-dev && \
     composer dumpautoload -o
     
