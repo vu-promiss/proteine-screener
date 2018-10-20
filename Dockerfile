@@ -37,9 +37,9 @@ RUN composer install --no-dev && \
     
 COPY .env.example .env
 
-RUN chmod a+w storage/logs database
-
 RUN > database/database.sqlite
+
+RUN chmod -R a+w storage/logs database
 
 RUN php artisan migrate
 
