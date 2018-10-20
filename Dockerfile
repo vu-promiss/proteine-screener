@@ -45,12 +45,12 @@ RUN > database/database.sqlite
 
 RUN chmod -R a+w storage/logs database
 
-RUN php artisan migrate
-
 COPY public/config.example.json public/config.json
 
 RUN rm -rf /var/www/html && \
     ln -s $APP_DIR/public /var/www/html
+    
+ENTRYPOINT ["php", "artisan", "migrate"]
 
 RUN a2enmod rewrite
 
