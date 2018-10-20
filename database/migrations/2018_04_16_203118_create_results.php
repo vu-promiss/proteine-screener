@@ -17,7 +17,7 @@ class CreateResults extends Migration
             $table->increments('id');
             $table->string('unique_id');
             $table->string('reg_id')->nullable();
-            $table->json('answers')->default('null');
+            $table->json('answers');
             $table->timestamps();
             $table->softDeletes();
         });
