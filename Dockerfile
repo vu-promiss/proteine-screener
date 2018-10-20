@@ -3,7 +3,7 @@ FROM php:7.2-apache
 ENV APP_DIR /var/proteinscreener
 
 RUN apt-get update && \
-    apt-get install -y gnupg2 sqlite3 && \
+    apt-get install -y gnupg2 sqlite3 unzip && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install --no-install-recommends -y nodejs build-essential && \
     apt-get clean && \
@@ -35,7 +35,9 @@ RUN npm install
 RUN composer install --no-dev && \
     composer dumpautoload -o
     
-RUN touch database/database.sqlite
+COPY .env.example .env
+    
+RUN > database/database.sqlite
 
 RUN php artisan migrate
 
