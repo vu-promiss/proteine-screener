@@ -49,9 +49,8 @@ COPY public/config.example.json public/config.json
 
 RUN rm -rf /var/www/html && \
     ln -s $APP_DIR/public /var/www/html
-    
-ENTRYPOINT ["php", "artisan", "migrate"]
-
-RUN a2enmod rewrite
 
 EXPOSE 80
+
+ENTRYPOINT .docker/entrypoint.sh
+
