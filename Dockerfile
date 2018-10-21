@@ -49,8 +49,11 @@ COPY public/config.example.json public/config.json
 
 RUN rm -rf /var/www/html && \
     ln -s $APP_DIR/public /var/www/html
+    
+RUN a2enmod rewrite
+
+CMD php artisan migrate
+
+CMD apachectl -D FOREGROUND
 
 EXPOSE 80
-
-ENTRYPOINT .docker/entrypoint.sh
-
