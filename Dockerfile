@@ -36,6 +36,8 @@ RUN npm install
 
 RUN npm run build
 
+RUN rm -rf node_modules
+
 RUN composer install --no-dev && \
     composer dumpautoload -o
     
