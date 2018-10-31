@@ -62,8 +62,8 @@ class ResultsController extends Controller
 
     public function stats(Result $result)
     {
-        $completedCount = $result->where('answers', 'NOT LIKE', 'null')->count();
-        $incompleteCount = $result->where('answers', 'LIKE', 'null')->count();
+        $completedCount = $result->whereNotNull('answers')->count();
+        $incompleteCount = $result->whereNull('answers')->count();
         return response()->json([
           'completed' => $completedCount,
           'incomplete' => $incompleteCount,
