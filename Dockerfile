@@ -54,6 +54,6 @@ RUN rm -rf /var/www/html && \
     
 RUN a2enmod rewrite
 
-CMD php artisan migrate && apachectl -D FOREGROUND
+CMD php artisan migrate --force && apachectl -D FOREGROUND
 
 EXPOSE 80
