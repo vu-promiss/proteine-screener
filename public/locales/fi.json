@@ -10,9 +10,9 @@
     "paragraph4": "Lisää tietoa Proteiinikyselyn (Pro55+) kehittämisestä ja validoinnista löytyy täältä: {link}"
   },
   "results": {
-      "predicted_probability": "Predicted Probability",
-      "paragraph1": "We consider a chance of more than {cutoff}% as a high risk on a low protein intake.",
-      "paragraph2": "To more precisely measure actual protein intake, a full nutritional assessment should be done by for example a dietitian."
+      "predicted_probability": "Arvioitu todennäköisyys",
+      "paragraph1": "Yli {cutoff}% todennäköisyys viittaa korkeaan riskiin saada liian vähän proteiinia ruokavaliosta.",
+      "paragraph2": "Proteiinin saannin tarkempi arvio edellyttää kokonaisvaltaista ravitsemustilan arviointia, esimerkiksi ravitsemusterapeutin tekemänä."
   },
   "session": {
       "your_id": "Your session ID is: {session_id}"
@@ -21,7 +21,7 @@
     "continue": "Jatka",
     "next": "Seuraava",
     "previous": "Edellinen",
-    "start_over": "Aloita yli"
+    "start_over": "Aloita uudelleen"
   },
   "intro": {
     "text": "Alla on kysymyksiä koskien Teidän ruokavaliotanne. On tärkeää, että vastaatte mahdollisimman tarkasti. Haluaisimme tietää, mitä söitte viimeisen neljän viikon aikana riippumatta viikonpäivistä tai paikasta, missä söitte. Jos viimeiset neljä viikkoa ovat olleet Teille hyvin poikkeuksellisia ruokailutottumusten suhteen (esim. lomamatka tai sairastaminen), vastatkaa kysymyksiin neljän viikon ajanjaksolta ennen tätä poikkeavaa tilannetta."
@@ -33,13 +33,13 @@
     "text": "Seuraavissa kysymyksissä tiedustelemme, paljonko söitte kyseistä ruoka-ainetta"
   },
   "N05b_0": {
-    "text": "Viimeksi kuluneiden neljän viikon aikana, kuinka monta leipää oli syöt keskimäärin päivässä?"
+    "text": "Viimeksi kuluneiden neljän viikon aikana, kuinka monta palaa leipää söitte keskimäärin päivässä?"
   },
   "N15b_0": {
-    "text": "Viimeisen neljän viikon aikana, kuinka monta lasillista maitoa, piimää tai soijamaitoa joitte keskimäärin päivässä? (Sisältäen myös puurossa tai ruoanvalmistuksessa käytetyn maidon)."
+    "text": "Viimeisen neljän viikon aikana, kuinka monta lasillista maitoa, piimää tai soijamaitoa joitte keskimäärin päivässä?"
   },
   "N34b": {
-    "text": "Kuinka paljon lihaa (esim. nauta, sika, broileri, riista) söitte keskimäärin päivänä, jolloin söitte lihaa viimeisen neljän viikon aikana?"
+    "text": "Kuinka paljon lihaa (esim. nauta, sika, broileri, riista) söitte keskimäärin lämpimällä aterialla  päivänä, jolloin söitte lihaa viimeisen neljän viikon aikana?"
   },
   "frequency1": {
     "text": "Seuraavissa kysymyksissä tiedustelemme, kuinka usein söitte tiettyä ruoka-ainetta"
@@ -48,7 +48,7 @@
     "text": "Viimeisen neljän viikon aikana, kuinka usein söitte maito- tai soijavalmisteita kuten jogurttia, viiliä, rahkaa, jäätelöä tai pirtelöä? (Ei juotavaa maitoa, piimää tai juustoviipaleita)."
   },
   "N14a_0": {
-    "text": "Viimeisen neljän viikon aikana, kuinka usein söitte kananmunaa aamupalalla, lounaalla, päivällisellä tai välipalalla?"
+    "text": "Viimeisen neljän viikon aikana, kuinka usein söitte kananmunaa aamupalalla, lounaalla, päivällisellä tai välipalalla tai osana ateriaa?"
   },
   "N24a_0": {
     "text": "Viimeisen neljän viikon aikana, kuinka usein söitte pastaa tai nuudeleita (makaroni, spaghetti, lasagne, riisi - tai vehnänuudeleita)?"
@@ -57,13 +57,13 @@
     "text": "Viimeisen neljän viikon aikana, kuinka usein söitte kalaa aterialla, leivän päällä tai välipalana? (Ei koske äyriäisiä)."
   },
   "N62a_0": {
-    "text": "Viimeisen neljän viikon aikana kuinka usein söitte pähkinöitä tai maapähkinöitä?"
+    "text": "Viimeisen neljän viikon aikana, kuinka usein söitte pähkinöitä tai maapähkinöitä sellaisenaan?"
   },
   "N08a_0": {
     "text": "Viimeisen neljän viikon aikana, kuinka usein söitte juustoa (esim. kova juusto, juustolevite) leivän, sämpylän, korpun, keksin yms. päällä?"
   },
   "N08b_0": {
-    "text": "Kuinka monta viipaletta juustolla tai juustolevitteellä päällystettyä leipää, sämpylää, korppua, keksiä ym. söitte keskimäärin päivässä (niinä päivinä kuin söitte juustoa tai juustolevitettä)?"
+    "text": "Kuinka monta viipaletta juustolla tai juustolevitteellä päällystettyä leipää, sämpylää, korppua, keksiä ym. söitte keskimäärin päivässä (niinä päivinä kun söitte juustoa tai juustolevitettä)?"
   },
   "less_than_one": "Vähemmän kuin yhden palan / ei sovellettavissa",
   "slice": "{count} pala ::: {count} palaa",
