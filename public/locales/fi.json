@@ -65,7 +65,7 @@
   "N08b_0": {
     "text": "Kuinka monta viipaletta juustolla tai juustolevitteellä päällystettyä leipää, sämpylää, korppua, keksiä ym. söitte keskimäärin päivässä (niinä päivinä kun söitte juustoa tai juustolevitettä)?"
   },
-  "less_than_one": "Vähemmän kuin yhden palan / ei sovellettavissa",
+  "less_than_one": "Vähemmän kuin yhden tai ei sovellettavissa",
   "slice": "{count} pala ::: {count} palaa",
   "more_than_slices": "{count} pala :::> {count} palaa",
   "glass": "{count} lasillinen ::: {count} lasillista",
@@ -87,13 +87,13 @@
   "weight": {
     "label": "Paino",
     "placeholder": "Ilmoita painosi kiloina.",
-    "invalid": "Please enter a valid weight.",
+    "invalid": "Syöttäkää oikea paino.",
     "append": "kg"
   },
   "length": {
     "label": "Pituus",
     "placeholder": "Ilmoita pituutesi senttimetreissä.",
-    "invalid": "Please enter a valid length.",
+    "invalid": "Syöttäkää oikea pituus.",
     "append": "cm"
   }
 }
