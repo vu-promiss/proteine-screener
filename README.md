@@ -1,4 +1,4 @@
-# Proteinscreener
+# ProteinScreener
 
 Calculate protein intake based on a small quiz.
 
