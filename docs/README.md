@@ -11,3 +11,7 @@ If you want to add new languages or change the behaviour of the ProteinScreener,
 ## Install ProteinScreener on another webserver
 
 If you need to install ProteinScreener on another webserver, you can follow the [Installation Manual](Installation.md)
+
+## Run ProteinScreener in a Docker container
+
+[Docker Manual](Docker.md)
