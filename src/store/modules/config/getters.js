@@ -17,3 +17,5 @@ export const storeResultsEndpoint = (state) => state.config.apiBaseUrl + 'store-
 export const initQuizEndpoint = (state) => state.config.apiBaseUrl + 'init-quiz'
 
 export const statsEndpoint = (state) => state.config.apiBaseUrl + 'stats'
+
+export const quizFile = (state) => state.config.quizFile
