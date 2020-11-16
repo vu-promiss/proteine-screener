@@ -1,12 +1,15 @@
 import axios from 'axios'
+import yaml from 'js-yaml'
 
-export const getQuestions = ({ commit }) => {
-  return axios.get('quiz.json').then((response) => {
+export const getQuestions = ({ commit, rootGetters }) => {
+  return axios.get(rootGetters['config/quizFile']).then((response) => {
+    // get YAML
+    let data = yaml.safeLoad(response.data)
     // assemble questions
     let counter = 1
-    let questions = response.data.questions.map((obj) => {
+    let questions = data.questions.map((obj) => {
       if (obj.answers) {
-        obj.answers = response.data.answers[obj.answers]
+        obj.answers = data.answers[obj.answers]
       }
       // Add number to question
       if (obj.type === 'question') {
@@ -22,14 +25,14 @@ export const getQuestions = ({ commit }) => {
 
 export const initQuiz = ({ commit, rootGetters }) => {
   axios.post(rootGetters['config/initQuizEndpoint'], {reg_id: rootGetters['quiz/reg_id']})
-  .then((response) => {
-    if (response.data.unique_id) {
-      commit('setUniqueId', response.data.unique_id)
-    }
-  })
-  .catch((error) => {
-    console.log(error.response)
-  })
+    .then((response) => {
+      if (response.data.unique_id) {
+        commit('setUniqueId', response.data.unique_id)
+      }
+    })
+    .catch((error) => {
+      console.log(error.response)
+    })
 }
 
 export const nextQuestion = ({ commit, state }) => {
