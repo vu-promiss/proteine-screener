@@ -32,13 +32,13 @@ export default {
     // send results to api
     let that = this
     axios.get(this.statsEndpoint)
-    .then(function (response) {
-      that.completed = response.data.completed
-      that.incomplete = response.data.incomplete
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
+      .then(function (response) {
+        that.completed = response.data.completed
+        that.incomplete = response.data.incomplete
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   },
   computed: {
     ...mapGetters({

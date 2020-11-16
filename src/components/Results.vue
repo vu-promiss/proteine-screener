@@ -37,12 +37,12 @@ export default {
       pred_prob: this.predprob,
       answers: this.answers
     })
-    .then(function (response) {
-      // console.log(response)
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
+      .then(function (response) {
+        // console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   },
   computed: {
     ...mapGetters({
