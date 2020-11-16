@@ -146,7 +146,7 @@ export const predprob = (state, getters) => {
   let weight_adj = state.answers.weight
 
   // Initialize variables
-  let r = getters.recodedAnswers
+  // let r = getters.recodedAnswers
 
   // berekenen bmi
   bmi = state.answers.weight / (height_m * height_m)
@@ -159,30 +159,61 @@ export const predprob = (state, getters) => {
   if (bmi > 27.0 & state.answers.age >= 71) weight_adj = (height_m) * (height_m) * 27
   // if (bmi >= 22.0 & bmi <= 27.0 & state.answers.age >= 71) weight_adj = state.answers.weight
 
+  let results = []
+  // loop over quiz
+  state.questions.forEach(question => {
+    // only do questions
+    if (question.type !== 'question') {
+      return
+    }
+    // get answer for this question
+    let answer = state.answers[question.id]
+    // get all recodes
+    question.recode.forEach(recode => {
+      let factor = recode['default_factor'] || 1
+      // Replace Function with a parser as it's unsafe
+      /* eslint-disable no-new-func */
+      if (Function('"use strict";return (' + recode.comparison.replaceAll('answer', answer) + ')')()) {
+        factor = recode.factor + (recode['add_answer_to_factor'] ? answer : 0)
+      }
+      /* eslint-enable no-new-func */
+      results.push({
+        name: recode.name,
+        value: recode.weight * factor
+      })
+    })
+  })
+
+  console.log(results)
+
   let z = shrinkage_factor * 19.361 +
-      0.106 * shrinkage_factor * weight_adj -
-      0.326 * shrinkage_factor * r.amount_slice_breadd1 -
-      1.175 * shrinkage_factor * r.amount_slice_breadd2 -
-      2.750 * shrinkage_factor * r.amount_slice_breadd3 -
-      0.344 * shrinkage_factor * r.amount_milkd1 -
-      1.681 * shrinkage_factor * r.amount_milkd2 -
-      1.326 * shrinkage_factor * r.amount_meatd1 -
-      3.074 * shrinkage_factor * r.amount_meatd2 -
-      0.175 * shrinkage_factor * r.freq_dairy_dessert -
-      0.256 * shrinkage_factor * r.freq_eggd1 -
-      0.636 * shrinkage_factor * r.freq_eggd2 -
-      1.480 * shrinkage_factor * r.freq_eggd3 -
-      0.432 * shrinkage_factor * r.freq_pastad1 -
-      0.713 * shrinkage_factor * r.freq_pastad2 -
-      1.409 * shrinkage_factor * r.freq_pastad3 -
-      0.454 * shrinkage_factor * r.freq_fishd1 -
-      0.757 * shrinkage_factor * r.freq_fishd2 -
-      1.100 * shrinkage_factor * r.freq_fishd3 -
-      0.393 * shrinkage_factor * r.freq_peanutsd1 -
-      0.888 * shrinkage_factor * r.freq_peanutsd2 -
-      0.177 * shrinkage_factor * r.freq_cheese_on_bread -
-      0.654 * shrinkage_factor * r.amount_bread_with_cheesed1 -
-      1.214 * shrinkage_factor * r.amount_bread_with_cheesed2
+      0.106 * shrinkage_factor * weight_adj
+
+  results.forEach(result => {
+    z = z - shrinkage_factor * result.value
+  })
+  //     0.326 * shrinkage_factor * r.amount_slice_breadd1 -
+  //     1.175 * shrinkage_factor * r.amount_slice_breadd2 -
+  //     2.750 * shrinkage_factor * r.amount_slice_breadd3 -
+  //     0.344 * shrinkage_factor * r.amount_milkd1 -
+  //     1.681 * shrinkage_factor * r.amount_milkd2 -
+  //     1.326 * shrinkage_factor * r.amount_meatd1 -
+  //     3.074 * shrinkage_factor * r.amount_meatd2 -
+  //     0.175 * shrinkage_factor * r.freq_dairy_dessert -
+  //     0.256 * shrinkage_factor * r.freq_eggd1 -
+  //     0.636 * shrinkage_factor * r.freq_eggd2 -
+  //     1.480 * shrinkage_factor * r.freq_eggd3 -
+  //     0.432 * shrinkage_factor * r.freq_pastad1 -
+  //     0.713 * shrinkage_factor * r.freq_pastad2 -
+  //     1.409 * shrinkage_factor * r.freq_pastad3 -
+  //     0.454 * shrinkage_factor * r.freq_fishd1 -
+  //     0.757 * shrinkage_factor * r.freq_fishd2 -
+  //     1.100 * shrinkage_factor * r.freq_fishd3 -
+  //     0.393 * shrinkage_factor * r.freq_peanutsd1 -
+  //     0.888 * shrinkage_factor * r.freq_peanutsd2 -
+  //     0.177 * shrinkage_factor * r.freq_cheese_on_bread -
+  //     0.654 * shrinkage_factor * r.amount_bread_with_cheesed1 -
+  //     1.214 * shrinkage_factor * r.amount_bread_with_cheesed2
 
   return 1 / (1 + Math.exp(-z))
 }
