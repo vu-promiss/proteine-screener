@@ -1,91 +1,149 @@
 ---
 questions:
+  # Intro
   - id: intro
     type: info
-  # - id: bmi1
-  #   type: bmi
+
+  # BMI Questions
+  - id: bmi1
+    type: bmi
+  
+  # Information
   - id: info1
     type: info
+
+  # slices of bread
   - id: N05b_0
     type: question
     answers: slices
     recode:
-      - name: amount_slice_breadd1
-        comparison: "answer == 4"
+      - comparison: "answer == 4"
         factor: 2
         weight: 0.326
-      - name: amount_slice_breadd2
-        comparison: "answer == 5"
+      - comparison: "answer == 5"
         factor: 2
         weight: 1.175
-      - name: amount_slice_breadd3
-        comparison: "answer >= 6"
+      - comparison: "answer >= 6"
         factor: 2
         weight: 2.75
+
+  # glasses of milk
   - id: N15b_0
     type: question
     answers: glasses
     recode:
-      - name: amount_milkd1
-        comparison: "answer == 2"
+      - comparison: "answer == 2"
         factor: 2
         weight: 0.344
-      - name: amount_milkd2
-        comparison: "answer >= 3"
+      - comparison: "answer >= 3"
         factor: 2
         weight: 1.681
+
+  # amount meat warm meal
   - id: N34b
     type: question
     answers: meat
     recode:
-      - name: amount_meatd1
-        comparison: "answer == 2"
+      - comparison: "answer == 2"
         factor: 2
         weight: 1.326
-      - name: amount_meatd2
-        comparison: "answer >= 3"
+      - comparison: "answer >= 3"
         factor: 2
         weight: 3.074
-# - id: frequency1
-#   type: info
+
+  # Information about frequency
+  - id: frequency1
+    type: info
+
+  # dairy dessert
   - id: N18a_0
     type: question
     answers: weekly_intake
     recode:
-      - name: freq_dairy_dessert
-        comparison: "answer > 3"
+      - comparison: "answer > 3"
         factor: -2
         add_answer_to_factor: true
         weight: 0.175
 
-# - id: N14a_0
-#   type: question
-#   answers: weekly_intake
-# - id: N24a_0
-#   type: question
-#   answers: weekly_intake
-# - id: N33a_0
-#   type: question
-#   answers: weekly_intake
+  # frequency eggs
+  - id: N14a_0
+    type: question
+    answers: weekly_intake
+    recode:
+      - comparison: "answer == 4"
+        factor: 2
+        weight: 0.256
+      - comparison: "answer == 5"
+        factor: 2
+        weight: 0.636
+      - comparison: "answer >= 6"
+        factor: 2
+        weight: 1.480
+
+  # frequency pasta
+  - id: N24a_0
+    type: question
+    answers: weekly_intake
+    recode:
+      - comparison: "answer == 3"
+        factor: 2
+        weight: 0.432
+      - comparison: "answer == 4"
+        factor: 2
+        weight: 0.713
+      - comparison: "answer >= 5"
+        factor: 2
+        weight: 1.409
+
+  # frequency fish.
+  - id: N33a_0
+    type: question
+    answers: weekly_intake
+    recode:
+      - comparison: "answer == 3"
+        factor: 2
+        weight: 0.454
+      - comparison: "answer == 4"
+        factor: 2
+        weight: 0.757
+      - comparison: "answer >= 5"
+        factor: 2
+        weight: 1.100
+
+  # frequency peanuts
   - id: N62a_0
     type: question
     answers: weekly_intake
     recode:
-      - name: freq_peanutsd1
-        comparison: "answer == 2 || answer == 3"
+      - comparison: "answer == 2 || answer == 3"
         factor: 2
         weight: 0.393
-      - name: freq_peanutsd2
-        comparison: "answer >= 4"
+      - comparison: "answer >= 4"
         factor: 2
         weight: 0.888
 
-# - id: N08a_0
-#   type: question
-#   answers: weekly_intake
-# - id: N08b_0
-#   type: question
-#   answers: slices
+  # cheese on bread
+  - id: N08a_0
+    type: question
+    answers: weekly_intake
+    recode:
+      - comparison: "answer > 3"
+        factor: -2
+        add_answer_to_factor: true
+        weight: 0.177
+
+  # amount bread with cheese
+  - id: N08b_0
+    type: question
+    answers: slices
+    recode:
+      - comparison: "answer == 3"
+        factor: 2
+        weight: 0.654
+      - comparison: "answer >= 4"
+        factor: 2
+        weight: 1.214
+
 answers:
   slices:
   - id: 1
@@ -223,4 +281,3 @@ answers:
   - id: 10
     text: day_week
     count: 7
-
