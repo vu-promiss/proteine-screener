@@ -10,6 +10,7 @@
 <script>
   import { mapGetters, mapActions } from 'vuex'
   import axios from 'axios'
+  import yaml from 'js-yaml'
   import Navbar from './components/Navbar'
 
   export default {
@@ -35,8 +36,8 @@
         let config = this.$store.getters['config/config']
         let loadedLocales = []
         config.locales.forEach((locale) => {
-          loadedLocales.push(axios.get('locales/' + locale + '.json').then((response) => {
-            this.$i18n.add(locale, response.data)
+          loadedLocales.push(axios.get('locales/' + locale + '.yaml').then((response) => {
+            this.$i18n.add(locale, yaml.safeLoad(response.data))
           }))
         })
         if (config.locales.includes(browserLocale)) {

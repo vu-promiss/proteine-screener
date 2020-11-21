@@ -1,0 +1,99 @@
+---
+home:
+  button:
+    title: To the screener
+  title: Welcome to the Protein Screener (Pro55+)
+  paragraph1: The Protein Screener (Pro55+) is a short (10 food items) questionnaire
+    that estimates the chance on a low protein intake (<1.0 gram /per kilogram body
+    weight/day) for older adults. The Protein screener (Pro55+) is developed by the
+    Vrije Universiteit Amsterdam (the Netherlands).
+  paragraph2: You can use the Protein Screener (Pro55+) here for free. After completing
+    the questions, you will immediately see the chance (0-100%) on a low protein intake.
+    We consider a chance of more than {cutoff}% as a high risk on a low protein intake.
+  paragraph3: To more precisely measure actual protein intake, a full nutritional
+    assessment should be done by for example a dietitian.
+  paragraph4: 'You can find more information on the development and validation of
+    the Protein screener (Pro55+) here: {link}'
+results:
+  predicted_probability: Predicted Probability
+  paragraph1: We consider a chance of more than {cutoff}% as a high risk on a low
+    protein intake.
+  paragraph2: To more precisely measure actual protein intake, a full nutritional
+    assessment should be done by for example a dietitian.
+session:
+  your_id: 'Your session ID is: {session_id}'
+nav:
+  continue: Continue
+  next: Next
+  previous: Previous
+  start_over: Start over
+intro:
+  text: The following questions are about your dietary habits. It is very important
+    that you give an honest response. We would like to know what you ate or drank
+    in the last 4 weeks (irrespective of week days, weekend days, at home or someplace
+    else). If the last 4 weeks were very special (for example you were sick or you
+    went on a vacation and this had a major influence on your usual diet), please
+    recall the 4 weeks before this period.
+bmi1:
+  text: Please enter your body measurements.
+info1:
+  text: In the following questions, we ask how much of a food product you ate
+N05b_0:
+  text: In the last 4 weeks, how many slices of bread did you eat on an average day?
+N15b_0:
+  text: In the last 4 weeks, how many glasses/cups of milk, buttermilk or soy milk
+    did you drink on an average day?
+N34b:
+  text: How much meat did you on average eat on a day that you ate meat with your
+    warm meal in the last 4 weeks?
+frequency1:
+  text: In the following questions, we will ask how often you ate a certain product
+N18a_0:
+  text: In the last 4 weeks how often did you yoghurt, quark, milk-based pudding,
+    or soy dessert?
+N14a_0:
+  text: In the last 4 weeks how often did you eat egg with either your breakfast,
+    lunch, evening meal, as a snack, or in a meal?
+N24a_0:
+  text: In the last 4 weeks how often did you eat pasta or noodles (like spaghetti,
+    macaroni, lasagna, chow mein, rice-based or wheat-based noodles)?
+N33a_0:
+  text: In the last 4 weeks how often did you eat fish with your bread meal, warm
+    meal, or as a snack? (Do NOT include shellfish).
+N62a_0:
+  text: In the last 4 weeks, how often did you eat nuts or peanuts as a snack?
+N08a_0:
+  text: In the last 4 weeks how often did you eat cheese or cheese spread on your
+    bread, bun, rusk, cracker, etc.?
+N08b_0:
+  text: How many slices of bread, bun, rusk, cracker, etc. with cheese or cheese spread
+    did you on average eat on a day that you ate cheese or cheese spread?
+less_than_one: Less than one or not applicable
+slice: "{count} slice ::: {count} slices"
+more_than_slices: "> {count} slice ::: > {count} slices"
+glass: "{count} glass ::: {count} glasses"
+more_than_glasses: "> {count} glass ::: > {count} glasses"
+no_meat: Not applicable, does not eat meat
+plate: "{fraction} plate"
+not_in_four_weeks: Not in these 4 weeks
+one_in_four_weeks: 1 day in 4 weeks
+two_three_in_four_weeks: 2-3 days in 4 weeks
+day_week: "{count} day/week ::: {count} days/week"
+sufficient_protein_intake: No, does not have low protein intake
+low_protein_intake: YES, has low protein intake --> include
+question_number: Question {number}
+age:
+  label: Age
+  placeholder: Please enter your age.
+  invalid: Please enter a valid age.
+  append: year
+weight:
+  label: Weight
+  placeholder: Please enter your weight in kilograms.
+  invalid: Please enter a valid weight.
+  append: kg
+length:
+  label: Length
+  placeholder: Please enter your length in centimeters.
+  invalid: Please enter a valid length.
+  append: cm
