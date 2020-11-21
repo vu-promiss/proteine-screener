@@ -6,9 +6,10 @@ RUN apt-get update && \
     apt-get install -y gnupg2 sqlite3 unzip && \
     curl -sL https://deb.nodesource.com/setup_15.x | bash - && \
     apt-get install --no-install-recommends -y nodejs build-essential && \
-    curl -L https://www.npmjs.com/install.sh | sh && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+RUN npm install -g yarn
 
 RUN docker-php-ext-install pdo_mysql
 
@@ -21,11 +22,11 @@ WORKDIR $APP_DIR
 
 RUN ./docker/setup_composer.sh
 
-RUN npm install
+RUN yarn install
 
-RUN npm run build
+RUN yarn run build
 
-RUN rm -rf node_modules
+# RUN rm -rf node_modules
 
 RUN composer install --no-dev && \
     composer dumpautoload -o

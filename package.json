@@ -1,8 +1,8 @@
 {
   "name": "proteine-screener",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A Vue.js project",
-  "author": "abn290 <abn290@vu.nl>",
+  "author": "Arjen <arjen@bochoven.net>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -28,7 +28,6 @@
     "es6-promise": "^4.2.4",
     "es6-promise-promise": "^1.0.0",
     "js-yaml": "^3.14.0",
-    "npm": "^6.14.6",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.8.0"
