@@ -67,12 +67,13 @@ export const recodedAnswers = (state) => {
       }
       /* eslint-enable no-new-func */
       results.push({
-        name: recode.name,
+        name: question.id + ' ' + recode.comparison,
+        answer: answer,
+        factor: factor,
         value: recode.weight * factor
       })
     })
   })
-
   return results
 }
 
