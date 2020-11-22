@@ -1,6 +1,12 @@
 FROM php:7.4-apache
 
 ENV APP_DIR /var/proteinscreener
+ENV PRSCR_API_URL /api/
+ENV PRSCR_CUTOFF 0.3
+ENV PRSCR_DEBUG FALSE
+ENV PRSCR_AUTONEXT FALSE
+ENV PRSCR_QUIZFILE quiz.yaml
+ENV PRSCR_LOCALES en,fi,nl
 
 RUN apt-get update && \
     apt-get install -y gnupg2 sqlite3 unzip && \
@@ -26,7 +32,7 @@ RUN yarn install
 
 RUN yarn run build
 
-# RUN rm -rf node_modules
+RUN rm -rf node_modules
 
 RUN composer install --no-dev && \
     composer dumpautoload -o
@@ -37,13 +43,11 @@ RUN > database/database.sqlite
 
 RUN chmod -R a+w storage/logs database
 
-COPY public/config.example.yaml public/config.yaml
-
 RUN rm -rf /var/www/html && \
     ln -s $APP_DIR/public /var/www/html
     
 RUN a2enmod rewrite
 
-CMD php artisan migrate --force && apachectl -D FOREGROUND
+CMD ./docker/setup_config.sh && php artisan migrate --force && apachectl -D FOREGROUND
 
 EXPOSE 80
