@@ -8,7 +8,7 @@
 
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
-          <b-dropdown 
+          <b-dropdown v-if="locales.length > 1"
             id="ddown1" 
             :text="$i18n.locale() | uppercase" 
             class="m-md-2"
