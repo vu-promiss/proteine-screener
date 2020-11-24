@@ -28,23 +28,23 @@ module.exports = {
         changeOrigin: true
       },
       '/config.json': {
-        target: 'http://localhost:8800/config.json',
+        target: 'http://localhost:8800',
         changeOrigin: true
       },
       '/config.yaml': {
-        target: 'http://localhost:8800/config.yaml',
+        target: 'http://localhost:8800',
         changeOrigin: true
       },
       '/quiz.json': {
-        target: 'http://localhost:8800/quiz.json',
+        target: 'http://localhost:8800',
         changeOrigin: true
       },
       '/quiz_short.yaml': {
-        target: 'http://localhost:8800/quiz_short.yaml',
+        target: 'http://localhost:8800',
         changeOrigin: true
       },
       '/quiz.yaml': {
-        target: 'http://localhost:8800/quiz.yaml',
+        target: 'http://localhost:8800',
         changeOrigin: true
       }
     },
