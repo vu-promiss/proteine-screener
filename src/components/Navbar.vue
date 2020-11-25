@@ -25,6 +25,15 @@
               > {{ locale | uppercase }}
             </b-dropdown-item>
           </b-dropdown>
+          <b-button v-if="locales.length == 1"
+            class="m-md-2"
+            variant="outline-light"
+            right
+            size="sm"
+            disabled
+          >
+          {{ locales[0] | uppercase }}
+          </b-button>
         </b-nav-form>
       </b-navbar-nav>
     </div>

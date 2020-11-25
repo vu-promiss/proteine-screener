@@ -42,8 +42,10 @@
         })
         if (config.locales.includes(browserLocale)) {
           this.$i18n.set(browserLocale)
-        } else {
+        } else if (config.locales.includes('en')) {
           this.$i18n.set('en')
+        } else {
+          this.$i18n.set(config.locales[0])
         }
         this.getQuestions()
       })
