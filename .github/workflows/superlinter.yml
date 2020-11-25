@@ -15,6 +15,27 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - uses: actions/checkout@v2
+
+      # Cache
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache Composer Downloads
+        uses: actions/cache@v2
+        with:
+          path: vendor/
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        
+      - name: Cache PHP dependencies
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+            
       - uses: php-actions/composer@v4
 
       # Runs the Super-Linter action
@@ -22,4 +43,6 @@ jobs:
         uses: github/super-linter@v3
         env:
           DEFAULT_BRANCH: main
+          FILTER_REGEX_INCLUDE: .*vendor/*
+          FILTER_REGEX_INCLUDE: .*node_modules/*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
