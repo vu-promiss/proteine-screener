@@ -47,6 +47,4 @@ jobs:
       - name: Test
         uses: CultureHQ/actions-yarn@master
         with:
-          args: 
-            - run
-            - build
+          args: run build
