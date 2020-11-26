@@ -1,4 +1,4 @@
-name: Super-Linter
+name: Build
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
@@ -6,9 +6,9 @@ on: push
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  super-lint:
+  build-app:
     # Name the Job
-    name: Lint code base
+    name: Build app
     # Set the type of machine to run on
     runs-on: ubuntu-latest
 
@@ -36,12 +36,17 @@ jobs:
           path: vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
             
-      - uses: php-actions/composer@v4
+      - name: Run Composer
+        uses: php-actions/composer@v4
 
-      # Runs the Super-Linter action
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH: main
-          FILTER_REGEX_EXCLUDE: .*/vendor/.*
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: install
+
+      - name: Test
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: 
+            - run
+            - build
