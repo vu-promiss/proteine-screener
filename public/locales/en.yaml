@@ -1,4 +1,9 @@
 ---
+values:
+  intercept: 19.361
+  cutoff: 0.3
+  shrinkageFactor: 0.92
+  weightAdjustedFactor: 0.106
 home:
   button:
     title: To the screener
