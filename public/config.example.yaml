@@ -3,7 +3,8 @@ locales:
   - en
   - nl
   - fi
-cutoff: 0.3
+  # - uk
+quizFile: quiz.yaml
 showAutonextButton: false
 debug: false
 apiBaseUrl: "/api/"
