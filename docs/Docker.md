@@ -6,6 +6,15 @@ ProteinScreener is available as prebuilt docker image. You can run the applicati
 docker run -p 80:80 --rm --name proteinscreener vupromiss/proteine-screener
 ```
 
+## Configuration
+
+Initialize the container instance with the following environment variables:
+
+PRSCR_LOCALES=en,fi,nl
+PRSCR_AUTONEXT=false
+PRSCR_DEBUG=false
+PRSCR_API_URL=/api/
+
 ## Data persistence
 
 To persist the data, hook the container up with a database.

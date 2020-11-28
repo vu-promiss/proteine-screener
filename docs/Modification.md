@@ -4,49 +4,65 @@ There are several things that can be modified rather easily without rebuilding t
 
 ## Configuration
 
-The main configuration file for the webapplication is found in `public/config.json`.
+The main configuration file for the webapplication is found in `public/config.yaml`.
 
-The structure of the configuration json file is like this:
-```json
-{
-  "locales": [
-    "en",
-    "nl",
-    "fi"
-  ],
-  "cutoff": 0.3,
-  "showAutonextButton": false,
-  "debug": false,
-  "apiBaseUrl": "/api/"
-}
+The structure of the configuration yaml file is like this:
+```yaml
+locales:
+  - en
+  - nl
+  - fi
+  # - uk
+showAutonextButton: false
+debug: false
+apiBaseUrl: "/api/"
+quizFile: quiz.yaml
 ```
 * The **locales** array contains the shortcodes to the available locale files. If you want to add a new language, add it to this array.
-* **cutoff** is the value that determines if the protein intake is below the threshold
 * **showAutonextButton** if this is set to `true`, a button is shown that toggles 'auto next' which will cause the app to move on to the next question without pressing 'continue'
 * **debug** if set to true, show some debug information in the app
 * **apiBaseUrl** address for the backend API. It is possible to point this to a different server by entering the full address (https://server/api/)
 
-Please check the validity of the json before committing. Use a linting application like https://jsonlint.com
+Please check the validity of the yaml before committing. Use a linting application like https://onlineyamltools.com/validate-yaml
 
 ## Language files
 
 Language files live in `public/locales`. They are loaded every time the webapp is started. Updates to these files are best done via a Pull Request in https://github.com/vu-promiss/proteine-screener
 
-Please check the validity of the language files json before committing them. Use a linting application like https://jsonlint.com
+Please check the validity of the language files yaml before committing them. Use a linting application like https://onlineyamltools.com/validate-yaml
 
 ## Quiz
 
-The structure of the quiz is found in `public/quiz.json`. The structure is as follows:
+The structure of the quiz is found in `public/quiz.yaml`. The structure is as follows:
 
 ### Questions
 
-All questions have an unique **id** that is used to identify the question and is also used in the locale files to reference the locale strings.
+All questions have a unique **id** that is used to identify the question and is also used in the locale files to reference the locale strings.
 
 All questions have a type. There are three types of questions:
 
 * **info** contains only text.
 * **bmi** contains the special BMI form
 * **question** contains a regular question
+
+Questions with the **type** of **question** have a recode entry that determines how the answers will be weighed in the calculation of the probability score. Recode entries always have a `comparison`, a `factor` and a `weight`.
+Optionally recode entries can have an `add_answer_to_factor` boolean that will add the value of the answer to the `factor`. There's also `default_factor` that can be used to override the default factor of 1 that is applied when the comparison is not true.
+
+```yaml
+  - id: N05b_0
+    type: question
+    answers: slices
+    recode:
+      - comparison: "answer == 4"
+        factor: 2
+        weight: 0.326
+      - comparison: "answer == 5"
+        factor: 2
+        weight: 1.175
+      - comparison: "answer >= 6"
+        factor: 2
+        weight: 2.75
+```
 
 Questions with the **type** of **question** also have an **answers** entry that corresponds to the answers below.
 

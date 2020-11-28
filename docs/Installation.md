@@ -8,18 +8,18 @@ The frontend is a Vue.js javascript application.
 
 Prerequisites:
 
-* npm
+* yarn
 
 First, install all dependencies:
 
 ```
-npm install
+yarn install
 ```
 
 Second, build the project from source:
 
 ```
-npm run build
+yarn run build
 ```
 
 ## Backend
@@ -45,7 +45,7 @@ There are two configurations to take care of:
 
 ## Frontend
 
-Copy `public/config.example.json` to `public/config.json` and modify the settings if necessary.
+Copy `public/config.example.yaml` to `public/config.yaml` and modify the settings if necessary.
 
 ## Backend
 
