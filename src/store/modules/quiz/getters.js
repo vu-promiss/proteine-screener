@@ -93,14 +93,15 @@ export const weightAdjusted = (state) => {
   return weight_adj
 }
 
-export const predprob = (state, getters) => {
-  // Shrinkage Factor
-  let shrinkage_factor = 0.92
+export const predprob = (state, getters, rootState, rootGetters) => {
+  let shrinkage_factor = rootGetters['config/shrinkageFactor']
+  let weight_adjusted_factor = rootGetters['config/weightAdjustedFactor']
+  let intercept = rootGetters['config/intercept']
   let weight_adj = getters.weightAdjusted
   let results = getters.recodedAnswers
 
-  let z = shrinkage_factor * 19.361 +
-      0.106 * shrinkage_factor * weight_adj
+  let z = shrinkage_factor * intercept +
+    weight_adjusted_factor * shrinkage_factor * weight_adj
 
   results.forEach(result => {
     z = z - shrinkage_factor * result.value

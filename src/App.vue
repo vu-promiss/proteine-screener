@@ -26,7 +26,9 @@
     methods: {
       ...mapActions({
         getQuestions: 'quiz/getQuestions',
-        getConfig: 'config/getConfig'
+        getConfig: 'config/getConfig',
+        storeLocaleData: 'config/storeLocaleData',
+        updateLocale: 'config/updateLocale'
       })
     },
     mounted () {
@@ -36,17 +38,22 @@
         let config = this.$store.getters['config/config']
         let loadedLocales = []
         config.locales.forEach((locale) => {
+          let self = this
           loadedLocales.push(axios.get('locales/' + locale + '.yaml').then((response) => {
-            this.$i18n.add(locale, yaml.safeLoad(response.data))
+            let localeData = yaml.safeLoad(response.data)
+            self.storeLocaleData({locale: locale, localeData: localeData})
+            this.$i18n.add(locale, localeData)
           }))
         })
-        if (config.locales.includes(browserLocale)) {
-          this.$i18n.set(browserLocale)
-        } else if (config.locales.includes('en')) {
-          this.$i18n.set('en')
-        } else {
-          this.$i18n.set(config.locales[0])
-        }
+        Promise.all(loadedLocales).then((reponse) => {
+          if (config.locales.includes(browserLocale)) {
+            this.updateLocale(browserLocale)
+          } else if (config.locales.includes('en')) {
+            this.updateLocale('en')
+          } else {
+            this.updateLocale(config.locales[0])
+          }
+        })
         this.getQuestions()
       })
     }

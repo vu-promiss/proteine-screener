@@ -4,9 +4,17 @@ export const configLoaded = (state) => state.configLoaded
 
 export const locales = (state) => state.config.locales
 
-export const cutoff = (state) => state.config.cutoff
+export const localeData = (state) => state.localeData
 
-export const cutoffPercentage = (state) => parseInt(state.config.cutoff * 100)
+export const cutoff = (state) => state.cutoff
+
+export const cutoffPercentage = (state) => parseInt(state.cutoff * 100)
+
+export const intercept = (state) => state.intercept
+
+export const shrinkageFactor = (state) => state.shrinkageFactor
+
+export const weightAdjustedFactor = (state) => state.weightAdjustedFactor
 
 export const debug = (state) => state.config.debug
 

@@ -18,7 +18,7 @@
           >
             <b-dropdown-item v-for="locale in locales"
               :key="locale"
-              v-on:click.prevent="$i18n.set(locale)"
+              v-on:click.prevent="updateLocale(locale);"
               :active="$i18n.locale() === locale"
               active-class="protein"
               variant="outline-secondary"
@@ -41,9 +41,14 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
+  methods: {
+    ...mapActions({
+      updateLocale: 'config/updateLocale'
+    })
+  },
   computed: {
     ...mapGetters({
       predprob: 'quiz/predprob',

@@ -9,6 +9,11 @@
           <p>{{ $t('results.paragraph2') }}</p>
           <p v-if="debug">
             <b-btn v-b-modal.modal1>Show recoded values</b-btn>
+            <b-list-group>
+              <b-list-group-item>Intercept: {{ intercept }}</b-list-group-item>
+              <b-list-group-item>WeightAdj factor: {{ weightAdjustedFactor }}</b-list-group-item>
+              <b-list-group-item>Shrinkage factor: {{ shrinkageFactor }}</b-list-group-item>
+            </b-list-group>
           </p>
         </b-alert>
         <b-button
@@ -49,6 +54,9 @@ export default {
       predprob: 'quiz/predprob',
       debug: 'config/debug',
       cutoff: 'config/cutoff',
+      intercept: 'config/intercept',
+      shrinkageFactor: 'config/shrinkageFactor',
+      weightAdjustedFactor: 'config/weightAdjustedFactor',
       storeResultsEndpoint: 'config/storeResultsEndpoint',
       unique_id: 'quiz/unique_id',
       reg_id: 'quiz/reg_id',
