@@ -27,23 +27,7 @@ module.exports = {
         target: 'http://localhost:8800',
         changeOrigin: true
       },
-      '/config.json': {
-        target: 'http://localhost:8800',
-        changeOrigin: true
-      },
-      '/config.yaml': {
-        target: 'http://localhost:8800',
-        changeOrigin: true
-      },
-      '/quiz.json': {
-        target: 'http://localhost:8800',
-        changeOrigin: true
-      },
-      '/quiz_short.yaml': {
-        target: 'http://localhost:8800',
-        changeOrigin: true
-      },
-      '/quiz.yaml': {
+      '/*.yaml': {
         target: 'http://localhost:8800',
         changeOrigin: true
       }
