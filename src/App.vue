@@ -26,7 +26,8 @@
     methods: {
       ...mapActions({
         getQuestions: 'quiz/getQuestions',
-        getConfig: 'config/getConfig',
+        loadYamlConfig: 'config/loadYamlConfig',
+        setConfig: 'config/setConfig',
         storeLocaleData: 'config/storeLocaleData',
         updateLocale: 'config/updateLocale'
       })
@@ -34,7 +35,7 @@
     mounted () {
       let browserLocale = navigator.language.split('-')[0]
 
-      this.getConfig().then(() => {
+      this.loadYamlConfig().then(() => {
         let config = this.$store.getters['config/config']
         let loadedLocales = []
         config.locales.forEach((locale) => {
@@ -55,6 +56,10 @@
           }
         })
         this.getQuestions()
+      }).catch((error) => {
+        console.log(error)
+        this.setConfig({locales: ['en']})
+        this.$router.push({ name: 'configerror' })
       })
     }
   }

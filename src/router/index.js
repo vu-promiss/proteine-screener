@@ -5,6 +5,7 @@ import Screener from '@/components/Screener'
 import Editor from '@/components/Editor'
 import Register from '@/components/Register'
 import Admin from '@/components/Admin'
+import Error from '@/components/Error'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
       props: true,
       name: 'register',
       component: Register
+    },
+    {
+      path: '/error',
+      name: 'configerror',
+      component: Error
     },
     {
       path: '/editor',
