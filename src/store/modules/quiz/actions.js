@@ -2,14 +2,17 @@ import axios from 'axios'
 import yaml from 'js-yaml'
 
 export const getQuestions = ({ commit, rootGetters }) => {
-  return axios.get(rootGetters['config/quizFile']).then((response) => {
-    // get YAML
-    let data = yaml.safeLoad(response.data)
-    // assemble questions
+  let promises = [
+    axios.get(rootGetters['config/quizFile']),
+    axios.get(rootGetters['config/answerFile'])
+  ]
+  Promise.all(promises).then((response) => {
+    let quiz = yaml.safeLoad(response[0].data)
+    let answers = yaml.safeLoad(response[1].data)
     let counter = 1
-    let questions = data.questions.map((obj) => {
+    let questions = quiz.map((obj) => {
       if (obj.answers) {
-        obj.answers = data.answers[obj.answers]
+        obj.answers = answers[obj.answers]
       }
       // Add number to question
       if (obj.type === 'question') {
