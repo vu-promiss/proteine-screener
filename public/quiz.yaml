@@ -1,283 +1,143 @@
----
-questions:
-  # Intro
-  - id: intro
-    type: info
+# Intro
+- id: intro
+  type: info
 
-  # BMI Questions
-  - id: bmi1
-    type: bmi
-  
-  # Information
-  - id: info1
-    type: info
+# BMI Questions
+- id: bmi1
+  type: bmi
 
-  # slices of bread
-  - id: N05b_0
-    type: question
-    answers: slices
-    recode:
-      - comparison: "answer == 4"
-        factor: 2
-        weight: 0.326
-      - comparison: "answer == 5"
-        factor: 2
-        weight: 1.175
-      - comparison: "answer >= 6"
-        factor: 2
-        weight: 2.75
+# Information
+- id: info1
+  type: info
 
-  # glasses of milk
-  - id: N15b_0
-    type: question
-    answers: glasses
-    recode:
-      - comparison: "answer == 2"
-        factor: 2
-        weight: 0.344
-      - comparison: "answer >= 3"
-        factor: 2
-        weight: 1.681
+# slices of bread
+- id: N05b_0
+  type: question
+  answers: slices
+  recode:
+    - comparison: "answer == 4"
+      factor: 2
+      weight: 0.326
+    - comparison: "answer == 5"
+      factor: 2
+      weight: 1.175
+    - comparison: "answer >= 6"
+      factor: 2
+      weight: 2.75
 
-  # amount meat warm meal
-  - id: N34b
-    type: question
-    answers: meat
-    recode:
-      - comparison: "answer == 2"
-        factor: 2
-        weight: 1.326
-      - comparison: "answer >= 3"
-        factor: 2
-        weight: 3.074
+# glasses of milk
+- id: N15b_0
+  type: question
+  answers: glasses
+  recode:
+    - comparison: "answer == 2"
+      factor: 2
+      weight: 0.344
+    - comparison: "answer >= 3"
+      factor: 2
+      weight: 1.681
 
-  # Information about frequency
-  - id: frequency1
-    type: info
+# amount meat warm meal
+- id: N34b
+  type: question
+  answers: meat
+  recode:
+    - comparison: "answer == 2"
+      factor: 2
+      weight: 1.326
+    - comparison: "answer >= 3"
+      factor: 2
+      weight: 3.074
 
-  # dairy dessert
-  - id: N18a_0
-    type: question
-    answers: weekly_intake
-    recode:
-      - comparison: "answer > 3"
-        factor: -2
-        add_answer_to_factor: true
-        weight: 0.175
+# Information about frequency
+- id: frequency1
+  type: info
 
-  # frequency eggs
-  - id: N14a_0
-    type: question
-    answers: weekly_intake
-    recode:
-      - comparison: "answer == 4"
-        factor: 2
-        weight: 0.256
-      - comparison: "answer == 5"
-        factor: 2
-        weight: 0.636
-      - comparison: "answer >= 6"
-        factor: 2
-        weight: 1.480
+# dairy dessert
+- id: N18a_0
+  type: question
+  answers: weekly_intake
+  recode:
+    - comparison: "answer > 3"
+      factor: -2
+      add_answer_to_factor: true
+      weight: 0.175
 
-  # frequency pasta
-  - id: N24a_0
-    type: question
-    answers: weekly_intake
-    recode:
-      - comparison: "answer == 3"
-        factor: 2
-        weight: 0.432
-      - comparison: "answer == 4"
-        factor: 2
-        weight: 0.713
-      - comparison: "answer >= 5"
-        factor: 2
-        weight: 1.409
+# frequency eggs
+- id: N14a_0
+  type: question
+  answers: weekly_intake
+  recode:
+    - comparison: "answer == 4"
+      factor: 2
+      weight: 0.256
+    - comparison: "answer == 5"
+      factor: 2
+      weight: 0.636
+    - comparison: "answer >= 6"
+      factor: 2
+      weight: 1.480
 
-  # frequency fish.
-  - id: N33a_0
-    type: question
-    answers: weekly_intake
-    recode:
-      - comparison: "answer == 3"
-        factor: 2
-        weight: 0.454
-      - comparison: "answer == 4"
-        factor: 2
-        weight: 0.757
-      - comparison: "answer >= 5"
-        factor: 2
-        weight: 1.100
+# frequency pasta
+- id: N24a_0
+  type: question
+  answers: weekly_intake
+  recode:
+    - comparison: "answer == 3"
+      factor: 2
+      weight: 0.432
+    - comparison: "answer == 4"
+      factor: 2
+      weight: 0.713
+    - comparison: "answer >= 5"
+      factor: 2
+      weight: 1.409
 
-  # frequency peanuts
-  - id: N62a_0
-    type: question
-    answers: weekly_intake
-    recode:
-      - comparison: "answer == 2 || answer == 3"
-        factor: 2
-        weight: 0.393
-      - comparison: "answer >= 4"
-        factor: 2
-        weight: 0.888
+# frequency fish.
+- id: N33a_0
+  type: question
+  answers: weekly_intake
+  recode:
+    - comparison: "answer == 3"
+      factor: 2
+      weight: 0.454
+    - comparison: "answer == 4"
+      factor: 2
+      weight: 0.757
+    - comparison: "answer >= 5"
+      factor: 2
+      weight: 1.100
 
-  # cheese on bread
-  - id: N08a_0
-    type: question
-    answers: weekly_intake
-    recode:
-      - comparison: "answer > 3"
-        factor: -2
-        add_answer_to_factor: true
-        weight: 0.177
+# frequency peanuts
+- id: N62a_0
+  type: question
+  answers: weekly_intake
+  recode:
+    - comparison: "answer == 2 || answer == 3"
+      factor: 2
+      weight: 0.393
+    - comparison: "answer >= 4"
+      factor: 2
+      weight: 0.888
 
-  # amount bread with cheese
-  - id: N08b_0
-    type: question
-    answers: slices
-    recode:
-      - comparison: "answer == 3"
-        factor: 2
-        weight: 0.654
-      - comparison: "answer >= 4"
-        factor: 2
-        weight: 1.214
+# cheese on bread
+- id: N08a_0
+  type: question
+  answers: weekly_intake
+  recode:
+    - comparison: "answer > 3"
+      factor: -2
+      add_answer_to_factor: true
+      weight: 0.177
 
-answers:
-  slices:
-  - id: 1
-    text: less_than_one
-  - id: 2
-    text: slice
-    count: 1
-  - id: 3
-    text: slice
-    count: 2
-  - id: 4
-    text: slice
-    count: 3
-  - id: 5
-    text: slice
-    count: 4
-  - id: 6
-    text: slice
-    count: 5
-  - id: 7
-    text: slice
-    count: 6
-  - id: 8
-    text: slice
-    count: 7
-  - id: 9
-    text: slice
-    count: 8
-  - id: 10
-    text: slice
-    count: 9
-  - id: 11
-    text: slice
-    count: 10
-  - id: 12
-    text: slice
-    count: 11
-  - id: 13
-    text: slice
-    count: 12
-  - id: 14
-    text: more_than_slices
-    count: 12
-  glasses:
-  - id: 1
-    text: less_than_one
-  - id: 2
-    text: glass
-    count: 1
-  - id: 3
-    text: glass
-    count: 2
-  - id: 4
-    text: glass
-    count: 3
-  - id: 5
-    text: glass
-    count: 4
-  - id: 6
-    text: glass
-    count: 5
-  - id: 7
-    text: glass
-    count: 6
-  - id: 8
-    text: glass
-    count: 7
-  - id: 9
-    text: glass
-    count: 8
-  - id: 10
-    text: glass
-    count: 9
-  - id: 11
-    text: glass
-    count: 10
-  - id: 12
-    text: glass
-    count: 11
-  - id: 13
-    text: glass
-    count: 12
-  - id: 14
-    text: more_than_glasses
-    count: 12
-  meat:
-  - id: 0
-    text: no_meat
-    picture: plate_0
-  - id: 1
-    text: plate
-    fraction: 1/5
-    picture: plate_20
-  - id: 2
-    text: plate
-    fraction: 1/4
-    picture: plate_25
-  - id: 3
-    text: plate
-    fraction: 1/2
-    picture: plate_50
-  - id: 4
-    text: plate
-    fraction: 2/3
-    picture: plate_66
-  - id: 5
-    text: plate
-    fraction: 3/4
-    picture: plate_75
-  weekly_intake:
-  - id: 1
-    text: not_in_four_weeks
-  - id: 2
-    text: one_in_four_weeks
-  - id: 3
-    text: two_three_in_four_weeks
-  - id: 4
-    text: day_week
-    count: 1
-  - id: 5
-    text: day_week
-    count: 2
-  - id: 6
-    text: day_week
-    count: 3
-  - id: 7
-    text: day_week
-    count: 4
-  - id: 8
-    text: day_week
-    count: 5
-  - id: 9
-    text: day_week
-    count: 6
-  - id: 10
-    text: day_week
-    count: 7
+# amount bread with cheese
+- id: N08b_0
+  type: question
+  answers: slices
+  recode:
+    - comparison: "answer == 3"
+      factor: 2
+      weight: 0.654
+    - comparison: "answer >= 4"
+      factor: 2
+      weight: 1.214
