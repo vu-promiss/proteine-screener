@@ -3,10 +3,24 @@
     <b-row class="pt-2">
       <b-col cols="12" md="8">
         <h2>{{ $t('home.title') }}</h2>
-        <p>{{ $t('home.paragraph1') }}</p>
-        <p>{{ $t('home.paragraph2', {cutoff: cutoffPercentage}) }}</p>
-        <p>{{ $t('home.paragraph3') }}</p>
-        <p class="d-none">{{ $t('home.paragraph4') }}</p>
+
+        <template v-if="stakeholder == 'professional'">
+          <p>{{ $t('home.professional.paragraph1') }}</p>
+          <p>{{ $t('home.professional.paragraph2', {cutoff: cutoffPercentage}) }}</p>
+          <p>{{ $t('home.professional.paragraph3') }}</p>
+        </template>
+
+        <template v-if="stakeholder == 'client'">
+          <p>{{ $t('home.client.paragraph1') }}</p>
+          <p>{{ $t('home.client.list_1.title') }}</p>
+          <ol>
+            <li>{{ $t('home.client.list_1.list_item_1') }}</li>
+            <li>{{ $t('home.client.list_1.list_item_2') }}</li>
+            <li>{{ $t('home.client.list_1.list_item_3') }}</li>
+          </ol>
+          <p><em>{{ $t('home.client.paragraph2') }}</em></p>
+        </template>
+
         <router-link
           class="btn
           btn-info
@@ -51,6 +65,7 @@ export default {
     ...mapGetters({
       autoNext: 'quiz/autoNext',
       locales: 'config/locales',
+      stakeholder: 'config/stakeholder',
       cutoffPercentage: 'config/cutoffPercentage',
       allowAutoNext: 'config/showAutonextButton'
     })
