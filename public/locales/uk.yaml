@@ -1,9 +1,9 @@
 ---
 values:
-  intercept: 19.361
+  intercept: 18.779
   cutoff: 0.3
-  shrinkageFactor: 0.92
-  weightAdjustedFactor: 0.106
+  shrinkageFactor: 0.87
+  weightAdjustedFactor: 0.104
 home:
   button:
     title: To the screener
@@ -46,33 +46,30 @@ info1:
 N05b_0:
   text: In the last 4 weeks, how many slices of bread did you eat on an average day?
 N15b_0:
-  text: In the last 4 weeks, how many glasses/cups of milk, buttermilk or soy milk
-    did you drink on an average day?
+  text: In the last 4 weeks, how many glasses/cups of milk or soy milk did you drink 
+    on an average day? Including added to tea, coffee, cereal, porridge etc.
 N34b:
-  text: How much meat did you on average eat on a day that you ate meat with your
-    warm meal in the last 4 weeks?
+  text: How much meat or meat substitute (i.e. tofu, quorn products, seitan/wheat-protein
+    or soya protein products e.g. Linda Mcartney’s) did you, on average, eat with a meal?
 frequency1:
   text: In the following questions, we will ask how often you ate a certain product
 N18a_0:
-  text: In the last 4 weeks how often did you yoghurt, quark, milk-based pudding,
-    or soy dessert?
+  text: In the last 4 weeks how often did you consume yoghurt, fromage frais,
+    dairy-based or soy dessert?
 N14a_0:
-  text: In the last 4 weeks how often did you eat egg with either your breakfast,
-    lunch, evening meal, as a snack, or in a meal?
+  text: In the last 4 weeks how many eggs did you consume on an average?
 N24a_0:
   text: In the last 4 weeks how often did you eat pasta or noodles (like spaghetti,
     macaroni, lasagna, chow mein, rice-based or wheat-based noodles)?
 N33a_0:
-  text: In the last 4 weeks how often did you eat fish with your bread meal, warm
-    meal, or as a snack? (Do NOT include shellfish).
+  text: In the last 4 weeks how often did you eat fish (fresh, canned, battered etc.)?
 N62a_0:
-  text: In the last 4 weeks, how often did you eat nuts or peanuts as a snack?
+  text: In the last 4 weeks how often did you eat nuts, or nut-containing products?
 N08a_0:
-  text: In the last 4 weeks how often did you eat cheese or cheese spread on your
-    bread, bun, rusk, cracker, etc.?
-N08b_0:
-  text: How many slices of bread, bun, rusk, cracker, etc. with cheese or cheese spread
-    did you on average eat on a day that you ate cheese or cheese spread?
+  text: In the last 4 weeks how often did you eat cheese?
+N26a_0:
+  text: In the last 4 weeks how often did you consume pulses (e.g lentils, chickpeas 
+    and peas) or beans (including broad, runner, baked and other varieties of tinned beans)
 less_than_one: Less than one or not applicable
 slice: "{count} slice ::: {count} slices"
 more_than_slices: "> {count} slice ::: > {count} slices"
