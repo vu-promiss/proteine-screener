@@ -4,7 +4,18 @@ locales:
   - nl
   - fi
   # - uk
+
+# Quiz file, default quiz.yaml
 quizFile: quiz.yaml
+
+# Answer file, default answers.yaml
+answerFile: answers.yaml
+
 showAutonextButton: false
 debug: false
+
+# Url to the api backend
 apiBaseUrl: "/api/"
+
+# Stakeholder: professional or client
+stakeholder: professional
