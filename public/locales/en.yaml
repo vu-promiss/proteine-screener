@@ -8,17 +8,32 @@ home:
   button:
     title: To the screener
   title: Welcome to the Protein Screener (Pro55+)
-  paragraph1: The Protein Screener (Pro55+) is a short (10 food items) questionnaire
-    that estimates the chance on a low protein intake (<1.0 gram /per kilogram body
-    weight/day) for older adults. The Protein screener (Pro55+) is developed by the
-    Vrije Universiteit Amsterdam (the Netherlands).
-  paragraph2: You can use the Protein Screener (Pro55+) here for free. After completing
-    the questions, you will immediately see the chance (0-100%) on a low protein intake.
-    We consider a chance of more than {cutoff}% as a high risk on a low protein intake.
-  paragraph3: To more precisely measure actual protein intake, a full nutritional
-    assessment should be done by for example a dietitian.
-  paragraph4: 'You can find more information on the development and validation of
-    the Protein screener (Pro55+) here: {link}'
+  professional:
+    paragraph1: The Protein Screener (Pro55+) is a short (10 food items) questionnaire
+      that estimates the chance on a low protein intake (<1.0 gram /per kilogram body
+      weight/day) for older adults. The Protein screener (Pro55+) is developed by the
+      Vrije Universiteit Amsterdam (the Netherlands).
+    paragraph2: You can use the Protein Screener (Pro55+) here for free. After completing
+      the questions, you will immediately see the chance (0-100%) on a low protein intake.
+      We consider a chance of more than {cutoff}% as a high risk on a low protein intake.
+    paragraph3: To more precisely measure actual protein intake, a full nutritional
+      assessment should be done by for example a dietitian.
+  client:
+    paragraph1: Het eten van voldoende eiwit is belangrijk voor het behoud van spiermassa
+      en botten. Vanaf de leeftijd van 50 jaar verliezen we geleidelijk spiermassa. Dit
+      kunnen we beperken door voldoende eiwitinname met voeding en regelmatige
+      lichaamsbeweging. Met het invullen van deze vragenlijst kunt u zelf inschatten of
+      uw eiwitinname aan de lage kant is of niet. Deze vragenlijst is bedoeld voor mensen
+      van 55 jaar en ouder. 
+    list_1: 
+      title: "Na het nauwkeurig invullen van deze korte vragenlijst bestaande uit 13 vragen,
+        ontvangt u direct:"
+      list_item_1: Een inschatting of uw eiwitinname aan de lage kant is (of niet)
+      list_item_2: De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening houdend
+        met uw leeftijd, lengte en gewicht
+      list_item_3: Advies waar u meer informatie kunt vinden over eiwitinname
+    paragraph2: Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam
+      \[link wetenschappelijke publicatie(s)\].
 results:
   predicted_probability: Predicted Probability
   paragraph1: We consider a chance of more than {cutoff}% as a high risk on a low

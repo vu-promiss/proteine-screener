@@ -8,17 +8,16 @@ home:
   button:
     title: Kyselyyn
   title: Tervetuloa proteiinikyselyyn (Pro55+)
-  paragraph1: Proteiinikysely (Pro55+) on lyhyt ikääntyneille suunnattu kymmenen kohdan
-    kysely. Siinä arvioidaan, onko vastaajan proteiininsaanti mahdollisesti alhaista
-    (alle 1 g/kehonpaino kg/ vrk). Proteiinikysely (Pro55+) on kehitetty Vrijen yliopistossa
-    Amsterdamissa Hollannissa.
-  paragraph2: Proteiinikyselyä (Pro55+) saa käyttää maksutta. Kysymyksiin vastattuanne,
-    saatte  heti vastauksen prosenttilukuna (0-100 %). Jos tulos on yli 30 %, katsotaan
-    että proteiininsaantinne on alhaista.
-  paragraph3: Jos haluatte tarkemman arvion proteiinin saannistanne, sen tekemiseen
-    tarvitaan ravitsemussuunnittelija tai -terapeutti.
-  paragraph4: 'Lisää tietoa Proteiinikyselyn (Pro55+) kehittämisestä ja validoinnista
-    löytyy täältä: {link}'
+  professional:
+    paragraph1: Proteiinikysely (Pro55+) on lyhyt ikääntyneille suunnattu kymmenen kohdan
+      kysely. Siinä arvioidaan, onko vastaajan proteiininsaanti mahdollisesti alhaista
+      (alle 1 g/kehonpaino kg/ vrk). Proteiinikysely (Pro55+) on kehitetty Vrijen yliopistossa
+      Amsterdamissa Hollannissa.
+    paragraph2: Proteiinikyselyä (Pro55+) saa käyttää maksutta. Kysymyksiin vastattuanne,
+      saatte  heti vastauksen prosenttilukuna (0-100 %). Jos tulos on yli 30 %, katsotaan
+      että proteiininsaantinne on alhaista.
+    paragraph3: Jos haluatte tarkemman arvion proteiinin saannistanne, sen tekemiseen
+      tarvitaan ravitsemussuunnittelija tai -terapeutti.
 results:
   predicted_probability: Arvioitu todennäköisyys
   paragraph1: Yli {cutoff}% todennäköisyys viittaa korkeaan riskiin saada liian vähän
