@@ -113,8 +113,8 @@ export default {
         {name: 'Age', value: this.age},
         {name: 'Length', value: this.length},
         {name: 'Weight', value: this.weight},
-        {name: 'Weight adjusted', value: this.weightAdjusted.toFixed(2)},
-        {name: 'BMI', value: this.weightAdjusted /((this.length / 100) * (this.length / 100)) }
+        {name: 'Weight adjusted', value: this.weightAdjusted},
+        {name: 'BMI', value: this.weightAdjusted / ((this.length / 100) * (this.length / 100))}
       ]
     },
     recodedAnswersArray () {
