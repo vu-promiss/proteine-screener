@@ -1,4 +1,3 @@
----
 values:
   intercept: 19.361
   cutoff: 0.3
@@ -8,105 +7,208 @@ home:
   button:
     title: Naar de screener
   title: Welkom bij de Eiwit Screener (Pro55+)
-  professional:
-    paragraph1: De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een
-      lage eiwit inname (<0.8, <1.0, of <1.2 gram /kilogram lichaamsgewicht/dag) voor
-      ouderen (55+ jaar) te berekenen. De Eiwit Screener (Pro55+) is ontwikkeld door
-      de Vrije Universiteit Amsterdam [link wetenschappelijke publicatie(s) zoals plos paper].
-    paragraph2: De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna
-      direct de uitslag volgt uitgedrukt als de kans op een lage eiwitinname (0-100%)
-      en advies voor gebruik van deze kans in de praktijk en in onderzoek. Tevens wordt
-      het eiwitdoel in grammen inname per dag berekend gebaseerd op leeftijd, lengte en
-      gewicht.
-    paragraph3: Bij een verhoogde kans op een lage eiwitinname, adviseren wij een 
-      nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een uitgebreide
-      voedingsanamnese door een diëtist.
-  client:
-    paragraph1: Het eten van voldoende eiwit is belangrijk voor het behoud van spiermassa
-      en botten. Vanaf de leeftijd van 50 jaar verliezen we geleidelijk spiermassa. Dit
-      kunnen we beperken door voldoende eiwitinname met voeding en regelmatige
-      lichaamsbeweging. Met het invullen van deze vragenlijst kunt u zelf inschatten of
-      uw eiwitinname aan de lage kant is of niet. Deze vragenlijst is bedoeld voor mensen
-      van 55 jaar en ouder. 
-    list_1: 
-      title: "Na het nauwkeurig invullen van deze korte vragenlijst bestaande uit 13 vragen,
-        ontvangt u direct:"
+  professionals:
+    paragraph1: >-
+      De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage
+      eiwit inname (<0.8, <1.0, of <1.2 gram /kilogram lichaamsgewicht/dag) voor
+      ouderen (55+ jaar) te berekenen. De Eiwit Screener (Pro55+) is ontwikkeld
+      door de Vrije Universiteit Amsterdam [link wetenschappelijke publicatie(s)
+      zoals plos paper].
+    paragraph2: >-
+      De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna
+      direct de uitslag volgt uitgedrukt als de kans op een lage eiwitinname
+      (0-100%) en advies voor gebruik van deze kans in de praktijk en in
+      onderzoek. Tevens wordt het eiwitdoel in grammen inname per dag berekend
+      gebaseerd op leeftijd, lengte en gewicht.
+    paragraph3: >-
+      Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
+      nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
+      uitgebreide voedingsanamnese door een diëtist.
+  clients:
+    paragraph1: >-
+      Het eten van voldoende eiwit is belangrijk voor het behoud van spiermassa
+      en botten. Vanaf de leeftijd van 50 jaar verliezen we geleidelijk
+      spiermassa. Dit kunnen we beperken door voldoende eiwitinname met voeding
+      en regelmatige lichaamsbeweging. Met het invullen van deze vragenlijst
+      kunt u zelf inschatten of uw eiwitinname aan de lage kant is of niet. Deze
+      vragenlijst is bedoeld voor mensen van 55 jaar en ouder.
+    list_1:
+      title: >-
+        Na het nauwkeurig invullen van deze korte vragenlijst bestaande uit 13
+        vragen, ontvangt u direct:
       list_item_1: Een inschatting of uw eiwitinname aan de lage kant is (of niet)
-      list_item_2: De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening houdend
-        met uw leeftijd, lengte en gewicht
+      list_item_2: >-
+        De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
+        houdend met uw leeftijd, lengte en gewicht
       list_item_3: Advies waar u meer informatie kunt vinden over eiwitinname
-    paragraph2: Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam
-      \[link wetenschappelijke publicatie(s)\].
+    paragraph2: >-
+      Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam [link
+      wetenschappelijke publicatie(s)].
 results:
+  professionals:
+    chance: 'Voorspelde kans: {percentage}%'
+    explanation:
+      title: Toelichting gebruik voorspelde kans
+      item_1: >-
+        Een kans van meer dan {percentage}% beschouwen wij als een hoog risico
+        op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag
+      item_2: >-
+        Een kans van meer dan 30% beschouwen wij als een hoog risico op een
+        eiwit inname < 1.0 gram /kilogram (gecorrigeerd) lichaamsgewicht/dag
+      item_3: >-
+        Een kans van meer dan 40% beschouwen wij als een hoog risico op een
+        eiwit inname < 1.2 gram /kilogram (gecorrigeerd) lichaamsgewicht/dag
+    target:
+      title: 'Eiwitdoel:'
+      item_1: >-
+        Op basis van de norm ≥0.8 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
+      item_2: >-
+        Op basis van de norm ≥1.0 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
+      item_3: >-
+        Op basis van de norm ≥1.2 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
+    health_advise:
+      title: 'Advies gebruik in praktijk gezondheidszorg:'
+      paragraph: >-
+        Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
+        nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
+        uitgebreide voedingsanamnese door een diëtist of het gebruik van een
+        online tool voor het bijhouden van voedingsinname gedurende ten minste 3
+        dagen.
+    research_advise:
+      title: 'Advies gebruik in onderzoek:'
+      paragraph: >-
+        Afhankelijk van het doel van het onderzoek, kan gekozen worden voor een
+        ander afkappunt van de voorspelde kans. Een lager afkappunt resulteert
+        in een sensitievere screening maar een hogere kans op een vals positieve
+        uitslag. Een hoger afkappunt resulteert in een minder sensitieve
+        screening maar een kleinere kans op een vals positieve uitslag. [link
+        naar plos paper en andere papers]
+  clients:
+    low:
+      paragraph_1: >-
+        Wij schatten uw eiwitinname in als lager dan wordt geadviseerd op basis
+        van uw leeftijd, lengte en gewicht. U kunt de resultaten van deze test
+        opslaan, bewaren, printen, en meenemen door op deze [link] te klikken.
+      paragraph_2: >-
+        Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
+        diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
+        doen. Vervolgens kan zij/hij u voedingsadvies en/of tips geven hoe u, op
+        een manier die bij u past, meer eiwit kunt eten.
+      paragraph_3: >-
+        U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
+        vinden op de website Goed Gevoed Ouder Worden [website link].
+    adequate:
+      paragraph_1: >-
+        Wij schatten uw eiwitinname in als conform wordt geadviseerd op basis
+        van uw leeftijd, lengte en gewicht.
+      paragraph_2: >-
+        Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
+        veranderd in uw voedingspatroon.
+      paragraph_3: >-
+        Mocht u desondanks behoefte hebben aan meer informatie en tips over een
+        gezonde eiwitinname kunt u meer informatie en tips over een gezonde
+        eiwitinname vinden op de website Goed Gevoed Ouder Worden [website
+        link].
+    target:
+      title: 'Eiwitdoel:'
+      paragraph: >-
+        De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
+        houdend met uw leeftijd, lengte en gewicht is: {protein_target} gram per dag.
   predicted_probability: Predicted Probability
-  paragraph1: Een kans van meer dan {cutoff}% beschouwen wij als een hoog risico op
-    een lage eiwit inname.
-  paragraph2: Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke
-    eiwitinname, dient een volledige voedingsanamnese gedaan te worden door bijvoorbeeld
-    een diëtist.
+  paragraph1: >-
+    Een kans van meer dan {cutoff}% beschouwen wij als een hoog risico op een
+    lage eiwit inname.
+  paragraph2: >-
+    Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke
+    eiwitinname, dient een volledige voedingsanamnese gedaan te worden door
+    bijvoorbeeld een diëtist.
 session:
   your_id: 'Je sessie ID is: {session_id}'
+
+# Navigation
 nav:
   continue: Ga door
   next: Volgende
   previous: Vorige
   start_over: Begin opnieuw
+
+# Quiz
 intro:
-  text: 'De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat
-    u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken gegeten
-    en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk en op feestjes.
-    Als u bijvoorbeeld door vakantie of ziekte anders dan normaal gegeten heeft, dan
-    gaat u uit van de 4 weken vóórdat u op vakantie ging of ziek werd.'
+  text: >-
+    De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat
+    u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken
+    gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk
+    en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan
+    normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie
+    ging of ziek werd.
 bmi1:
   text: Vul hier uw persoonlijke gegevens in.
 info1:
-  text: In de volgende vragen vragen we u hoeveel van een voedingsproduct u heeft
+  text: >-
+    In de volgende vragen vragen we u hoeveel van een voedingsproduct u heeft
     gegeten
 N05b_0:
-  text: Hoeveel sneetjes brood heeft u in de afgelopen 4 weken gemiddeld per dag gegeten?
+  text: >-
+    Hoeveel sneetjes brood heeft u in de afgelopen 4 weken gemiddeld per dag
+    gegeten?
 N15b_0:
-  text: Hoeveel glazen/bekers melk, karnemelk of sojamelk/sojadrink heeft u in de
+  text: >-
+    Hoeveel glazen/bekers melk, karnemelk of sojamelk/sojadrink heeft u in de
     afgelopen 4 weken gemiddeld per dag gedronken?
 N34b:
-  text: Hoeveel vlees heeft u gemiddeld gegeten met de warme maaltijd in de afgelopen
-    4 weken op een dag dat u vlees eet?
+  text: >-
+    Hoeveel vlees heeft u gemiddeld gegeten met de warme maaltijd in de
+    afgelopen 4 weken op een dag dat u vlees eet?
 frequency1:
-  text: In de volgende vragen zullen we u vragen hoe vaak u een bepaald product heeft
-    gegeten
+  text: >-
+    In de volgende vragen zullen we u vragen hoe vaak u een bepaald product
+    heeft gegeten
 N18a_0:
-  text: Hoe vaak heeft u in de afgelopen 4 weken een melk product zoals yoghurt, kwark,
-    pudding, vla, of soja dessert gegeten?
+  text: >-
+    Hoe vaak heeft u in de afgelopen 4 weken een melk product zoals yoghurt,
+    kwark, pudding, vla, of soja dessert gegeten?
 N14a_0:
-  text: Hoe vaak heeft u in de afgelopen 4 weken eieren gegeten bij uw ontbijt, middag-
-    of avondmaaltijd, als tussendoortje of verwerkt in gerechten?
+  text: >-
+    Hoe vaak heeft u in de afgelopen 4 weken eieren gegeten bij uw ontbijt,
+    middag- of avondmaaltijd, als tussendoortje of verwerkt in gerechten?
 N24a_0:
-  text: Hoe vaak heeft u in de afgelopen 4 weken deegwaren/pasta, zoals macaroni,
+  text: >-
+    Hoe vaak heeft u in de afgelopen 4 weken deegwaren/pasta, zoals macaroni,
     spaghetti, lasagne, bami, mie, mihoen etc. gegeten?
 N33a_0:
-  text: 'Hoe vaak heeft u in de afgelopen 4 weken vis gegeten bij uw broodmaaltijd,
-    warme maaltijd of als tussendoortje? Let op: schaal- en schelpdieren niet meetellen.'
+  text: >-
+    Hoe vaak heeft u in de afgelopen 4 weken vis gegeten bij uw broodmaaltijd,
+    warme maaltijd of als tussendoortje? Let op: schaal- en schelpdieren niet
+    meetellen.
 N62a_0:
-  text: Hoe vaak heeft u in de afgelopen 4 weken noten of pinda’s als tussendoortje
+  text: >-
+    Hoe vaak heeft u in de afgelopen 4 weken noten of pinda’s als tussendoortje
     gegeten?
 N08a_0:
-  text: Hoe vaak heeft u in de afgelopen 4 weken kaas of smeerkaas gegeten op uw brood,
-    broodjes, beschuiten, crackers etc.?
+  text: >-
+    Hoe vaak heeft u in de afgelopen 4 weken kaas of smeerkaas gegeten op uw
+    brood, broodjes, beschuiten, crackers etc.?
 N08b_0:
-  text: Hoeveel sneden brood/crackers/bolletjes etc. met kaas of smeerkaas heeft u
-    in de afgelopen 4 weken gemiddeld per dag gegeten op een dag dat u brood met kaas
-    of smeerkaas at?
+  text: >-
+    Hoeveel sneden brood/crackers/bolletjes etc. met kaas of smeerkaas heeft u
+    in de afgelopen 4 weken gemiddeld per dag gegeten op een dag dat u brood met
+    kaas of smeerkaas at?
 less_than_one: Minder dan één of niet van toepassing
-slice: "{count} snee ::: {count} sneden"
-more_than_slices: "> {count} snee ::: > {count} sneden"
-glass: "{count} glas ::: {count} glazen"
-more_than_glasses: "> {count} glas ::: > {count} glazen"
-no_meat: Niet van toepassing, eet geen vlees
-plate: "{fraction} bord"
+slice: '{count} snee ::: {count} sneden'
+more_than_slices: '> {count} snee ::: > {count} sneden'
+glass: '{count} glas ::: {count} glazen'
+more_than_glasses: '> {count} glas ::: > {count} glazen'
+no_meat: 'Niet van toepassing, eet geen vlees'
+plate: '{fraction} bord'
 not_in_four_weeks: Deze 4 weken niet
 one_in_four_weeks: 1 dag per 4 weken
 two_three_in_four_weeks: 2-3 dagen per 4 weken
-day_week: "{count} dag per week ::: {count} dagen per week"
-question_number: Vraag {number}
+day_week: '{count} dag per week ::: {count} dagen per week'
+question_number: 'Vraag {number}'
 result_explanation: Some explanation about the results.
 age:
   label: Leeftijd

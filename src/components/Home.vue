@@ -5,20 +5,20 @@
         <h2>{{ $t('home.title') }}</h2>
 
         <template v-if="stakeholder == 'professional'">
-          <p>{{ $t('home.professional.paragraph1') }}</p>
-          <p>{{ $t('home.professional.paragraph2', {cutoff: cutoffPercentage}) }}</p>
-          <p>{{ $t('home.professional.paragraph3') }}</p>
+          <p>{{ $t('home.professionals.paragraph1') }}</p>
+          <p>{{ $t('home.professionals.paragraph2', {cutoff: cutoffPercentage}) }}</p>
+          <p>{{ $t('home.professionals.paragraph3') }}</p>
         </template>
 
         <template v-if="stakeholder == 'client'">
-          <p>{{ $t('home.client.paragraph1') }}</p>
-          <p>{{ $t('home.client.list_1.title') }}</p>
+          <p>{{ $t('home.clients.paragraph1') }}</p>
+          <p>{{ $t('home.clients.list_1.title') }}</p>
           <ol>
-            <li>{{ $t('home.client.list_1.list_item_1') }}</li>
-            <li>{{ $t('home.client.list_1.list_item_2') }}</li>
-            <li>{{ $t('home.client.list_1.list_item_3') }}</li>
+            <li>{{ $t('home.clients.list_1.list_item_1') }}</li>
+            <li>{{ $t('home.clients.list_1.list_item_2') }}</li>
+            <li>{{ $t('home.clients.list_1.list_item_3') }}</li>
           </ol>
-          <p><em>{{ $t('home.client.paragraph2') }}</em></p>
+          <p><em>{{ $t('home.clients.paragraph2') }}</em></p>
         </template>
 
         <router-link
