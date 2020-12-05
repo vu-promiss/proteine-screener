@@ -83,7 +83,7 @@ results:
     low: |
       **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
       van uw leeftijd, lengte en gewicht. U kunt de resultaten van deze test
-      opslaan, bewaren, printen, en meenemen door op deze [link] te klikken.
+      opslaan, bewaren, printen, en meenemen door op deze [link](/#/print) te klikken.
 
       Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
       diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
@@ -110,6 +110,9 @@ results:
 publications:
   title: Publicaties
   view_article: Bekijk artikel
+print:
+  title: Resultaten
+  print: Print
 
 # Session
 session:

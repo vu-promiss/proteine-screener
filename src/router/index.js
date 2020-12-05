@@ -7,6 +7,7 @@ import Register from '@/components/Register'
 import Admin from '@/components/Admin'
 import Error from '@/components/Error'
 import Publications from '@/components/Publications'
+import Print from '@/components/Print'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/publications',
       name: 'publications',
       component: Publications
+    },
+    {
+      path: '/print',
+      name: 'print',
+      component: Print
     },
     {
       path: '/editor',

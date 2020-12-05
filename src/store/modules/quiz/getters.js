@@ -17,7 +17,7 @@ export const length = (state) => state.answers.length
 
 export const validLength = (state) => {
   if (state.answers.length === '') return null
-  return state.answers.length >= 30 && state.answers.length < 300
+  return state.answers.length >= 100 && state.answers.length < 300
 }
 
 export const weight = (state) => state.answers.weight
@@ -112,4 +112,23 @@ export const predprob = (state, getters, rootState, rootGetters) => {
 
 export const proteinTarget = (state, getters, rootState, rootGetters) => {
   return Math.round(getters.weightAdjusted * rootGetters['config/proteinTarget'])
+}
+
+export const renderQuizResults = (state) => {
+  let results = []
+  // loop over quiz
+  state.questions.forEach(question => {
+    // only do questions
+    if (question.type !== 'question') {
+      return
+    }
+    // get answer for this question
+    let answer = state.answers[question.id]
+    results.push({
+      id: question.id,
+      number: question.number,
+      answer: question.answers.find(obj => { return obj.id === answer })
+    })
+  })
+  return results
 }
