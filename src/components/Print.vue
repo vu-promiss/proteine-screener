@@ -3,10 +3,11 @@
     <b-row class="pt-2">
       <b-col cols="12" md="8">
         <h2>{{ $t('print.title') }}
-          <b-button variant="outline-secondary" onclick="window.print()">
+          <b-button class="d-print-none" variant="outline-secondary" onclick="window.print()">
             <font-awesome-icon icon="print"/> {{ $t('print.print') }}
           </b-button>
         </h2>
+        <p>{{ getDateString }}</p>
         <p v-for="item in renderQuizResults" :key="item.id">
             <strong>{{ $t('question_number', {number: item.number}) }}:</strong>
               {{ $t(item.id + '.text') }} <br>
@@ -14,9 +15,7 @@
               {{ $t(item.answer.text, {count: item.answer.count, fraction: item.answer.fraction}, item.answer.count) }}
         </p>
         <a
-          class="btn
-          btn-info
-          btn-lg"
+          class="btn d-print-none btn-info btn-lg"
           @click="$router.go(-1)">{{ $t('nav.back') }}
         </a>
       </b-col>
@@ -42,6 +41,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import router from '../router'
 
 export default {
   name: 'Print',
@@ -51,7 +51,13 @@ export default {
   computed: {
     ...mapGetters({
       renderQuizResults: 'quiz/renderQuizResults'
-    })
+    }),
+    getDateString () {
+      let event = new Date()
+      let options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
+      let locale = router.app.$i18n.locale()
+      return event.toLocaleDateString(locale, options)
+    }
   }
 }
 </script>
