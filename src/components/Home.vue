@@ -5,28 +5,21 @@
         <h2>{{ $t('home.title') }}</h2>
 
         <template v-if="stakeholder == 'professional'">
-          <p>{{ $t('home.professionals.paragraph1') }}</p>
-          <p>{{ $t('home.professionals.paragraph2', {cutoff: cutoffPercentage}) }}</p>
-          <p>{{ $t('home.professionals.paragraph3') }}</p>
+          <div v-html="renderLocale('home.professionals')"></div>
         </template>
 
         <template v-if="stakeholder == 'client'">
-          <p>{{ $t('home.clients.paragraph1') }}</p>
-          <p>{{ $t('home.clients.list_1.title') }}</p>
-          <ol>
-            <li>{{ $t('home.clients.list_1.list_item_1') }}</li>
-            <li>{{ $t('home.clients.list_1.list_item_2') }}</li>
-            <li>{{ $t('home.clients.list_1.list_item_3') }}</li>
-          </ol>
-          <p><em>{{ $t('home.clients.paragraph2') }}</em></p>
+          <div v-html="renderLocale('home.clients')"></div>
         </template>
-
-        <router-link
-          class="btn
-          btn-info
-          btn-lg"
-          :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}
-        </router-link>
+        <div class="text-center">
+          <router-link
+            class="btn
+            btn-info
+            btn-lg"
+            :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}
+            <font-awesome-icon icon="arrow-alt-circle-right"/>
+          </router-link>
+        </div>
       </b-col>
       <b-col cols="12" md="4" class="d-none d-md-block">
         <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
@@ -58,9 +51,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
 export default {
   name: 'Home',
+  components: {
+    FontAwesomeIcon
+  },
   computed: {
     ...mapGetters({
       autoNext: 'quiz/autoNext',
