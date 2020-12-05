@@ -10,12 +10,12 @@
                 <a :href="item.link" target="_blank">{{ $t('publications.view_article') }}</a>
             </li>
         </ol>
-        <router-link
+        <a
           class="btn
           btn-info
           btn-lg"
-          :to="{ name: 'home'}">{{ $t('nav.back') }}
-        </router-link>
+          @click="$router.go(-1)">{{ $t('nav.back') }}
+        </a>
       </b-col>
       <b-col cols="12" md="4" class="d-none d-md-block">
         <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
