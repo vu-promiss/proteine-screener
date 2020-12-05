@@ -11,6 +11,7 @@
         <template v-if="stakeholder == 'client'">
           <div v-html="renderLocale('home.clients')"></div>
         </template>
+        
         <div class="text-center">
           <router-link
             class="btn
