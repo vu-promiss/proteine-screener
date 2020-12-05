@@ -19,7 +19,8 @@ export default new Router({
       component: Home
     },
     {
-      path: '/screener/:question',
+      path: '/screener/:stakeholder',
+      props: true,
       name: 'screener',
       component: Screener
     },

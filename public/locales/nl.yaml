@@ -5,8 +5,11 @@ values:
   weightAdjustedFactor: 0.106
   proteinTarget: 0.8
 home:
-  button:
-    title: Naar de screener
+  button: Naar de screener
+  proversion: Dit is de Eiwit screener voor onderzoekers.
+  proversion_link: Ga naar de versie voor ouderen
+  clientversion: Dit is de Eiwit screener voor ouderen.
+  clientversion_link: Ga naar de versie voor onderzoekers
   title: Welkom bij de Eiwit Screener (Pro55+)
   professionals: |
     De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage
@@ -125,6 +128,7 @@ nav:
   next: Volgende
   previous: Vorige
   start_over: Begin opnieuw
+  change: wijzig
 
 # Quiz
 intro:

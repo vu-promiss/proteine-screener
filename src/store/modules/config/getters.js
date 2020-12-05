@@ -30,7 +30,7 @@ export const quizFile = (state) => state.config.quizFile
 
 export const answerFile = (state) => state.config.answerFile
 
-export const stakeholder = (state) => state.config.stakeholder
+export const stakeholder = (state) => state.stakeholder
 
 export const publications = (state) => state.publications
 

@@ -38,7 +38,9 @@
 
   export default {
     name: 'screener',
+    props: ['stakeholder'],
     mounted () {
+      this.updateStakeholder(this.stakeholder)
       this.initQuiz()
     },
     components: {
@@ -59,7 +61,8 @@
     },
     methods: {
       ...mapActions({
-        initQuiz: 'quiz/initQuiz'
+        initQuiz: 'quiz/initQuiz',
+        updateStakeholder: 'config/updateStakeholder'
       }),
       scrollup () {
         this.$scrollTo('body')

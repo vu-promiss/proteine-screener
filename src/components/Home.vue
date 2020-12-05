@@ -3,7 +3,6 @@
     <b-row class="pt-2">
       <b-col cols="12" md="8">
         <h2>{{ $t('home.title') }}</h2>
-
         <template v-if="stakeholder == 'professional'">
           <div v-html="renderLocale('home.professionals')"></div>
         </template>
@@ -17,9 +16,25 @@
             class="btn
             btn-info
             btn-lg"
-            :to="{ name: 'screener', params: { question: 1 }}">{{ $t('home.button.title') }}
+            :to="{ name: 'screener', params: { stakeholder: stakeholder }}">{{ $t('home.button') }}
             <font-awesome-icon icon="arrow-alt-circle-right"/>
           </router-link>
+          <p v-if="stakeholder == 'professional'">
+            <em>
+              {{ $t('home.proversion') }}
+              <b-link href="" @click.stop="updateStakeholder('client')">
+                {{ $t('home.proversion_link') }}
+              </b-link>
+            </em>
+          </p>
+          <p v-if="stakeholder == 'client'">
+            <em>
+              {{ $t('home.clientversion') }}
+              <b-link href="#" @click.stop="updateStakeholder('professional')">
+                {{ $t('home.clientversion_link') }}
+              </b-link>
+            </em>
+          </p>
         </div>
       </b-col>
       <b-col cols="12" md="4" class="d-none d-md-block">
@@ -51,7 +66,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
 export default {
@@ -69,6 +84,9 @@ export default {
     })
   },
   methods: {
+    ...mapActions({
+      updateStakeholder: 'config/updateStakeholder'
+    }),
     changeAutoNext (val) {
       this.$store.commit('quiz/setAutoNext', val)
     }

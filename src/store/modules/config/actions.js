@@ -21,6 +21,10 @@ export const updateLocale = ({ commit }, locale) => {
   commit('setLocaleData', locale)
 }
 
+export const updateStakeholder = ({ commit }, stakeholder) => {
+  commit('setStakeholder', stakeholder)
+}
+
 export const loadPublications = ({ commit }) => {
   return axios.get('publications.yaml').then((response) => {
     commit('setPublications', yaml.safeLoad(response.data))

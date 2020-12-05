@@ -2,8 +2,12 @@ export const setConfig = (state, config) => {
   state.config = config
   state.config.quizFile = state.config['quizFile'] ? state.config.quizFile : 'quiz.yaml'
   state.config.answerFile = state.config['answerFile'] ? state.config.answerFile : 'answers.yaml'
-  state.config.stakeholder = state.config['stakeholder'] ? state.config.stakeholder : 'professional'
+  state.stakeholder = state.config['stakeholder'] ? state.config.stakeholder : 'professional'
   state.configLoaded = true
+}
+
+export const setStakeholder = (state, stakeholder) => {
+  state.stakeholder = stakeholder
 }
 
 export const setPublications = (state, publications) => {

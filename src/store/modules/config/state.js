@@ -9,5 +9,6 @@ export default {
   intercept: 0,
   shrinkageFactor: 0,
   weightAdjustedFactor: 0,
+  stakeholder: '',
   proteinTarget: 0
 }
