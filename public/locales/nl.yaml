@@ -3,6 +3,7 @@ values:
   cutoff: 0.3
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.106
+  proteinTarget: 0.8
 home:
   button:
     title: Naar de screener
@@ -38,97 +39,81 @@ home:
       houdend met uw leeftijd, lengte en gewicht
     3. Advies waar u meer informatie kunt vinden over eiwitinname
 
-    *Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam.*
-
-    #### Wetenschappelijke publicaties
-    - [Development and validation of a short food questionnaire to screen for low protein intake in community-dwelling older adults: The Protein Screener 55+ (Pro55+)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0196406).
+    *Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam. [Bekijk publicaties](/#/publications)*
 results:
   professionals:
-    chance: 'Voorspelde kans: {percentage}%'
-    explanation:
-      title: Toelichting gebruik voorspelde kans
-      item_1: >-
-        Een kans van meer dan {percentage}% beschouwen wij als een hoog risico
+    probability: 'Voorspelde kans: {percentage}%'
+    explanation: |
+      ##### Toelichting gebruik voorspelde kans
+
+      - Een kans van meer dan {percentage}% beschouwen wij als een hoog risico
         op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag
-      item_2: >-
-        Een kans van meer dan 30% beschouwen wij als een hoog risico op een
+      - Een kans van meer dan 30% beschouwen wij als een hoog risico op een
         eiwit inname < 1.0 gram /kilogram (gecorrigeerd) lichaamsgewicht/dag
-      item_3: >-
-        Een kans van meer dan 40% beschouwen wij als een hoog risico op een
+      - Een kans van meer dan 40% beschouwen wij als een hoog risico op een
         eiwit inname < 1.2 gram /kilogram (gecorrigeerd) lichaamsgewicht/dag
-    target:
-      title: 'Eiwitdoel:'
-      item_1: >-
-        Op basis van de norm ≥0.8 gram /kilogram (gecorrigeerd)
+    target: |
+      ##### Eiwitdoel
+
+      - Op basis van de norm ≥0.8 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
-      item_2: >-
-        Op basis van de norm ≥1.0 gram /kilogram (gecorrigeerd)
+      - Op basis van de norm ≥1.0 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
-      item_3: >-
-        Op basis van de norm ≥1.2 gram /kilogram (gecorrigeerd)
+      - Op basis van de norm ≥1.2 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
-    health_advise:
-      title: 'Advies gebruik in praktijk gezondheidszorg:'
-      paragraph: >-
-        Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
-        nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
-        uitgebreide voedingsanamnese door een diëtist of het gebruik van een
-        online tool voor het bijhouden van voedingsinname gedurende ten minste 3
-        dagen.
-    research_advise:
-      title: 'Advies gebruik in onderzoek:'
-      paragraph: >-
-        Afhankelijk van het doel van het onderzoek, kan gekozen worden voor een
-        ander afkappunt van de voorspelde kans. Een lager afkappunt resulteert
-        in een sensitievere screening maar een hogere kans op een vals positieve
-        uitslag. Een hoger afkappunt resulteert in een minder sensitieve
-        screening maar een kleinere kans op een vals positieve uitslag. [link
-        naar plos paper en andere papers]
+    health_advise: |
+      ##### Advies gebruik in praktijk gezondheidszorg
+     
+      Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
+      nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
+      uitgebreide voedingsanamnese door een diëtist of het gebruik van een
+      online tool voor het bijhouden van voedingsinname gedurende ten minste 3
+      dagen.
+    research_advise: |
+      ##### Advies gebruik in onderzoek:
+        
+      Afhankelijk van het doel van het onderzoek, kan gekozen worden voor een
+      ander afkappunt van de voorspelde kans. Een lager afkappunt resulteert
+      in een sensitievere screening maar een hogere kans op een vals positieve
+      uitslag. Een hoger afkappunt resulteert in een minder sensitieve
+      screening maar een kleinere kans op een vals positieve uitslag.
+      [Bekijk publicaties](/#/publications)
   clients:
-    low:
-      paragraph_1: >-
-        Wij schatten uw eiwitinname in als lager dan wordt geadviseerd op basis
-        van uw leeftijd, lengte en gewicht. U kunt de resultaten van deze test
-        opslaan, bewaren, printen, en meenemen door op deze [link] te klikken.
-      paragraph_2: >-
-        Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
-        diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
-        doen. Vervolgens kan zij/hij u voedingsadvies en/of tips geven hoe u, op
-        een manier die bij u past, meer eiwit kunt eten.
-      paragraph_3: >-
-        U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
-        vinden op de website Goed Gevoed Ouder Worden [website link].
+    low: |
+      **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
+      van uw leeftijd, lengte en gewicht. U kunt de resultaten van deze test
+      opslaan, bewaren, printen, en meenemen door op deze [link] te klikken.
+
+      Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
+      diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
+      doen. Vervolgens kan zij/hij u voedingsadvies en/of tips geven hoe u, op
+      een manier die bij u past, meer eiwit kunt eten.
+
+      U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
+      vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
     adequate:
-      paragraph_1: >-
-        Wij schatten uw eiwitinname in als conform wordt geadviseerd op basis
-        van uw leeftijd, lengte en gewicht.
-      paragraph_2: >-
-        Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
-        veranderd in uw voedingspatroon.
-      paragraph_3: >-
-        Mocht u desondanks behoefte hebben aan meer informatie en tips over een
-        gezonde eiwitinname kunt u meer informatie en tips over een gezonde
-        eiwitinname vinden op de website Goed Gevoed Ouder Worden [website
-        link].
-    target:
-      title: 'Eiwitdoel:'
-      paragraph: >-
-        De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
-        houdend met uw leeftijd, lengte en gewicht is: {protein_target} gram per dag.
-  predicted_probability: Predicted Probability
-  paragraph1: >-
-    Een kans van meer dan {cutoff}% beschouwen wij als een hoog risico op een
-    lage eiwit inname.
-  paragraph2: >-
-    Om vervolgens een nauwkeurig beeld te krijgen van de daadwerkelijke
-    eiwitinname, dient een volledige voedingsanamnese gedaan te worden door
-    bijvoorbeeld een diëtist.
-session:
-  your_id: 'Je sessie ID is: {session_id}'
+      Wij schatten uw eiwitinname in als conform wordt geadviseerd op basis
+      van uw leeftijd, lengte en gewicht.
+
+      Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
+      veranderd in uw voedingspatroon.
+
+      Mocht u desondanks behoefte hebben aan meer informatie en tips over een
+      gezonde eiwitinname kunt u meer informatie en tips over een gezonde
+      eiwitinname vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
+    target: |
+      ##### Eiwitdoel:
+
+      De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
+      houdend met uw leeftijd, lengte en gewicht is: **{protein_target} gram per dag**.
 publications:
   title: Publicaties
   view_article: Bekijk artikel
+
+# Session
+session:
+  your_id: 'Je sessie ID is: {session_id}'
 
 # Navigation
 nav:
