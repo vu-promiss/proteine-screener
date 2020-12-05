@@ -12,8 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import fontawesome from '@fortawesome/fontawesome'
 import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
+import faArrowAltCircleRight from '@fortawesome/fontawesome-free-solid/faArrowAltCircleRight'
+import marked from 'marked'
 
 fontawesome.library.add(faCheckCircle)
+fontawesome.library.add(faArrowAltCircleRight)
 
 const locale = new Vuex.Store()
 Vue.use(vuexI18n.plugin, locale)
@@ -29,6 +32,14 @@ Vue.filter('uppercase', function (value) {
 })
 Vue.filter('integer', function (value) {
   return parseInt(value, 10)
+})
+Vue.mixin({
+  methods: {
+    renderLocale (val, substitutions) {
+      substitutions = substitutions || {}
+      return marked(this.$root.$t(val, substitutions), {gfm: true, breaks: false})
+    }
+  }
 })
 
 /* eslint-disable no-new */
