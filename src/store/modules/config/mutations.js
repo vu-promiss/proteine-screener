@@ -6,6 +6,10 @@ export const setConfig = (state, config) => {
   state.configLoaded = true
 }
 
+export const setPublications = (state, publications) => {
+  state.publications = publications
+}
+
 export const addlocaleData = (state, obj) => {
   state.localeData[obj.locale] = obj.localeData.values
 }

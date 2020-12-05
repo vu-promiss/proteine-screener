@@ -2,6 +2,7 @@ export default {
   config: {
     'locales': []
   },
+  publications: [],
   configLoaded: false,
   localeData: {},
   cutoff: 0,

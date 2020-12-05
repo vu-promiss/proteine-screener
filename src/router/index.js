@@ -6,6 +6,7 @@ import Editor from '@/components/Editor'
 import Register from '@/components/Register'
 import Admin from '@/components/Admin'
 import Error from '@/components/Error'
+import Publications from '@/components/Publications'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/error',
       name: 'configerror',
       component: Error
+    },
+    {
+      path: '/publications',
+      name: 'publications',
+      component: Publications
     },
     {
       path: '/editor',

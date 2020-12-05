@@ -20,3 +20,9 @@ export const updateLocale = ({ commit }, locale) => {
   router.app.$i18n.set(locale)
   commit('setLocaleData', locale)
 }
+
+export const loadPublications = ({ commit }) => {
+  return axios.get('publications.yaml').then((response) => {
+    commit('setPublications', yaml.safeLoad(response.data))
+  })
+}
