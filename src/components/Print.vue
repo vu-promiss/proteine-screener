@@ -11,8 +11,10 @@
         <p v-for="item in renderQuizResults" :key="item.id">
             <strong>{{ $t('question_number', {number: item.number}) }}:</strong>
               {{ $t(item.id + '.text') }} <br>
-            Uw antwoord: 
+            Uw antwoord:
+              <template v-if="item.answer != undefined">
               {{ $t(item.answer.text, {count: item.answer.count, fraction: item.answer.fraction}, item.answer.count) }}
+              </template>
         </p>
         <a
           class="btn d-print-none btn-info btn-lg"
