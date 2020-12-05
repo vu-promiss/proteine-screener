@@ -3,41 +3,30 @@
     <b-row align-h="center">
       <b-col cols="12" md="6" class="text-left">
         <b-alert show v-if="stakeholder == 'professional'">
-          <h3>{{ $t('results.professionals.chance', {percentage: predprob * 100 | integer})  }}</h3>
+          <h3>{{ $t('results.professionals.probability', {percentage: parseInt(predprob * 100)})  }}</h3>
 
-          <h5>{{ $t('results.professionals.explanation.title') }}</h5>
-          <ul>
-            <li>{{ $t('results.professionals.explanation.item_1', {percentage: predprob * 100 | integer}) }}</li>
-            <li>{{ $t('results.professionals.explanation.item_2') }}</li>
-            <li>{{ $t('results.professionals.explanation.item_3') }}</li>
-          </ul>
+          <div v-html="renderLocale('results.professionals.explanation')"></div>
 
-          <h5>{{ $t('results.professionals.target.title') }}</h5>
-          <ul>
-            <li>{{ $t('results.professionals.target.item_1') }}</li>
-            <li>{{ $t('results.professionals.target.item_2') }}</li>
-            <li>{{ $t('results.professionals.target.item_3') }}</li>
-          </ul>
+          <div v-html="renderLocale('results.professionals.target')"></div>
 
-          <h5>{{ $t('results.professionals.health_advise.title') }}</h5>
-          <p>{{ $t('results.professionals.health_advise.paragraph') }}</p>
+          <div v-html="renderLocale('results.professionals.health_advise')"></div>
 
-          <h5>{{ $t('results.professionals.research_advise.title') }}</h5>
-          <p>{{ $t('results.professionals.research_advise.paragraph') }}</p>
+          <div v-html="renderLocale('results.professionals.research_advise')"></div>
 
         </b-alert>
 
         <b-alert show variant="danger" v-if="stakeholder == 'client' && predprob > cutoff">
-            <p>{{ $t('results.clients.low.paragraph_1') }}</p>
-            <p>{{ $t('results.clients.low.paragraph_2') }}</p>
-            <p>{{ $t('results.clients.low.paragraph_3') }}</p>
+          <div v-html="renderLocale('results.clients.low')"></div>
         </b-alert>
 
         <b-alert show variant="success" v-if="stakeholder == 'client' && predprob <= cutoff">
-            <p>{{ $t('results.clients.adequate.paragraph_1') }}</p>
-            <p>{{ $t('results.clients.adequate.paragraph_2') }}</p>
-            <p>{{ $t('results.clients.adequate.paragraph_3') }}</p>
+          <div v-html="renderLocale('results.clients.adequate')"></div>
         </b-alert>
+
+        <b-alert show variant="info" v-if="stakeholder == 'client'">
+          <div v-html="renderLocale('results.clients.target', {protein_target: proteinTarget})"></div>
+        </b-alert>
+
         <p>
           <b-button
             size="lg"
@@ -99,7 +88,8 @@ export default {
       weightAdjusted: 'quiz/weightAdjusted',
       length: 'quiz/length',
       age: 'quiz/age',
-      recodedAnswers: 'quiz/recodedAnswers'
+      recodedAnswers: 'quiz/recodedAnswers',
+      proteinTarget: 'quiz/proteinTarget'
     }),
     valueArray () {
       return [

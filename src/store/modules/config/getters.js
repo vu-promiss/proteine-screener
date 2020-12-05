@@ -33,3 +33,5 @@ export const answerFile = (state) => state.config.answerFile
 export const stakeholder = (state) => state.config.stakeholder
 
 export const publications = (state) => state.publications
+
+export const proteinTarget = (state) => state.proteinTarget

@@ -21,4 +21,5 @@ export const setLocaleData = (state, locale) => {
   state.cutoff = localeData.cutoff
   state.shrinkageFactor = localeData.shrinkageFactor
   state.weightAdjustedFactor = localeData.weightAdjustedFactor
+  state.proteinTarget = localeData.proteinTarget
 }

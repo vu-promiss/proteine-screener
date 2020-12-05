@@ -78,9 +78,9 @@ export const recodedAnswers = (state) => {
 }
 
 export const weightAdjusted = (state) => {
-  let weight_adj = state.answers.weight
-  let age = state.answers.age
-  let height_m = state.answers.length / 100.0
+  let weight_adj = state.answers.weight || 80
+  let age = state.answers.age || 50
+  let height_m = state.answers.length / 100.0 || 1.80
   let height_squared = height_m * height_m
   let bmi = state.answers.weight / height_squared
 
@@ -108,4 +108,8 @@ export const predprob = (state, getters, rootState, rootGetters) => {
   })
 
   return 1 / (1 + Math.exp(-z))
+}
+
+export const proteinTarget = (state, getters, rootState, rootGetters) => {
+  return Math.round(getters.weightAdjusted * rootGetters['config/proteinTarget'])
 }

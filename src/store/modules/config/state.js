@@ -8,5 +8,6 @@ export default {
   cutoff: 0,
   intercept: 0,
   shrinkageFactor: 0,
-  weightAdjustedFactor: 0
+  weightAdjustedFactor: 0,
+  proteinTarget: 0
 }
