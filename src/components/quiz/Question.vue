@@ -47,6 +47,7 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import QuizNavigation from './QuizNavigation'
   import BmiQuestion from './BmiQuestion'
+
   export default {
     props: ['question'],
     components: {
