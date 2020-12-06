@@ -19,26 +19,13 @@
             :to="{ name: 'screener', params: { stakeholder: stakeholder }}">{{ $t('home.button') }}
             <font-awesome-icon icon="arrow-alt-circle-right"/>
           </router-link>
-          <p v-if="stakeholder == 'professional'">
-            <em>
-              {{ $t('home.proversion') }}
-              <b-link href="" @click.stop="updateStakeholder('client')">
-                {{ $t('home.proversion_link') }}
-              </b-link>
-            </em>
-          </p>
-          <p v-if="stakeholder == 'client'">
-            <em>
-              {{ $t('home.clientversion') }}
-              <b-link href="#" @click.stop="updateStakeholder('professional')">
-                {{ $t('home.clientversion_link') }}
-              </b-link>
-            </em>
-          </p>
         </div>
       </b-col>
       <b-col cols="12" md="4" class="d-none d-md-block">
-        <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
+        <stakeholder-switcher></stakeholder-switcher>
+        <p>
+          <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
+        </p>
       </b-col>
       <b-col cols="12" class="text-center">
         <b-form-checkbox v-if="allowAutoNext" id="checkbox1"
@@ -66,27 +53,25 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import StakeholderSwitcher from './navigation/StakeholderSwitcher'
 
 export default {
   name: 'Home',
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    StakeholderSwitcher
   },
   computed: {
     ...mapGetters({
       autoNext: 'quiz/autoNext',
       locales: 'config/locales',
       stakeholder: 'config/stakeholder',
-      cutoffPercentage: 'config/cutoffPercentage',
       allowAutoNext: 'config/showAutonextButton'
     })
   },
   methods: {
-    ...mapActions({
-      updateStakeholder: 'config/updateStakeholder'
-    }),
     changeAutoNext (val) {
       this.$store.commit('quiz/setAutoNext', val)
     }
