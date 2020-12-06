@@ -121,6 +121,7 @@ print:
   title: Eiwit Screener Resultaten
   print: Print
   download: Download
+  your_answer: Uw antwoord
 
 # Session
 session:

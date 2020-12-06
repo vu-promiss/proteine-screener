@@ -21,7 +21,7 @@
         <p v-for="item in renderQuizResults" :key="item.id">
             <strong>{{ $t('question_number', {number: item.number}) }}:</strong>
               {{ $t(item.id + '.text') }} <br>
-            Uw antwoord:
+              {{ $t('print.your_answer') }}:
               <template v-if="item.answer != undefined">
               {{ $t(item.answer.text, {count: item.answer.count, fraction: item.answer.fraction}, item.answer.count) }}
               </template>
