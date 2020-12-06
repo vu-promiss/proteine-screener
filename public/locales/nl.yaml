@@ -85,8 +85,7 @@ results:
   clients:
     low: |
       **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
-      van uw leeftijd, lengte en gewicht ({age}jaar, {length}cm, {weight}kg). U kunt de resultaten van deze test
-      opslaan, bewaren, printen, en meenemen door op deze [link](/#/print) te klikken.
+      van uw leeftijd, lengte en gewicht ({age} jaar, {length}cm, {weight}kg).
 
       Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
       diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
@@ -110,12 +109,18 @@ results:
 
       De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
       houdend met uw leeftijd, lengte en gewicht is: **{protein_target} gram per dag**.
+    print: |
+      ##### Resultaten
+
+      U kunt de resultaten van deze test
+      opslaan, bewaren, printen, en meenemen op de [Resultaten Pagina](/#/print).
 publications:
   title: Publicaties
   view_article: Bekijk artikel
 print:
   title: Eiwit Screener Resultaten
   print: Print
+  download: Download
 
 # Session
 session:

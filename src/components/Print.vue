@@ -1,12 +1,22 @@
 <template>
   <b-container class="home">
-    <b-row class="pt-2">
-      <b-col cols="12" md="8">
-        <h2>{{ $t('print.title') }}
-          <b-button class="d-print-none" variant="outline-secondary" onclick="window.print()">
+    <b-row class="d-print-none pt-2">
+      <b-col>
+        <b-button variant="outline-secondary" onclick="window.print()">
             <font-awesome-icon icon="print"/> {{ $t('print.print') }}
           </b-button>
-        </h2>
+          <a onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" 
+            href="#"
+            class="btn btn-outline-secondary"
+            download="proteinscreener.html"
+          >
+            <font-awesome-icon icon="download"/> {{ $t('print.download') }}
+          </a>                    
+      </b-col>
+    </b-row>   
+    <b-row class="pt-2">
+      <b-col cols="12" md="8">
+        <h2>{{ $t('print.title') }}</h2>
         <p>{{ getDateString }}</p>
         <p v-for="item in renderQuizResults" :key="item.id">
             <strong>{{ $t('question_number', {number: item.number}) }}:</strong>
@@ -16,7 +26,7 @@
               {{ $t(item.answer.text, {count: item.answer.count, fraction: item.answer.fraction}, item.answer.count) }}
               </template>
         </p>
-        <client-results></client-results>
+        <client-results calling-page="print" />
         <a
           class="btn d-print-none btn-info btn-lg"
           @click="$router.go(-1)">{{ $t('nav.back') }}

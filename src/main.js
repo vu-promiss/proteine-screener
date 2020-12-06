@@ -13,12 +13,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import fontawesome from '@fortawesome/fontawesome'
 import faCheckCircle from '@fortawesome/fontawesome-free-solid/faCheckCircle'
 import faArrowAltCircleRight from '@fortawesome/fontawesome-free-solid/faArrowAltCircleRight'
+import faDownload from '@fortawesome/fontawesome-free-solid/faDownload'
 import faPrint from '@fortawesome/fontawesome-free-solid/faPrint'
 import marked from 'marked'
 
 fontawesome.library.add(faCheckCircle)
 fontawesome.library.add(faArrowAltCircleRight)
 fontawesome.library.add(faPrint)
+fontawesome.library.add(faDownload)
 
 const locale = new Vuex.Store()
 Vue.use(vuexI18n.plugin, locale)
