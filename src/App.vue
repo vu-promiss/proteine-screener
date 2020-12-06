@@ -36,9 +36,9 @@
       let browserLocale = navigator.language.split('-')[0]
 
       this.loadYamlConfig().then(() => {
-        let config = this.$store.getters['config/config']
+        let locales = this.$store.getters['config/locales']
         let loadedLocales = []
-        config.locales.forEach((locale) => {
+        locales.forEach((locale) => {
           let self = this
           loadedLocales.push(axios.get('locales/' + locale + '.yaml').then((response) => {
             let localeData = yaml.safeLoad(response.data)
@@ -47,12 +47,12 @@
           }))
         })
         Promise.all(loadedLocales).then((reponse) => {
-          if (config.locales.includes(browserLocale)) {
+          if (locales.includes(browserLocale)) {
             this.updateLocale(browserLocale)
-          } else if (config.locales.includes('en')) {
+          } else if (locales.includes('en')) {
             this.updateLocale('en')
           } else {
-            this.updateLocale(config.locales[0])
+            this.updateLocale(locales[0])
           }
         })
         this.getQuestions()
