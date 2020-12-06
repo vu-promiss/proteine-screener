@@ -85,7 +85,7 @@ results:
   clients:
     low: |
       **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
-      van uw leeftijd, lengte en gewicht. U kunt de resultaten van deze test
+      van uw leeftijd, lengte en gewicht ({age}jaar, {length}cm, {weight}kg). U kunt de resultaten van deze test
       opslaan, bewaren, printen, en meenemen door op deze [link](/#/print) te klikken.
 
       Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
@@ -95,9 +95,9 @@ results:
 
       U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
       vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
-    adequate:
-      Wij schatten uw eiwitinname in als conform wordt geadviseerd op basis
-      van uw leeftijd, lengte en gewicht.
+    adequate: |
+      Wij schatten uw eiwitinname in als **voldoende** op basis van uw leeftijd,
+      lengte en gewicht.
 
       Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
       veranderd in uw voedingspatroon.
@@ -106,7 +106,7 @@ results:
       gezonde eiwitinname kunt u meer informatie en tips over een gezonde
       eiwitinname vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
     target: |
-      ##### Eiwitdoel:
+      ##### Eiwitdoel
 
       De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
       houdend met uw leeftijd, lengte en gewicht is: **{protein_target} gram per dag**.
@@ -114,7 +114,7 @@ publications:
   title: Publicaties
   view_article: Bekijk artikel
 print:
-  title: Eiwit Screener resultaten
+  title: Eiwit Screener Resultaten
   print: Print
 
 # Session
