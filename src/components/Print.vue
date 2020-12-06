@@ -16,6 +16,7 @@
               {{ $t(item.answer.text, {count: item.answer.count, fraction: item.answer.fraction}, item.answer.count) }}
               </template>
         </p>
+        <client-results></client-results>
         <a
           class="btn d-print-none btn-info btn-lg"
           @click="$router.go(-1)">{{ $t('nav.back') }}
@@ -44,11 +45,13 @@
 import { mapGetters } from 'vuex'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import router from '../router'
+import ClientResults from './results/ClientResults'
 
 export default {
   name: 'Print',
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    ClientResults
   },
   computed: {
     ...mapGetters({

@@ -15,17 +15,7 @@
 
         </b-alert>
 
-        <b-alert show variant="danger" v-if="stakeholder == 'client' && predprob > cutoff">
-          <div v-html="renderLocale('results.clients.low')"></div>
-        </b-alert>
-
-        <b-alert show variant="success" v-if="stakeholder == 'client' && predprob <= cutoff">
-          <div v-html="renderLocale('results.clients.adequate')"></div>
-        </b-alert>
-
-        <b-alert show variant="info" v-if="stakeholder == 'client'">
-          <div v-html="renderLocale('results.clients.target', {protein_target: proteinTarget})"></div>
-        </b-alert>
+        <client-results v-if="stakeholder == 'client'"></client-results>
 
         <p>
           <b-button
@@ -53,8 +43,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import axios from 'axios'
+import ClientResults from './results/ClientResults'
 
 export default {
+  components: {
+    ClientResults
+  },
   mounted () {
     // send results to api
     axios.post(this.storeResultsEndpoint, {

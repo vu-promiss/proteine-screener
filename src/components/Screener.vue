@@ -31,10 +31,10 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
-  import Question from './Question'
+  import Question from './quiz/Question'
   import Results from './Results'
-  import QuizNavigation from './QuizNavigation'
-  import QuizNavigationFixed from './QuizNavigationFixed'
+  import QuizNavigation from './quiz/QuizNavigation'
+  import QuizNavigationFixed from './quiz/QuizNavigationFixed'
 
   export default {
     name: 'screener',
