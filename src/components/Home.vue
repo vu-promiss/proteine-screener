@@ -21,9 +21,9 @@
           </router-link>
         </div>
       </b-col>
-      <b-col cols="12" md="4" class="d-none d-md-block">
+      <b-col cols="12" md="4" class="p-3">
         <stakeholder-switcher></stakeholder-switcher>
-        <p>
+        <p class="d-none d-md-block">
           <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
         </p>
       </b-col>
