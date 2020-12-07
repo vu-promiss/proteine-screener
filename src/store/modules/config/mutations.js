@@ -26,4 +26,5 @@ export const setLocaleData = (state, locale) => {
   state.shrinkageFactor = localeData.shrinkageFactor
   state.weightAdjustedFactor = localeData.weightAdjustedFactor
   state.proteinTarget = localeData.proteinTarget
+  state.targetList = localeData.targetList
 }

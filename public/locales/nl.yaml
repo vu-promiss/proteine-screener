@@ -1,9 +1,16 @@
 values:
   intercept: 19.361
-  cutoff: 0.3
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.106
+  cutoff: 0.3
   proteinTarget: 0.8
+  targetList:
+    - cutoff: 0.2
+      proteinTarget: 0.8
+    - cutoff: 0.3
+      proteinTarget: 1.0
+    - cutoff: 0.4
+      proteinTarget: 1.2
 home:
   button: Naar de screener
   proversion: Dit is de Eiwit screener voor onderzoekers.
@@ -46,25 +53,15 @@ home:
 results:
   professionals:
     probability: 'Voorspelde kans: {percentage}%'
-    explanation: |
-      ##### Toelichting gebruik voorspelde kans
-
-      - Een kans van meer dan {percentage}% beschouwen wij als een hoog risico
-        op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
-        lichaamsgewicht/dag
-      - Een kans van meer dan 30% beschouwen wij als een hoog risico op een
-        eiwit inname < 1.0 gram /kilogram (gecorrigeerd) lichaamsgewicht/dag
-      - Een kans van meer dan 40% beschouwen wij als een hoog risico op een
-        eiwit inname < 1.2 gram /kilogram (gecorrigeerd) lichaamsgewicht/dag
-    target: |
-      ##### Eiwitdoel
-
-      - Op basis van de norm ≥0.8 gram /kilogram (gecorrigeerd)
-        lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
-      - Op basis van de norm ≥1.0 gram /kilogram (gecorrigeerd)
-        lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
-      - Op basis van de norm ≥1.2 gram /kilogram (gecorrigeerd)
-        lichaamsgewicht/dag is het eiwitdoel: X gram/dag.
+    explanation: Toelichting gebruik voorspelde kans
+    explanation_list: |
+      Een kans van meer dan {percentage}% beschouwen wij als een hoog risico
+      op een eiwit inname < {weight} gram /kilogram (gecorrigeerd)
+      lichaamsgewicht/dag
+    target: Eiwitdoel
+    target_list: |
+      Op basis van de norm ≥{weight} gram /kilogram (gecorrigeerd)
+      lichaamsgewicht/dag is het eiwitdoel: {targetWeight} gram/dag.
     health_advise: |
       ##### Advies gebruik in praktijk gezondheidszorg
      
