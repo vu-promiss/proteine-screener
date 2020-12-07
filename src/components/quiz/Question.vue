@@ -1,5 +1,5 @@
 <template>
-  <div class="question">
+  <div class="question" v-hotkey="keymap">
       <b-row v-if="question.type === 'info'">
         <b-col cols="12">
           <b-alert show>{{ $t(question.id + '.text') }}</b-alert>
@@ -28,6 +28,7 @@
               size="lg"
               :pressed="getSelectedAnswerValue(question.id) === answer.value"
               :key="answer.value"
+              :id="question.id + '_' + answer.value"
             >
               <b-img v-if="answer.picture" block fluid :src="answer.picture"></b-img>
               {{ answer.text }}
@@ -60,6 +61,12 @@
         getSelectedAnswerValue: 'quiz/getSelectedAnswer',
         currentQuestionNumber: 'quiz/currentQuestionNumber'
       }),
+      keymap () {
+        return {
+          'down': this.nextAnswer,
+          'up': this.prevAnswer
+        }
+      },
       translatedAnswers () {
         return this.question.answers.map((obj) => {
           return {
@@ -74,19 +81,38 @@
       ...mapActions({
         nextQuestion: 'quiz/nextQuestion'
       }),
+      nextAnswer () {
+        this.moveAnswer(+1)
+      },
+      prevAnswer () {
+        this.moveAnswer(-1)
+      },
+      moveAnswer (increment) {
+        // Create a simple array
+        let answerValueArray = this.question.answers.map((obj) => {
+          return obj.id
+        })
+        // Get the selected answer
+        let answerValue = this.getSelectedAnswerValue(this.question.id)
+        let index = answerValueArray.indexOf(answerValue)
+        let nextIndex = 0
+        if (index !== undefined) {
+          nextIndex = Math.min(Math.max(index + increment, 0), answerValueArray.length - 1)
+        }
+        this.selectedAnswer({value: answerValue = answerValueArray[nextIndex]})
+        this.$scrollTo(
+          'button#' + this.question.id + '_' + answerValue,
+          300,
+          {
+            offset: -100
+          }
+        )
+      },
       selectedAnswer (answer) {
         this.$store.commit('quiz/setAnswer', {
           questionId: this.question.id,
           answer: answer.value
         })
-        if (this.$store.getters['quiz/autoNext'] === '1') {
-          this.$store.commit('quiz/setQuestionNumber', this.currentQuestionNumber + 1)
-          // Short delay to show checkmark
-          setTimeout(() => {
-            this.$store.commit('quiz/updateCurrentQuestion')
-            // this.$router.push({ name: 'screener', params: { question: this.currentQuestionNumber + 1 }})
-          }, 300)
-        }
       }
     }
   }

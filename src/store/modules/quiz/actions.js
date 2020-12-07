@@ -40,14 +40,10 @@ export const initQuiz = ({ commit, rootGetters }) => {
 
 export const nextQuestion = ({ commit, state }) => {
   commit('setQuestionNumber', state.currentQuestionNumber + 1)
-  setTimeout(() => {
-    commit('updateCurrentQuestion')
-  }, 300)
+  commit('updateCurrentQuestion')
 }
 
 export const prevQuestion = ({ commit, state }) => {
   commit('setQuestionNumber', state.currentQuestionNumber - 1)
-  setTimeout(() => {
-    commit('updateCurrentQuestion')
-  }, 300)
+  commit('updateCurrentQuestion')
 }

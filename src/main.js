@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 import Vuex from 'vuex'
 import vuexI18n from 'vuex-i18n'
+import VueHotkey from 'v-hotkey'
 import BootstrapVue from 'bootstrap-vue'
 import VueScrollTo from 'vue-scrollto'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -26,6 +27,7 @@ const locale = new Vuex.Store()
 Vue.use(vuexI18n.plugin, locale)
 Vue.use(BootstrapVue)
 Vue.use(VueScrollTo)
+Vue.use(VueHotkey)
 Vue.i18n.set('en')
 Vue.config.productionTip = false
 Vue.filter('decimal', function (value) {

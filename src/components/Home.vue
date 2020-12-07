@@ -1,12 +1,11 @@
 <template>
-  <b-container class="home">
+  <b-container class="home" v-hotkey="keymap">
     <b-row class="pt-2">
       <b-col cols="12" md="8">
         <h2>{{ $t('home.title') }}</h2>
         <template v-if="stakeholder == 'professional'">
           <div v-html="renderLocale('home.professionals')"></div>
         </template>
-
         <template v-if="stakeholder == 'client'">
           <div v-html="renderLocale('home.clients')"></div>
         </template>
@@ -56,6 +55,7 @@
 import { mapGetters } from 'vuex'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import StakeholderSwitcher from './navigation/StakeholderSwitcher'
+import router from '../router'
 
 export default {
   name: 'Home',
@@ -69,11 +69,20 @@ export default {
       locales: 'config/locales',
       stakeholder: 'config/stakeholder',
       allowAutoNext: 'config/showAutonextButton'
-    })
+    }),
+    keymap () {
+      return {
+        'enter': this.startScreener,
+        'right': this.startScreener
+      }
+    }
   },
   methods: {
     changeAutoNext (val) {
       this.$store.commit('quiz/setAutoNext', val)
+    },
+    startScreener () {
+      router.push({ name: 'screener', params: { stakeholder: this.stakeholder } })
     }
   }
 }

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="quiz-navigation">
+  <div class="quiz-navigation" v-hotkey="keymap">
     <b-row class="d-none d-md-block" v-bind:key="question.id">
       <b-col class="my-3 text-center">
         <b-button-group class="mx-1">
@@ -41,13 +41,30 @@ export default {
     },
     prevEnabled () {
       return this.currentQuestionNumber > 1
+    },
+    keymap () {
+      // Only enter key in BMI question
+      if (this.question.type === 'bmi') {
+        return {'enter': this.nextWhenEnabled}
+      }
+      return {
+        'enter': this.nextWhenEnabled,
+        'right': this.nextWhenEnabled,
+        'left': this.prevWhenEnabled
+      }
     }
   },
   methods: {
     ...mapActions({
       nextQuestion: 'quiz/nextQuestion',
       prevQuestion: 'quiz/prevQuestion'
-    })
+    }),
+    nextWhenEnabled () {
+      if (this.nextEnabled) { this.nextQuestion() }
+    },
+    prevWhenEnabled () {
+      if (this.prevEnabled) { this.prevQuestion() }
+    }
   }
 }
 </script>
