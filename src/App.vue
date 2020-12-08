@@ -66,7 +66,9 @@
 </script>
 
 <style>
-  .app { margin-top: 80px; margin-bottom:80px}
+  @media screen {
+    .app { margin-top: 80px; margin-bottom:80px}
+  }
 
   .component-fade-enter-active, .component-fade-leave-active {
   transition: opacity .2s;

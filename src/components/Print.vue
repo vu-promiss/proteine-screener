@@ -26,13 +26,14 @@
               {{ $t(item.answer.text, {count: item.answer.count, fraction: item.answer.fraction}, item.answer.count) }}
               </template>
         </p>
-        <client-results calling-page="print" />
         <a
           class="btn d-print-none btn-info btn-lg"
           @click="$router.go(-1)">{{ $t('nav.back') }}
         </a>
       </b-col>
       <b-col cols="12" md="4" class="d-none d-md-block">
+        <client-results-block/>
+        <protein-target-client/>
         <img class="img-fluid" src="../assets/egg_measuring_tape.jpg" />
       </b-col>
     </b-row>
@@ -55,13 +56,15 @@
 import { mapGetters } from 'vuex'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import router from '../router'
-import ClientResults from './results/ClientResults'
+import ClientResultsBlock from './results/ClientResultsBlock'
+import ProteinTargetClient from './results/ProteinTargetClient'
 
 export default {
   name: 'Print',
   components: {
     FontAwesomeIcon,
-    ClientResults
+    ClientResultsBlock,
+    ProteinTargetClient
   },
   computed: {
     ...mapGetters({
