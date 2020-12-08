@@ -6,7 +6,7 @@
         />
         <b-alert show variant="success" 
             v-if="predprob <= cutoff" 
-            v-html="renderLocale('results.clients.adequate')"
+            v-html="renderLocale('results.clients.adequate', {age: age, length: length, weight: weight })"
         />
     </div>
 </template>
