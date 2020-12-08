@@ -43,6 +43,7 @@
           loadedLocales.push(axios.get('locales/' + locale + '.yaml').then((response) => {
             let localeData = yaml.safeLoad(response.data)
             self.storeLocaleData({locale: locale, localeData: localeData})
+            delete localeData.values
             this.$i18n.add(locale, localeData)
           }))
         })
