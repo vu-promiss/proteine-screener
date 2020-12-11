@@ -10,8 +10,8 @@
               <ul>
                 <li v-for="target in targetList">
                   {{ $t('results.professionals.target_list', {
-                      weight: target.proteinTarget, 
-                      targetWeight: target.proteinTarget * weightAdjusted}) }}
+                      norm: target.proteinTarget, 
+                      protein_target: parseInt(target.proteinTarget * weightAdjusted)}) }}
                 </li>
               </ul>
             </b-alert>
