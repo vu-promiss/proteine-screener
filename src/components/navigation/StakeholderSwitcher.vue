@@ -30,10 +30,10 @@ export default {
       updateStakeholder: 'config/updateStakeholder'
     }),
     switchStakeholder (stakeholder) {
-        this.updateStakeholder(stakeholder)
-        if (router.currentRoute.name == 'screener') {
-          router.replace({ name: 'screener', params: { stakeholder: stakeholder } })
-        }
+      this.updateStakeholder(stakeholder)
+      if (router.currentRoute.name === 'screener') {
+        router.replace({ name: 'screener', params: { stakeholder: stakeholder } })
+      }
     }
   }
 }

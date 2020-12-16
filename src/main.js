@@ -43,7 +43,10 @@ Vue.mixin({
   methods: {
     renderLocale (val, substitutions) {
       substitutions = substitutions || {}
-      return marked(this.$root.$t(val, substitutions), {gfm: true, breaks: false})
+      if (typeof val === 'string') {
+        return marked(this.$root.$t(val, substitutions), {gfm: true, breaks: false})
+      }
+      return val
     }
   }
 })

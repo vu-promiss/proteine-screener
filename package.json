@@ -24,6 +24,7 @@
     "@fortawesome/vue-fontawesome": "0.0.22",
     "axios": "^0.18.1",
     "bootstrap-vue": "^2.18.1",
+    "dotize": "^0.3.0",
     "es6-promise": "^4.2.4",
     "es6-promise-promise": "^1.0.0",
     "js-yaml": "^3.14.0",

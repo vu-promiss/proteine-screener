@@ -5,8 +5,7 @@ values:
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.106
 home:
-  button:
-    title: To the screener
+  button: To the screener
   title: Welcome to the Protein Screener (Pro55+)
   professional:
     paragraph1: The Protein Screener (Pro55+) is a short (10 food items) questionnaire

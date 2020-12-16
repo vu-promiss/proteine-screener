@@ -2544,6 +2544,11 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotize@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dotize/-/dotize-0.3.0.tgz#b7a5c46835f6bd4087731354308f0d160dbceeac"
+  integrity sha512-/7m7WPeImgaYj/rWhp/ifA0ZuikC7ablgHiO3Ten5IfJmYX4a1NgjFatv0Srya4psxm25nFzDOKDvmKFOhkr1A==
+
 duplexer@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"

@@ -95,7 +95,7 @@ results:
       lengte en gewicht ({age} jaar, {length}cm, {weight}kg).
 
       Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
-      veranderd in uw voedingspatroon.
+      verandert in uw voedingspatroon.
 
       Mocht u desondanks behoefte hebben aan meer informatie en tips over een
       gezonde eiwitinname kunt u meer informatie en tips over een gezonde
@@ -133,66 +133,52 @@ nav:
   change: wijzig
 
 # Quiz
-intro:
-  text: >-
-    De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat
-    u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken
-    gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk
-    en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan
-    normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie
-    ging of ziek werd.
-bmi1:
-  text: Vul hier uw persoonlijke gegevens in.
-info1:
-  text: >-
-    In de volgende vragen vragen we u hoeveel van een voedingsproduct u heeft
-    gegeten
-N05b_0:
-  text: >-
-    Hoeveel sneetjes brood heeft u in de afgelopen 4 weken gemiddeld per dag
-    gegeten?
-N15b_0:
-  text: >-
-    Hoeveel glazen/bekers melk, karnemelk of sojamelk/sojadrink heeft u in de
-    afgelopen 4 weken gemiddeld per dag gedronken?
-N34b:
-  text: >-
-    Hoeveel vlees heeft u gemiddeld gegeten met de warme maaltijd in de
-    afgelopen 4 weken op een dag dat u vlees eet?
-frequency1:
-  text: >-
-    In de volgende vragen zullen we u vragen hoe vaak u een bepaald product
-    heeft gegeten
-N18a_0:
-  text: >-
-    Hoe vaak heeft u in de afgelopen 4 weken een melk product zoals yoghurt,
-    kwark, pudding, vla, of soja dessert gegeten?
-N14a_0:
-  text: >-
-    Hoe vaak heeft u in de afgelopen 4 weken eieren gegeten bij uw ontbijt,
-    middag- of avondmaaltijd, als tussendoortje of verwerkt in gerechten?
-N24a_0:
-  text: >-
-    Hoe vaak heeft u in de afgelopen 4 weken deegwaren/pasta, zoals macaroni,
-    spaghetti, lasagne, bami, mie, mihoen etc. gegeten?
-N33a_0:
-  text: >-
-    Hoe vaak heeft u in de afgelopen 4 weken vis gegeten bij uw broodmaaltijd,
-    warme maaltijd of als tussendoortje? Let op: schaal- en schelpdieren niet
-    meetellen.
-N62a_0:
-  text: >-
-    Hoe vaak heeft u in de afgelopen 4 weken noten of pinda’s als tussendoortje
-    gegeten?
-N08a_0:
-  text: >-
-    Hoe vaak heeft u in de afgelopen 4 weken kaas of smeerkaas gegeten op uw
-    brood, broodjes, beschuiten, crackers etc.?
-N08b_0:
-  text: >-
-    Hoeveel sneden brood/crackers/bolletjes etc. met kaas of smeerkaas heeft u
-    in de afgelopen 4 weken gemiddeld per dag gegeten op een dag dat u brood met
-    kaas of smeerkaas at?
+intro.text: |
+  De volgende vragen gaan over uw gebruikelijk voeding. Het is belangrijk dat
+  u eerlijk antwoord geeft. Wij willen van u weten wat u de laatste 4 weken
+  gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk
+  en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan
+  normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie
+  ging of ziek werd.
+bmi1.text: Vul hier uw persoonlijke gegevens in.
+info1.text: |
+  In de volgende vragen vragen we u hoeveel van een voedingsproduct u heeft
+  gegeten
+N05b_0.text: |
+  Hoeveel sneetjes brood heeft u in de afgelopen 4 weken gemiddeld per dag
+  gegeten?
+N15b_0.text: |
+  Hoeveel glazen/bekers melk, karnemelk of sojamelk/sojadrink heeft u in de
+  afgelopen 4 weken gemiddeld per dag gedronken?
+N34b.text: |
+  Hoeveel vlees heeft u gemiddeld gegeten met de warme maaltijd in de
+  afgelopen 4 weken op een dag dat u vlees eet?
+frequency1.text: |
+  In de volgende vragen zullen we u vragen hoe vaak u een bepaald product
+  heeft gegeten
+N18a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken een melk product zoals yoghurt,
+  kwark, pudding, vla, of soja dessert gegeten?
+N14a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken eieren gegeten bij uw ontbijt,
+  middag- of avondmaaltijd, als tussendoortje of verwerkt in gerechten?
+N24a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken deegwaren/pasta, zoals macaroni,
+  spaghetti, lasagne, bami, mie, mihoen etc. gegeten?
+N33a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken vis gegeten bij uw broodmaaltijd,
+  warme maaltijd of als tussendoortje? Let op: schaal- en schelpdieren niet
+  meetellen.
+N62a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken noten of pinda’s als tussendoortje
+  gegeten?
+N08a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken kaas of smeerkaas gegeten op uw
+  brood, broodjes, beschuiten, crackers etc.?
+N08b_0.text: |
+  Hoeveel sneden brood/crackers/bolletjes etc. met kaas of smeerkaas heeft u
+  in de afgelopen 4 weken gemiddeld per dag gegeten op een dag dat u brood met
+  kaas of smeerkaas at?
 less_than_one: Minder dan één of niet van toepassing
 slice: '{count} snee ::: {count} sneden'
 more_than_slices: '> {count} snee ::: > {count} sneden'
