@@ -88,7 +88,6 @@ one_in_four_weeks: 1 päivänä neljän viikon aikana
 two_three_in_four_weeks: 2-3 päivänä neljän viikon aikana
 day_week: "{count} päivänä viikossa ::: {count} päivänä viikossa"
 question_number: Kysymys {number}
-result_explanation: Some explanation about the results.
 age:
   label: Ikä
   placeholder: Ilmoita ikäsi

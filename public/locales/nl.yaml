@@ -191,7 +191,6 @@ one_in_four_weeks: 1 dag per 4 weken
 two_three_in_four_weeks: 2-3 dagen per 4 weken
 day_week: '{count} dag per week ::: {count} dagen per week'
 question_number: 'Vraag {number}'
-result_explanation: Some explanation about the results.
 age:
   label: Leeftijd
   placeholder: Wat is uw leeftijd?
