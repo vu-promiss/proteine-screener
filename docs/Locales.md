@@ -72,7 +72,15 @@ Het eten van **voldoende** eiwit is belangrijk voor het behoud van spiermassa en
 
 ```yaml
 ##### Toelichting gebruik voorspelde kans
+
+- Een kans van meer dan 20% beschouwen wij als een hoog risico
+  op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
+  lichaamsgewicht/dag
 ```
 will translate to
 
 ##### Toelichting gebruik voorspelde kans
+
+- Een kans van meer dan 20% beschouwen wij als een hoog risico
+  op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
+  lichaamsgewicht/dag
