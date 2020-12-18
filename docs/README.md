@@ -8,6 +8,10 @@ For an explanation on how to use the ProteinScreener for research, please read t
 
 If you want to add new languages or change the behaviour of the ProteinScreener, you can find instructions here: [Modifying ProteinScreener](Modification.md)
 
+## Working with locales (language files)
+
+If you want to edit language files, you can find instructions here: [Modifying ProteinScreener](Locales.md)
+
 ## Install ProteinScreener on another webserver
 
 If you need to install ProteinScreener on another webserver, you can follow the [Installation Manual](Installation.md)
