@@ -51,7 +51,7 @@ session.your_id: |
  ```
  
  The block style indicator can also be used to add a large block of text:
- ```
+ ```yaml
  professionals: |
   The Protein Screener (Pro55+) is a short (10 food items) questionnaire
   that estimates the chance on a low protein intake (<1.0 gram /per kilogram body
