@@ -138,8 +138,10 @@ intro.text: |
   were sick or you went on a vacation and this had a major influence on your
   usual diet), please recall the 4 weeks before this period.
 bmi1.text: Please enter your body measurements.
-info1.text: 'In the following questions, we ask how much of a food product you ate'
-N05b_0.text: 'In the last 4 weeks, how many slices of bread did you eat on an average day?'
+info1.text: |
+  In the following questions, we ask how much of a food product you ate
+N05b_0.text: |
+  In the last 4 weeks, how many slices of bread did you eat on an average day?
 N15b_0.text: |
   In the last 4 weeks, how many glasses/cups of milk or soy milk did you drink
   on an average day? Including added to tea, coffee, cereal, porridge etc.
@@ -147,31 +149,28 @@ N34b.text: |
   How much meat or meat substitute (i.e. tofu, quorn products,
   seitan/wheat-protein or soya protein products e.g. Linda Mcartney’s) did
   you, on average, eat with a meal?
-frequency1:
-  text: 'In the following questions, we will ask how often you ate a certain product'
-N18a_0:
-  text: >-
-    In the last 4 weeks how often did you consume yoghurt, fromage frais,
-    dairy-based or soy dessert?
-N14a_0:
-  text: In the last 4 weeks how many eggs did you consume on an average?
-N24a_0:
-  text: >-
-    In the last 4 weeks how often did you eat pasta or noodles (like spaghetti,
-    macaroni, lasagna, chow mein, rice-based or wheat-based noodles)?
-N33a_0:
-  text: >-
-    In the last 4 weeks how often did you eat fish (fresh, canned, battered
-    etc.)?
-N62a_0:
-  text: 'In the last 4 weeks how often did you eat nuts, or nut-containing products?'
-N08a_0:
-  text: In the last 4 weeks how often did you eat cheese?
-N26a_0:
-  text: >-
-    In the last 4 weeks how often did you consume pulses (e.g lentils, chickpeas
-    and peas) or beans (including broad, runner, baked and other varieties of
-    tinned beans)
+frequency1.text: |
+  In the following questions, we will ask how often you ate a certain product
+N18a_0.text: >-
+  In the last 4 weeks how often did you consume yoghurt, fromage frais,
+  dairy-based or soy dessert?
+N14a_0.text: |
+  In the last 4 weeks, how often did you eat eggs, either with breakfast,
+  lunch, an evening meal or as a snack?
+N24a_0.text: |
+  In the last 4 weeks how often did you eat pasta or noodles (like spaghetti,
+  macaroni, lasagna, chow mein, rice-based or wheat-based noodles)?
+N33a_0.text: |
+  In the last 4 weeks how often did you eat fish (fresh, canned, battered
+  etc.)?
+N62a_0.text: |
+  In the last 4 weeks how often did you eat nuts, or nut-containing products?
+N08a_0.text: |
+  In the last 4 weeks how often did you eat cheese?
+N26a_0.text: |
+  In the last 4 weeks how often did you consume pulses (e.g lentils, chickpeas
+  and peas) or beans (including broad, runner, baked and other varieties of
+  tinned beans)
 less_than_one: Less than one or not applicable
 slice: '{count} slice ::: {count} slices'
 more_than_slices: '> {count} slice ::: > {count} slices'
@@ -199,4 +198,3 @@ length:
   placeholder: Please enter your length in centimeters.
   invalid: Please enter a valid length.
   append: cm
-
