@@ -13,15 +13,14 @@ locales:
   - nl
   - fi
   # - uk
-showAutonextButton: false
 debug: false
 apiBaseUrl: "/api/"
 quizFile: quiz.yaml
 ```
 * The **locales** array contains the shortcodes to the available locale files. If you want to add a new language, add it to this array.
-* **showAutonextButton** if this is set to `true`, a button is shown that toggles 'auto next' which will cause the app to move on to the next question without pressing 'continue'
 * **debug** if set to true, show some debug information in the app
 * **apiBaseUrl** address for the backend API. It is possible to point this to a different server by entering the full address (https://server/api/)
+* **quizFile** name of the quiz file that is used. An instance of the protein screener can only use one quiz file
 
 Please check the validity of the yaml before committing. Use a linting application like https://onlineyamltools.com/validate-yaml
 
@@ -33,9 +32,7 @@ Please check the validity of the language files yaml before committing them. Use
 
 ## Quiz
 
-The structure of the quiz is found in `public/quiz.yaml`. The structure is as follows:
-
-### Questions
+The structure of the quiz is found in `public/quiz.yaml`. A quiz consists of a list of questions.
 
 All questions have a unique **id** that is used to identify the question and is also used in the locale files to reference the locale strings.
 
@@ -80,7 +77,9 @@ questions:
   answers: slices
 ```
 
-### Answers
+## Answers
+
+Answers are stored in `public/answers.yaml`
 
 There are 4 types of answers:
 
