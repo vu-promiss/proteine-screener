@@ -141,7 +141,9 @@ bmi1.text: Please enter your body measurements.
 info1.text: |
   In the following questions, we ask how much of a food product you ate
 N05b_0.text: |
-  In the last 4 weeks, how many slices of bread did you eat on an average day?
+  In the last 4 weeks, how many slices of bread (i.e. 1 'slice' equivalent
+  to 1/2 a large pitta, 1/2 a bun, 1/2 a bagel, 1 square slice etc.) did you
+  eat on an average day?
 N15b_0.text: |
   In the last 4 weeks, how many glasses/cups of milk or soy milk did you drink
   on an average day? Including added to tea, coffee, cereal, porridge etc.
