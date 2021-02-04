@@ -1,7 +1,7 @@
 values:
   intercept: 19.361
   shrinkageFactor: 0.92
-  weightAdjustedFactor: 0.106
+  weightAdjustedFactor: 0.105
   cutoff: 0.3
   proteinTarget: 0.8
   targetList:
