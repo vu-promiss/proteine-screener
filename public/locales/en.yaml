@@ -1,7 +1,7 @@
 values:
   intercept: 19.361
   shrinkageFactor: 0.92
-  weightAdjustedFactor: 0.106
+  weightAdjustedFactor: 0.105
   cutoff: 0.3
   proteinTarget: 0.8
   targetList:
@@ -10,111 +10,101 @@ values:
     - proteinTarget: 1.2
 home:
   button: To the screener
-  proversion: Dit is de Eiwit screener voor onderzoekers.
-  proversion_link: Ga naar de versie voor ouderen
-  clientversion: Dit is de Eiwit screener voor ouderen.
-  clientversion_link: Ga naar de versie voor onderzoekers
+  proversion: This is the Protein screener for health care professionals and researchers.
+  proversion_link: Click here for the version for older adults
+  clientversion: This is the Protein screener for older adults.
+  clientversion_link: Click here for the version for health care professionals and researchers
   title: Welcome to the Protein Screener (Pro55+)
-  professionals: |
-    The Protein Screener (Pro55+) is a short (10 food items) questionnaire
-    that estimates the chance on a low protein intake (<1.0 gram /per kilogram body
-    weight/day) for older adults. The Protein screener (Pro55+) is developed by the
-    Vrije Universiteit Amsterdam (the Netherlands).
-
-    You can use the Protein Screener (Pro55+) here for free. After completing
-    the questions, you will immediately see the chance (0-100%) on a low protein intake.
-    We consider a chance of more than {cutoff}% as a high risk on a low protein intake.
+   professionals: |
+    The Protein Screener (Pro55+) is a short questionnaire that can be used to
+    estimate the chance on a low protein intake (<0.8, <1.0, or <1.2 gram /per kilogram
+    adjusted body weight/day) in older adults (55+ year).
+    *The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam
+    (the Netherlands). [See publications](/#/publications)*
     
-    To more precisely measure actual protein intake, a full nutritional
-    assessment should be done by for example a dietitian.
+    You can use the Protein Screener (Pro55+) here for free. After completing
+    the questions, you will immediately see the chance (0-100%) on a low protein intake
+    and advice how to apply chance this in research and practice.
+           
+    When there is a high risk on a low protein intake, we recommend to perform a
+    more precise measurement of the actual protein intake, for example by
+    a full nutritional assessment performed by a dietitian.
   clients: |
-    Het eten van **voldoende** eiwit is belangrijk voor het behoud van spiermassa
-    en botten. Vanaf de leeftijd van 50 jaar verliezen we geleidelijk
-    spiermassa. Dit kunnen we beperken door voldoende eiwitinname met voeding
-    en regelmatige lichaamsbeweging. Met het invullen van deze vragenlijst
-    kunt u zelf inschatten of uw eiwitinname aan de lage kant is of niet. Deze
-    vragenlijst is bedoeld voor mensen van 55 jaar en ouder.
+    Consuming **sufficient** protein is important to preserve muscle and bone mass. 
+    From the age of 50 we graduately lose muscle mass. This loss can be recuced
+    by consuming sufficient protein with our food and by regular physical activity.
+    By filling in this questionnaire you will get an estimate
+    on whether or not your current protein intake may be too low. 
+    This questionnaire is developed for adults aged 55 years and older.
 
-    Na het nauwkeurig invullen van deze korte vragenlijst bestaande uit 13
-    vragen, ontvangt u direct:
+    After filling out this short questionnaire consisting of 13 questions, you will immediately see:
+ 
+    1. An estimate on whether or not your current protein intake may be too low
+    2. How many grams of protein you are adviced to consume per day, based on your age, body height and weight
+    3. Advice on where to find more information on protein intake 
 
-    1. Een inschatting of uw eiwitinname aan de lage kant is (of niet)
-    2. De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
-      houdend met uw leeftijd, lengte en gewicht
-    3. Advies waar u meer informatie kunt vinden over eiwitinname
-
-    *Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam. [Bekijk publicaties](/#/publications)*
+    *The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands).
+    [See publications](/#/publications)*
 results:
   professionals:
-    probability: 'Voorspelde kans: {percentage}%'
+    probability: 'Predicted probability: {percentage}%'
     explanation: |
-      ##### Toelichting gebruik voorspelde kans
+      ##### Explanation on how to use the predicted probability
 
-      - Een kans van meer dan 20% beschouwen wij als een hoog risico
-        op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
-        lichaamsgewicht/dag
-
-    target: Eiwitdoel
+      - A predicted probability of more than 20% is considered as a high risk on
+      a protein intake < 0.8 gram /kilogram (adjusted) body weight/day
+    
+    target: Personal advice protein intake
     target_list: |
-      Op basis van de norm ≥{norm} gram /kilogram (gecorrigeerd)
-      lichaamsgewicht/dag is het eiwitdoel: {protein_target} gram/dag.
-    health_advise: |
-      ##### Advies gebruik in praktijk gezondheidszorg
+      Based on the norm ≥{norm} gram /kilogram (adjusted) body weight/day
+      the personal advice for protein intake is: ≥{protein_target} gram/day.
+     health_advise: |
+      ##### Advice for use in health care
      
-      Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
-      nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
-      uitgebreide voedingsanamnese door een diëtist of het gebruik van een
-      online tool voor het bijhouden van voedingsinname gedurende ten minste 3
-      dagen.
+      When there is a high risk on a low protein intake, we recommend to perform a
+      more precise measurement of the actual protein intake, for example by
+      a full nutritional assessment performed by a dietitian or by filling in
+      an online tool to record food intake for at least 3 days.
     research_advise: |
-      ##### Advies gebruik in onderzoek:
+      ##### Advice for use in research:
         
-      Afhankelijk van het doel van het onderzoek, kan gekozen worden voor een
-      ander afkappunt van de voorspelde kans. Een lager afkappunt resulteert
-      in een sensitievere screening maar een hogere kans op een vals positieve
-      uitslag. Een hoger afkappunt resulteert in een minder sensitieve
-      screening maar een kleinere kans op een vals positieve uitslag.
+      Depending on the purpose of research, one may choose a (different) cut-off
+      for the predicted probability. For example, a lower cut-off will result in
+      a higher sensitivity when screening for low protein intake but also
+      a higher chance on a false positive screening result.
       [Bekijk publicaties](/#/publications)
-  clients:
+    clients:
     low: |
-      **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
-      van uw leeftijd, lengte en gewicht ({age} jaar, {length}cm, {weight}kg).
+      **We estimate that your current protein intake is *lower* than recommended** based
+      on your age, body height and weight ({age} year, {length}cm, {weight}kg).
 
-      Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
-      diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
-      doen. Vervolgens kan zij/hij u voedingsadvies en/of tips geven hoe u, op
-      een manier die bij u past, meer eiwit kunt eten.
-
-      U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
-      vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
+      We would advice you to discuss this information with for example a dietitian.
+      A dietitian can perform a more precise measurement of your actual protein intake.
+      He/she can also provide you with nutritional advice and/or tips, depending on
+      your personal preferences, on how to consume more protein with your diet. 
     adequate: |
-      Wij schatten uw eiwitinname in als **voldoende** op basis van uw leeftijd,
-      lengte en gewicht ({age} jaar, {length}cm, {weight}kg).
+      We estimate that your current protein intake is **sufficient** based
+      on your age, body height and weight ({age} year, {length}cm, {weight}kg).
 
-      Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
-      verandert in uw voedingspatroon.
-
-      Mocht u desondanks behoefte hebben aan meer informatie en tips over een
-      gezonde eiwitinname kunt u meer informatie en tips over een gezonde
-      eiwitinname vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
+      We would advice you to fill out the Protein Screener again when there is
+      a change in your dietary habits.
     target: |
-      ##### Eiwitdoel
+      ##### Personal advice protein intake
 
-      De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
-      houdend met uw leeftijd, lengte en gewicht is: **{protein_target} gram per dag**.
+      De amount protein you are adviced to consume per day,
+      based on your age, body height and weight is: **≥{protein_target} gram per day**.
     print: |
-      ##### Resultaten
+      ##### Results
 
-      U kunt de resultaten van deze test
-      opslaan, bewaren, printen, en meenemen op de [Resultaten Pagina](/#/print).
+      You may download, save, or print the results of this screening result on the [Results Page](/#/print).
 publications:
   title: Publicaties
-  view_article: Bekijk artikel
+  view_article: See paper
 print:
-  title: Eiwit Screener Resultaten
+  title: Protein Screener Results
   print: Print
   download: Download
-  your_answer: Uw antwoord
+  your_answer: Your answer
 
 # Session
 session:
