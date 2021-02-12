@@ -10,10 +10,10 @@ values:
     - proteinTarget: 1.2
 home:
   button: Naar de screener
-  proversion: Dit is de Eiwit screener voor onderzoekers.
+  proversion: Dit is de Eiwit screener voor zorgprofessionals en onderzoekers.
   proversion_link: Ga naar de versie voor ouderen
   clientversion: Dit is de Eiwit screener voor ouderen.
-  clientversion_link: Ga naar de versie voor onderzoekers
+  clientversion_link: Ga naar de versie voor zorgprofessionals en onderzoekers
   title: Welkom bij de Eiwit Screener (Pro55+)
   professionals: |
     De Eiwit Screener (Pro55+) is een korte vragenlijst om de kans op een lage
@@ -24,8 +24,7 @@ home:
     De Eiwit Screener (Pro55+) kunt u hier gratis online gebruiken, waarna
     direct de uitslag volgt uitgedrukt als de kans op een lage eiwitinname
     (0-100%) en advies voor gebruik van deze kans in de praktijk en in
-    onderzoek. Tevens wordt het eiwitdoel in grammen inname per dag berekend
-    gebaseerd op leeftijd, lengte en gewicht.
+    onderzoek.
 
     Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
     nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
@@ -57,10 +56,10 @@ results:
         op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag
 
-    target: Eiwitdoel
+    target: Persoonlijk advies eiwit inname
     target_list: |
       Op basis van de norm ≥{norm} gram /kilogram (gecorrigeerd)
-      lichaamsgewicht/dag is het eiwitdoel: {protein_target} gram/dag.
+      lichaamsgewicht/dag is het persoonlijk advies voor eiwit inname: ≥{protein_target} gram/dag.
     health_advise: |
       ##### Advies gebruik in praktijk gezondheidszorg
      
