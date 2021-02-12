@@ -99,10 +99,10 @@ results:
       gezonde eiwitinname kunt u meer informatie en tips over een gezonde
       eiwitinname vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
     target: |
-      ##### Eiwitdoel
+      ##### Persoonlijk advies eiwit inname
 
       De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
-      houdend met uw leeftijd, lengte en gewicht is: **{protein_target} gram per dag**.
+      houdend met uw leeftijd, lengte en gewicht is: **≥{protein_target} gram per dag**.
     print: |
       ##### Resultaten
 
