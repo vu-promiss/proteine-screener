@@ -1,4 +1,4 @@
-values:
+yamvalues:
   intercept: 19.361
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.105
@@ -15,7 +15,7 @@ home:
   clientversion: This is the Protein screener for older adults.
   clientversion_link: Click here for the version for health care professionals and researchers
   title: Welcome to the Protein Screener (Pro55+)
-   professionals: |
+  professionals: |
     The Protein Screener (Pro55+) is a short questionnaire that can be used to
     estimate the chance on a low protein intake (<0.8, <1.0, or <1.2 gram /per kilogram
     adjusted body weight/day) in older adults (55+ year).
@@ -58,7 +58,7 @@ results:
     target_list: |
       Based on the norm ≥{norm} gram /kilogram (adjusted) body weight/day
       the personal advice for protein intake is: ≥{protein_target} gram/day.
-     health_advise: |
+    health_advise: |
       ##### Advice for use in health care
      
       When there is a high risk on a low protein intake, we recommend to perform a
@@ -73,7 +73,7 @@ results:
       a higher sensitivity when screening for low protein intake but also
       a higher chance on a false positive screening result.
       [Bekijk publicaties](/#/publications)
-    clients:
+  clients:
     low: |
       **We estimate that your current protein intake is *lower* than recommended** based
       on your age, body height and weight ({age} year, {length}cm, {weight}kg).
