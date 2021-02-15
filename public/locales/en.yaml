@@ -3,7 +3,7 @@ values:
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.105
   cutoff: 0.3
-  proteinTarget: 0.8
+  proteinTarget: 1.0
   targetList:
     - proteinTarget: 0.8
     - proteinTarget: 1.0
@@ -53,6 +53,10 @@ results:
 
       - A predicted probability of more than 20% is considered as a high risk on
       a protein intake < 0.8 gram /kilogram (adjusted) body weight/day
+      - A predicted probability of more than 30% is considered as a high risk on
+      a protein intake < 1.0 gram /kilogram (adjusted) body weight/day
+      - A predicted probability of more than 40% is considered as a high risk on
+      a protein intake < 1.2 gram /kilogram (adjusted) body weight/day
     
     target: Personal advice protein intake
     target_list: |
