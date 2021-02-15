@@ -136,10 +136,11 @@ bmi1:
 info1:
   text: In the following questions, we ask how much of a food product you ate
 N05b_0:
-  text: In the last 4 weeks, how many slices of bread did you eat on an average day?
+  text: In the last 4 weeks, how many slices of bread did you on average eat
+  on a day that you ate bread?
 N15b_0:
   text: In the last 4 weeks, how many glasses/cups of milk, buttermilk or soy milk
-    did you drink on an average day?
+    did you on average drink on a day that you consumed these products?
 N34b:
   text: How much meat did you on average eat on a day that you ate meat with your
     warm meal in the last 4 weeks?
