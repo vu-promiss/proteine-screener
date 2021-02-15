@@ -3,7 +3,7 @@ values:
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.106
   cutoff: 0.3
-  proteinTarget: 0.8
+  proteinTarget: 1.0
   targetList:
     - proteinTarget: 0.8
     - proteinTarget: 1.0
@@ -54,6 +54,12 @@ results:
 
       - Een kans van meer dan 20% beschouwen wij als een hoog risico
         op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag
+      - Een kans van meer dan 30% beschouwen wij als een hoog risico
+        op een eiwit inname < 1.0 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag
+      - Een kans van meer dan 40% beschouwen wij als een hoog risico
+        op een eiwit inname < 1.2 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag
 
     target: Persoonlijk advies eiwit inname
