@@ -52,13 +52,13 @@ results:
     explanation: |
       ##### Toelichting gebruik voorspelde kans
 
-      - Een kans van meer dan 20% beschouwen wij als een hoog risico
+      - Een kans van meer dan 40% beschouwen wij als een hoog risico
         op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag
       - Een kans van meer dan 30% beschouwen wij als een hoog risico
         op een eiwit inname < 1.0 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag
-      - Een kans van meer dan 40% beschouwen wij als een hoog risico
+      - Een kans van meer dan 20% beschouwen wij als een hoog risico
         op een eiwit inname < 1.2 gram /kilogram (gecorrigeerd)
         lichaamsgewicht/dag
 
