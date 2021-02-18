@@ -51,11 +51,11 @@ results:
     explanation: |
       ##### Explanation on how to use the predicted probability
 
-      - A predicted probability of more than 20% is considered as a high risk on
+      - A predicted probability of more than 40% is considered as a high risk on
       a protein intake < 0.8 gram /kilogram (adjusted) body weight/day
       - A predicted probability of more than 30% is considered as a high risk on
       a protein intake < 1.0 gram /kilogram (adjusted) body weight/day
-      - A predicted probability of more than 40% is considered as a high risk on
+      - A predicted probability of more than 20% is considered as a high risk on
       a protein intake < 1.2 gram /kilogram (adjusted) body weight/day
     
     target: Personal advice protein intake
