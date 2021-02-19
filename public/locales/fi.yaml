@@ -1,177 +1,178 @@
-values:
+xvalues:
   intercept: 19.361
   shrinkageFactor: 0.92
-  weightAdjustedFactor: 0.106
+  weightAdjustedFactor: 0.105
   cutoff: 0.3
-  proteinTarget: 0.8
+  proteinTarget: 1.2
   targetList:
     - proteinTarget: 0.8
     - proteinTarget: 1.0
     - proteinTarget: 1.2
 home:
   button: Kyselyyn
-  proversion: Dit is de Eiwit screener voor onderzoekers.
-  proversion_link: Ga naar de versie voor ouderen
-  clientversion: Dit is de Eiwit screener voor ouderen.
-  clientversion_link: Ga naar de versie voor onderzoekers
-  title: Tervetuloa proteiinikyselyyn (Pro55+)
+  proversion: Tämä on proteiinilaskuri terveydenhuollon ammattilaisten ja tutkijoiden käyttöön.
+  proversion_link: Napauta tästä ikäihmisten käyttöön tarkoitettuun versioon.
+  clientversion: Tämä on proteiinilaskuri ikäihmisten käyttöön.
+  clientversion_link: Napauta tästä terveydenhuollon ammattilaisille ja tutkijoille tarkoitettuun versioon.
+  title: Tervetuloa proteiinilaskuriin (Pro55+)
   professionals: |
-    Proteiinikysely (Pro55+) on lyhyt ikääntyneille suunnattu kymmenen kohdan
-    kysely. Siinä arvioidaan, onko vastaajan proteiininsaanti mahdollisesti alhaista
-    (alle 1 g/kehonpaino kg/ vrk). Proteiinikysely (Pro55+) on kehitetty Vrijen yliopistossa
-    Amsterdamissa Hollannissa.
-
-    Proteiinikyselyä (Pro55+) saa käyttää maksutta. Kysymyksiin vastattuanne,
-    saatte  heti vastauksen prosenttilukuna (0-100 %). Jos tulos on yli 30 %, katsotaan
-    että proteiininsaantinne on alhaista.
-
-    Jos haluatte tarkemman arvion proteiinin saannistanne, sen tekemiseen
-    tarvitaan ravitsemussuunnittelija tai -terapeutti.
+    Proteiinilaskuri (Pro55+) on proteiinin saannin arvioimiseen tarkoitettu lyhyt kysely,
+    jolla voidaan arvioida todennäköisyys alhaiselle proteiinin saannille (<0.8, <1.0 tai <1.2 g/
+    kehon paino kg/päivä) ikäihmisillä (65+ vuotta).
+    *Proteiinilaskurin (Pro55+) on kehittänyt Vrije Universiteit Amsterdam (Alankomaat).
+    [Katso julkaisut](/#/publications)*
+    
+    Proteiinilaskurin (Pro55+) käyttö on maksutonta. Vastattuasi kyselyyn saat arvion,
+    millä todennäköisyydellä (0-100%) proteiinin saanti on suosituksia alhaisempaa
+    ja ohjeita kuinka hyödyntää tulosta tutkimuksessa tai käytännössä.
+           
+    Mikäli riski on korkea, suosittelemme tekemään
+    tarkemman arvion todellisesta proteiinin saannista
+    esimerkiksi ruokapäiväkirjan avulla.
   clients: |
-    Het eten van **voldoende** eiwit is belangrijk voor het behoud van spiermassa
-    en botten. Vanaf de leeftijd van 50 jaar verliezen we geleidelijk
-    spiermassa. Dit kunnen we beperken door voldoende eiwitinname met voeding
-    en regelmatige lichaamsbeweging. Met het invullen van deze vragenlijst
-    kunt u zelf inschatten of uw eiwitinname aan de lage kant is of niet. Deze
-    vragenlijst is bedoeld voor mensen van 55 jaar en ouder.
+    **Riittävä** proteiinin saanti on tärkeää lihasten ja luuston ylläpitämiseksi. 
+    Lihasmassa alkaa hiljalleen vähentyä 50 ikävuoden jälkeen. Tätä voidaan hidastaa
+    huolehtimalla riittävästä proteiinin saannista sekä ylläpitämällä säännöllistä liikuntaa.
+    Täyttämällä tämän kyselyn saat arvion siitä,
+    onko nykyinen proteiinin saannistisi mahdollisesti suosituksia alhaisempaa. 
+    Kysely on suunniteltu 65 vuotta täyttäneille aikuisille.
 
-    Na het nauwkeurig invullen van deze korte vragenlijst bestaande uit 13
-    vragen, ontvangt u direct:
+    Täytettyäsi tämän kyselyn, saat:
+ 
+    1. Arvion siitä, onko nykyinen proteiinin saantisi mahdollisesti suosituksia alhaisempaa
+    2. Arvion päivittäisestä proteiinin tarpeestasi ikä, kehon pituus ja paino huomioon ottaen
+    3. Neuvoja mistä löytää lisätietoa proteiinin saannista.
 
-    1. Een inschatting of uw eiwitinname aan de lage kant is (of niet)
-    2. De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
-      houdend met uw leeftijd, lengte en gewicht
-    3. Advies waar u meer informatie kunt vinden over eiwitinname
-
-    *Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam. [Bekijk publicaties](/#/publications)*
+    *Proteiinilaskurin (Pro55+) on kehittänyt Vrije Universiteit Amsterdam (Alankomaat).
+    [Katso julkaisut](/#/publications)*
 results:
   professionals:
-    probability: 'Voorspelde kans: {percentage}%'
+    probability: 'Ennustettu todennäköisyys: {percentage}%'
     explanation: |
-      ##### Toelichting gebruik voorspelde kans
+      ##### Kuinka tulkita ennustettua todennäköisyyttä
 
-      - Een kans van meer dan 20% beschouwen wij als een hoog risico
-        op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
-        lichaamsgewicht/dag
-
-    target: Eiwitdoel
+      - Yli 40%:n todennäköisyyttä pidetään korkeana riskinä sille,
+      että proteiinin saanti on < 0.8 g/kehon paino kg/päivä
+      - Yli 30%:n todennäköisyyttä pidetään korkeana riskinä sille,
+      että proteiinin saanti on < 1.0 g/kehon paino kg/päivä
+      - Yli 20%:n todennäköisyyttä pidetään korkeana riskinä sille,
+      että proteiinin saanti on < 1.2 g/kehon paino kg/päivä
+    
+    target: Suositeltu proteiinin saanti
     target_list: |
-      Op basis van de norm ≥{norm} gram /kilogram (gecorrigeerd)
-      lichaamsgewicht/dag is het eiwitdoel: {protein_target} gram/dag.
-    health_advise: |
-      ##### Advies gebruik in praktijk gezondheidszorg
+      Perustuen suositukseen ≥{norm} g/kehon paino kg/päivä
+      sinulle suositeltu proteiinin saanti on: ≥{protein_target} grammaa/päivä.
+     health_advise: |
+      ##### Käyttö terveydenhuollossa:
      
-      Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
-      nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
-      uitgebreide voedingsanamnese door een diëtist of het gebruik van een
-      online tool voor het bijhouden van voedingsinname gedurende ten minste 3
-      dagen.
+      Kun riski alhaiselle proteiinin saannille on korkea, suosittelemme
+      tekemään tarkemman arvion todellisesta proteiinin saannista
+      esimerkiksi ruokapäiväkirjan avulla.
     research_advise: |
-      ##### Advies gebruik in onderzoek:
+      ##### Käyttö tutkimuksessa:
         
-      Afhankelijk van het doel van het onderzoek, kan gekozen worden voor een
-      ander afkappunt van de voorspelde kans. Een lager afkappunt resulteert
-      in een sensitievere screening maar een hogere kans op een vals positieve
-      uitslag. Een hoger afkappunt resulteert in een minder sensitieve
-      screening maar een kleinere kans op een vals positieve uitslag.
-      [Bekijk publicaties](/#/publications)
+      Tutkimuksen tavoitteista riippuen, voidaan käyttää eri raja-arvoja
+      ennustetulle todennäköisyydelle. Matalampi raja-arvo antaa
+      suuremman sensitiivisyyden arvioitaessa alhaista proteiinin saantia, mutta myös
+      suuremman mahdollisuuden väärään positiiviseen tulokseen.
+      [Katso julkaisut](/#/publications)
   clients:
     low: |
-      **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
-      van uw leeftijd, lengte en gewicht ({age} jaar, {length}cm, {weight}kg).
+      **Arviomme mukaan nykyinen proteiinin saantisi on **suositeltua matalampi**
+      ikä, kehon pituus ja paino ({age}vuotta, {length}cm, {weight}kg) huomioon ottaen.
 
-      Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
-      diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
-      doen. Vervolgens kan zij/hij u voedingsadvies en/of tips geven hoe u, op
-      een manier die bij u past, meer eiwit kunt eten.
-
-      U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
-      vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
+      Suosittelemme keskustelemaan tästä terveydenhuollon ammattilaisen kanssa.
+      Voit pyytää häneltä tarkempaa arviota todellisesta proteiinin saannistasi,
+      sekä vinkkejä proteiinin saannin lisäämiseen.
+ 
     adequate: |
-      Wij schatten uw eiwitinname in als **voldoende** op basis van uw leeftijd,
-      lengte en gewicht ({age} jaar, {length}cm, {weight}kg).
+      Arviomme mukaan nykyinen proteiinin saantisi on **riittävä**
+      ikä, kehon pituus ja paino ({age}vuotta, {length}cm, {weight}kg) huomioon ottaen.
 
-      Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
-      verandert in uw voedingspatroon.
-
-      Mocht u desondanks behoefte hebben aan meer informatie en tips over een
-      gezonde eiwitinname kunt u meer informatie en tips over een gezonde
-      eiwitinname vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
+      Suosittelemme täyttämään proteiinilaskurin uudelleen, mikäli
+      ruokailutottumukset muuttuvat.
     target: |
-      ##### Eiwitdoel
+      ##### Suositeltu proteiinin saanti
 
-      De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
-      houdend met uw leeftijd, lengte en gewicht is: **{protein_target} gram per dag**.
+      Sinulle suositeltu päivittäinen proteiinin saanti
+      ikä, kehon pituus ja paino huomioon ottaen on: **≥{protein_target} grammaa päivässä**.
     print: |
-      ##### Resultaten
+      ##### Tulokset
 
-      U kunt de resultaten van deze test
-      opslaan, bewaren, printen, en meenemen op de [Resultaten Pagina](/#/print).
+      Voit ladata, tallentaa tai tulostaa saamasi tulokset [Tulokset sivu](/#/print).
 publications:
-  title: Publicaties
-  view_article: Bekijk artikel
+  title: Julkaisut
+  view_article: Katso artikkeli
 print:
-  title: Eiwit Screener Resultaten
-  print: Print
-  download: Download
-  your_answer: Uw antwoord
+  title: Proteiinilaskurin tulokset
+  print: Tulosta
+  download: Lataa
+  your_answer: Vastauksesi
+
+# Session
 session:
-  your_id: 'Your session ID is: {session_id}'
+  your_id: 'Istunnon tunnus: {session_id}'
+
+# Navigation
 nav:
   continue: Jatka
+  back: Takaisin
   next: Seuraava
   previous: Edellinen
   start_over: Aloita uudelleen
-intro:
-  text: Alla on kysymyksiä koskien Teidän ruokavaliotanne. On tärkeää, että vastaatte
-    mahdollisimman tarkasti. Haluaisimme tietää, mitä söitte viimeisen neljän viikon
-    aikana riippumatta viikonpäivistä tai paikasta, missä söitte. Jos viimeiset neljä
-    viikkoa ovat olleet Teille hyvin poikkeuksellisia ruokailutottumusten suhteen
-    (esim. lomamatka tai sairastaminen), vastatkaa kysymyksiin neljän viikon ajanjaksolta
-    ennen tätä poikkeavaa tilannetta.
+  change: Muuta
+
+# Quiz
+intro.text: |
+  Seuraavat kysymykset koskevat ruokailutottumuksiasi. On tärkeää,
+  että vastaat kysymyksiin totuudenmukaisesti. Haluaisimme tietää, mitä söit ja joit
+  viimeisen 4 viikon aikana (riippumatta viikonpäivistä tai siitä, missä ruokailu tapahtui).
+  Mikäli viimeiset 4 viikkoa ovat olleet hyvin poikkeavia (olet esimerkiksi ollut sairaana tai
+  matkalla, joka on merkittävästi muuttanut tavanomaista ruokailuasi),
+  ole hyvä ja mieti tätä ajanjaksoa edeltävää 4 viikkoa.
 bmi1:
-  text: Ilmoita seuraavat tiedot.
+  text: Ilmoita seuraavat tiedot
 info1:
-  text: Seuraavissa kysymyksissä tiedustelemme, paljonko söitte kyseistä ruoka-ainetta
+  text: Seuraavissa kysymyksissä tiedustelemme, paljonko söit kyseistä ruoka-ainetta
 N05b_0:
-  text: Viimeksi kuluneiden neljän viikon aikana, kuinka monta palaa leipää söitte
-    keskimäärin päivässä?
+  text: Viimeisen neljän viikon aikana, kuinka monta palaa leipää söit
+    keskimäärin päivässä niinä päivinä, kun söit leipää?
 N15b_0:
   text: Viimeisen neljän viikon aikana, kuinka monta lasillista maitoa, piimää tai
-    soijamaitoa joitte keskimäärin päivässä?
+    soijamaitoa joit keskimäärin päivässä niinä päivinä, kun joit jotain näistä?
 N34b:
-  text: Kuinka paljon lihaa (esim. nauta, sika, broileri, riista) söitte keskimäärin
-    lämpimällä aterialla  päivänä, jolloin söitte lihaa viimeisen neljän viikon aikana?
+  text: Kuinka paljon lihaa (esim. nauta, sika, broileri, riista) söit keskimäärin
+    lämpimällä aterialla päivänä, jolloin söit lihaa viimeisen neljän viikon aikana?
 frequency1:
-  text: Seuraavissa kysymyksissä tiedustelemme, kuinka usein söitte tiettyä ruoka-ainetta
+  text: Seuraavissa kysymyksissä tiedustelemme, kuinka usein söit tiettyä ruoka-ainetta
 N18a_0:
-  text: Viimeisen neljän viikon aikana, kuinka usein söitte maito- tai soijavalmisteita
+  text: Viimeisen neljän viikon aikana, kuinka usein söit maito- tai soijavalmisteita,
     kuten jogurttia, viiliä, rahkaa, jäätelöä tai pirtelöä? (Ei juotavaa maitoa, piimää
     tai juustoviipaleita).
 N14a_0:
-  text: Viimeisen neljän viikon aikana, kuinka usein söitte kananmunaa aamupalalla,
+  text: Viimeisen neljän viikon aikana, kuinka usein söit kananmunaa aamupalalla,
     lounaalla, päivällisellä tai välipalalla tai osana ateriaa?
 N24a_0:
-  text: Viimeisen neljän viikon aikana, kuinka usein söitte pastaa tai nuudeleita
-    (makaroni, spaghetti, lasagne, riisi - tai vehnänuudeleita)?
+  text: Viimeisen neljän viikon aikana, kuinka usein söit pastaa tai nuudeleita
+    (makaroni, spaghetti, lasagne, riisi- tai vehnänuudeleita)?
 N33a_0:
-  text: Viimeisen neljän viikon aikana, kuinka usein söitte kalaa aterialla, leivän
-    päällä tai välipalana? (Ei koske äyriäisiä).
+  text: Viimeisen neljän viikon aikana, kuinka usein söit kalaa aterialla, leivän
+    päällä tai välipalana? (Ei koske äyriäisiä)
 N62a_0:
-  text: Viimeisen neljän viikon aikana, kuinka usein söitte pähkinöitä tai maapähkinöitä
+  text: Viimeisen neljän viikon aikana, kuinka usein söit pähkinöitä tai maapähkinöitä
     sellaisenaan?
 N08a_0:
-  text: Viimeisen neljän viikon aikana, kuinka usein söitte juustoa (esim. kova juusto,
-    juustolevite) leivän, sämpylän, korpun, keksin yms. päällä?
+  text: Viimeisen neljän viikon aikana, kuinka usein söit juustoa (esim. kova juusto,
+    juustolevite) leivän, sämpylän, korpun, keksin tmv. päällä?
 N08b_0:
   text: Kuinka monta viipaletta juustolla tai juustolevitteellä päällystettyä leipää,
-    sämpylää, korppua, keksiä ym. söitte keskimäärin päivässä (niinä päivinä kun söitte
+    sämpylää, korppua, keksiä tmv. söit keskimäärin päivässä (niinä päivinä kun söit
     juustoa tai juustolevitettä)?
 less_than_one: Vähemmän kuin yhden tai ei sovellettavissa
-slice: "{count} pala ::: {count} palaa"
-more_than_slices: "{count} pala :::> {count} palaa"
-glass: "{count} lasillinen ::: {count} lasillista"
-more_than_glasses: "> {count} lasillinen :::> {count} lasillista"
+slice: "{count} palan ::: {count} palaa"
+more_than_slices: "{count} palan :::> {count} palaa"
+glass: "{count} lasillisen ::: {count} lasillista"
+more_than_glasses: "> {count} lasillisen :::> {count} lasillista"
 no_meat: En syö lihaa lainkaan
 plate: "{fraction} lautasesta"
 not_in_four_weeks: En yhtään kertaa neljän viikon aikana
@@ -182,15 +183,16 @@ question_number: Kysymys {number}
 age:
   label: Ikä
   placeholder: Ilmoita ikäsi
-  invalid: Please enter a valid age.
-  append: year
+  invalid: Syötä ikä oikeassa muodossa (vuosina).
+  append: vuotta
 weight:
   label: Paino
-  placeholder: Ilmoita painosi kiloina.
-  invalid: Syöttäkää oikea paino.
+  placeholder: Ilmoita painosi
+  invalid: Syötä paino oikeassa muodossa (kg).
   append: kg
 length:
   label: Pituus
-  placeholder: Ilmoita pituutesi senttimetreissä.
-  invalid: Syöttäkää oikea pituus.
+  placeholder: Ilmoita pituutesi
+  invalid: Syötä pituus oikeassa muodossa (cm).
   append: cm
+
