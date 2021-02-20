@@ -62,7 +62,7 @@ results:
     target_list: |
       Perustuen suositukseen ≥{norm} g/kehon paino kg/päivä
       sinulle suositeltu proteiinin saanti on: ≥{protein_target} grammaa/päivä.
-     health_advise: |
+    health_advise: |
       ##### Käyttö terveydenhuollossa:
      
       Kun riski alhaiselle proteiinin saannille on korkea, suosittelemme
