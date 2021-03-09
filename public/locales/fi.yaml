@@ -14,15 +14,15 @@ home:
   proversion_link: Napauta tästä ikäihmisten käyttöön tarkoitettuun versioon.
   clientversion: Tämä on proteiinilaskuri ikäihmisten käyttöön.
   clientversion_link: Napauta tästä terveydenhuollon ammattilaisille ja tutkijoille tarkoitettuun versioon.
-  title: Tervetuloa proteiinilaskuriin (Pro55+)
+  title: Tervetuloa proteiinilaskuriin
   professionals: |
-    Proteiinilaskuri (Pro55+) on proteiinin saannin arvioimiseen tarkoitettu lyhyt kysely,
+    Proteiinilaskuri on proteiinin saannin arvioimiseen tarkoitettu lyhyt kysely,
     jolla voidaan arvioida todennäköisyys alhaiselle proteiinin saannille (<0.8, <1.0 tai <1.2 g/
     kehon paino kg/päivä) ikäihmisillä (65+ vuotta).
-    *Proteiinilaskurin (Pro55+) on kehittänyt Vrije Universiteit Amsterdam (Alankomaat).
+    *Proteiinilaskurin on kehittänyt Vrije Universiteit Amsterdam (Alankomaat).
     [Katso julkaisut](/#/publications)*
     
-    Proteiinilaskurin (Pro55+) käyttö on maksutonta. Vastattuasi kyselyyn saat arvion,
+    Proteiinilaskurin käyttö on maksutonta. Vastattuasi kyselyyn saat arvion,
     millä todennäköisyydellä (0-100%) proteiinin saanti on suosituksia alhaisempaa
     ja ohjeita kuinka hyödyntää tulosta tutkimuksessa tai käytännössä.
            
@@ -34,23 +34,21 @@ home:
     Lihasmassa alkaa hiljalleen vähentyä 50 ikävuoden jälkeen. Tätä voidaan hidastaa
     huolehtimalla riittävästä proteiinin saannista sekä ylläpitämällä säännöllistä liikuntaa.
     Täyttämällä tämän kyselyn saat arvion siitä,
-    onko nykyinen proteiinin saannistisi mahdollisesti suosituksia alhaisempaa. 
-    Kysely on suunniteltu 65 vuotta täyttäneille aikuisille.
-
+    onko nykyinen proteiinin saantisi mahdollisesti suosituksia alhaisempaa. 
+    Kysely on suunniteltu 65 vuotta täyttäneille aikuisille. Kysely ei sovellu henkilöille, jotka ovat saaneet terveydenhuollon ammattihenkilön antamaa ohjausta proteiinin saantiin liittyen.
     Täytettyäsi tämän kyselyn, saat:
  
     1. Arvion siitä, onko nykyinen proteiinin saantisi mahdollisesti suosituksia alhaisempaa
     2. Arvion päivittäisestä proteiinin tarpeestasi ikä, kehon pituus ja paino huomioon ottaen
     3. Neuvoja mistä löytää lisätietoa proteiinin saannista.
 
-    *Proteiinilaskurin (Pro55+) on kehittänyt Vrije Universiteit Amsterdam (Alankomaat).
+    *Proteiinilaskurin on kehittänyt Vrije Universiteit Amsterdam (Alankomaat).
     [Katso julkaisut](/#/publications)*
 results:
   professionals:
     probability: 'Ennustettu todennäköisyys: {percentage}%'
     explanation: |
       ##### Kuinka tulkita ennustettua todennäköisyyttä
-
       - Yli 40%:n todennäköisyyttä pidetään korkeana riskinä sille,
       että proteiinin saanti on < 0.8 g/kehon paino kg/päivä
       - Yli 30%:n todennäköisyyttä pidetään korkeana riskinä sille,
@@ -79,26 +77,21 @@ results:
   clients:
     low: |
       **Arviomme mukaan nykyinen proteiinin saantisi on **suositeltua matalampi**
-      ikä, kehon pituus ja paino ({age}vuotta, {length}cm, {weight}kg) huomioon ottaen.
-
+      ikä, kehon pituus ja paino ({age} vuotta, {length} cm, {weight} kg) sekä saantisuositus vähintään 1,2 grammaa päivässä per kehon painokilo huomioon ottaen.
       Suosittelemme keskustelemaan tästä terveydenhuollon ammattilaisen kanssa.
       Voit pyytää häneltä tarkempaa arviota todellisesta proteiinin saannistasi,
       sekä vinkkejä proteiinin saannin lisäämiseen.
  
     adequate: |
       Arviomme mukaan nykyinen proteiinin saantisi on **riittävä**
-      ikä, kehon pituus ja paino ({age}vuotta, {length}cm, {weight}kg) huomioon ottaen.
-
+      ikä, kehon pituus ja paino ({age} vuotta, {length} cm, {weight} kg) sekä saantisuositus vähintään 1,2 grammaa päivässä per kehon painokilo huomioon ottaen.
       Suosittelemme täyttämään proteiinilaskurin uudelleen, mikäli
       ruokailutottumukset muuttuvat.
     target: |
       ##### Suositeltu proteiinin saanti
-
-      Sinulle suositeltu päivittäinen proteiinin saanti
-      ikä, kehon pituus ja paino huomioon ottaen on: **≥{protein_target} grammaa päivässä**.
+      Sinulle suositeltu päivittäinen proteiinin saanti on **≥{protein_target} grammaa päivässä**. Tämä perustuu ikääsi, kehon pituuteen ja painoon sekä suositukseen saada proteiinia vähintään 1,2 grammaa päivässä kehon painokiloa kohden.
     print: |
       ##### Tulokset
-
       Voit ladata, tallentaa tai tulostaa saamasi tulokset [Tulokset sivu](/#/print).
 publications:
   title: Julkaisut
