@@ -1,7 +1,7 @@
 values:
   intercept: 19.361
   shrinkageFactor: 0.92
-  weightAdjustedFactor: 0.105
+  weightAdjustedFactor: 0.106
   cutoff: 0.3
   proteinTarget: 0.8
   targetList:
@@ -9,194 +9,214 @@ values:
     - proteinTarget: 1.0
     - proteinTarget: 1.2
 home:
-  button: To the screener
-  proversion: This is the Protein screener for health care professionals and researchers.
-  proversion_link: Click here for the version for older adults
-  clientversion: This is the Protein screener for older adults.
-  clientversion_link: Click here for the version for health care professionals and researchers
-  title: Welcome to the Protein Screener
+  button: Naar de screener
+  proversion: Dit is de Eiwit screener voor zorgprofessionals en onderzoekers.
+  proversion_link: Ga naar de versie voor ouderen
+  clientversion: Dit is de Eiwit screener voor ouderen.
+  clientversion_link: Ga naar de versie voor zorgprofessionals en onderzoekers
+  title: Welkom bij de Eiwit Screener
   professionals: |
-    The Protein Screener is a short questionnaire that can be used to
-    estimate the chance on a low protein intake (<0.8, <1.0, or <1.2 gram /per kilogram
-    adjusted body weight/day) in older adults (55+ year).
-    *The Protein screener is developed by the Vrije Universiteit Amsterdam
-    (the Netherlands). [See publications](/#/publications)*
-    
-    You can use the Protein Screener here for free. After completing
-    the questions, you will immediately see the chance (0-100%) on a low protein intake
-    and advice how to apply chance this in research and practice.
-           
-    When there is a high risk on a low protein intake, we recommend to perform a
-    more precise measurement of the actual protein intake, for example by
-    a full nutritional assessment performed by a dietitian.
+    De Eiwit Screener is een korte vragenlijst om de kans op een lage
+    eiwit inname (<0.8, <1.0, of <1.2 gram /kilogram lichaamsgewicht/dag) voor
+    ouderen (55+ jaar) te berekenen. De Eiwit Screener is ontwikkeld
+    door de Vrije Universiteit Amsterdam - [Bekijk publicaties](/#/publications).
+
+    De Eiwit Screener kunt u hier gratis online gebruiken, waarna
+    direct de uitslag volgt uitgedrukt als de kans op een lage eiwitinname
+    (0-100%) en advies voor gebruik van deze kans in de praktijk en in
+    onderzoek.
+
+    Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
+    nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
+    uitgebreide voedingsanamnese door een diëtist.
   clients: |
-    Consuming **sufficient** protein is important to preserve muscle and bone mass. 
-    From the age of 50 we graduately lose muscle mass. This loss can be reduced
-    by consuming sufficient protein with our food and by regular physical activity.
-    By filling in this questionnaire you will get an estimate
-    on whether or not your current protein intake may be too low. 
-    This questionnaire is developed for adults aged 55 years and older.
-    This questionnaire is not suited for adults who received dietary advice
-    regarding protein intake from a health care professional. 
+    Het eten van **voldoende** eiwit is belangrijk voor het behoud van spiermassa
+    en botten. Vanaf de leeftijd van 50 jaar verliezen we geleidelijk
+    spiermassa. Dit kunnen we beperken door voldoende eiwitinname met voeding
+    en regelmatige lichaamsbeweging. Met het invullen van deze vragenlijst
+    kunt u zelf inschatten of uw eiwitinname aan de lage kant is of niet. Deze
+    vragenlijst is bedoeld voor mensen van 55 jaar en ouder. Deze vragenlijst
+    is niet geschikt voor mensen die een advies van dietist of arts hebben gehad
+    voor eiwitinname vanwege een ziekte of aandoening.
 
-    After filling out this short questionnaire consisting of 13 questions, you will immediately see:
- 
-    1. An estimate on whether or not your current protein intake may be too low
-    2. How many grams of protein you are adviced to consume per day, based on your age, body height and weight
-    3. Advice on where to find more information on protein intake 
+    Na het nauwkeurig invullen van deze korte vragenlijst bestaande uit 13
+    vragen, ontvangt u direct:
 
-    *The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam (the Netherlands).
-    [See publications](/#/publications)*
+    1. Een inschatting of uw eiwitinname aan de lage kant is (of niet)
+    2. De hoeveel eiwit die u per dag geadviseerd wordt te eten, rekening
+      houdend met uw leeftijd, lengte en gewicht
+    3. Advies waar u meer informatie kunt vinden over eiwitinname
+
+    *Deze vragenlijst is ontwikkeld door de Vrije Universiteit Amsterdam. [Bekijk publicaties](/#/publications)*
 results:
   professionals:
-    probability: 'Predicted probability: {percentage}%'
+    probability: 'Voorspelde kans: {percentage}%'
     explanation: |
-      ##### Explanation on how to use the predicted probability
+      ##### Toelichting gebruik voorspelde kans
 
-      - A predicted probability of more than 40% is considered as a high risk on
-      a protein intake < 0.8 gram /kilogram (adjusted) body weight/day
-      - A predicted probability of more than 30% is considered as a high risk on
-      a protein intake < 1.0 gram /kilogram (adjusted) body weight/day
-      - A predicted probability of more than 20% is considered as a high risk on
-      a protein intake < 1.2 gram /kilogram (adjusted) body weight/day
-    
-    target: Personal advice protein intake
+      - Een kans van meer dan 40% beschouwen wij als een hoog risico
+        op een eiwit inname < 0.8 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag
+      - Een kans van meer dan 30% beschouwen wij als een hoog risico
+        op een eiwit inname < 1.0 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag
+      - Een kans van meer dan 20% beschouwen wij als een hoog risico
+        op een eiwit inname < 1.2 gram /kilogram (gecorrigeerd)
+        lichaamsgewicht/dag
+
+    target: Persoonlijk advies eiwit inname
     target_list: |
-      Based on the norm ≥{norm} gram /kilogram (adjusted) body weight/day
-      the personal advice for protein intake is: ≥{protein_target} gram/day.
+      Op basis van de norm ≥{norm} gram /kilogram (gecorrigeerd)
+      lichaamsgewicht/dag is het persoonlijk advies voor eiwit inname: ≥{protein_target} gram/dag.
     health_advise: |
-      ##### Advice for use in health care
+      ##### Advies gebruik in praktijk gezondheidszorg
      
-      When there is a high risk on a low protein intake, we recommend to perform a
-      more precise measurement of the actual protein intake, for example by
-      a full nutritional assessment performed by a dietitian or by filling in
-      an online tool to record food intake for at least 3 days.
+      Bij een verhoogde kans op een lage eiwitinname, adviseren wij een
+      nauwkeuriger meting van de eiwitinname, bijvoorbeeld middels een
+      uitgebreide voedingsanamnese door een diëtist of het gebruik van een
+      online tool voor het bijhouden van voedingsinname gedurende ten minste 3
+      dagen.
     research_advise: |
-      ##### Advice for use in research:
+      ##### Advies gebruik in onderzoek:
         
-      Depending on the purpose of research, one may choose a (different) cut-off
-      for the predicted probability. For example, a lower cut-off will result in
-      a higher sensitivity when screening for low protein intake but also
-      a higher chance on a false positive screening result.
+      Afhankelijk van het doel van het onderzoek, kan gekozen worden voor een
+      ander afkappunt van de voorspelde kans. Een lager afkappunt resulteert
+      bijvoorbeeld in een sensitievere screening maar een hogere kans op een
+      vals positieve uitslag.
       [Bekijk publicaties](/#/publications)
   clients:
     low: |
-      **We estimate that your current protein intake is *lower* than recommended** based
-      on your age, body height and weight ({age} year, {length}cm, {weight}kg)
-      and the recommendation to consume at least 0.8 gram per kilogram
-      adjusted body weight per day.
+      **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
+      van uw leeftijd, lengte en gewicht ({age} jaar, {length}cm, {weight}kg) en rekening
+      houdend met de aanbeveling van tenminste 0.8 gram per kilogram gecorrigeerd
+      lichaamsgewicht per dag.
 
-      We would advice you to discuss this information with for example a dietitian.
-      A dietitian can perform a more precise measurement of your actual protein intake.
-      He/she can also provide you with nutritional advice and/or tips, depending on
-      your personal preferences, on how to consume more protein with your diet. 
+      Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
+      diëtist. De diëtist zal dan een nauwkeurige meting van uw eiwitinname
+      doen. Vervolgens kan zij/hij u voedingsadvies en/of tips geven hoe u, op
+      een manier die bij u past, meer eiwit kunt eten.
+
+      U kunt ook zelf meer informatie en tips over een gezonde eiwitinname
+      vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl).
     adequate: |
-      We estimate that your current protein intake is **sufficient** based
-      on your age, body height and weight ({age} year, {length}cm, {weight}kg)
-      and the recommendation to consume at least 0.8 gram per kilogram
-      adjusted body weight per day.
+      Wij schatten uw eiwitinname in als **voldoende** op basis van uw leeftijd,
+      lengte en gewicht ({age} jaar, {length}cm, {weight}kg) en rekening
+      houdend met de aanbeveling van tenminste 0.8 gram per kilogram gecorrigeerd
+      lichaamsgewicht per dag.
 
-      We would advice you to fill out the Protein Screener again when there is
-      a change in your dietary habits.
+      Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets
+      verandert in uw voedingspatroon.
+
+      Mocht u desondanks behoefte hebben aan meer informatie en tips over een
+      gezonde eiwitinname kunt u meer informatie en tips over een gezonde
+      eiwitinname vinden op de website [Goed Gevoed Ouder Worden](https://www.goedgevoedouderworden.nl/eiwit-van-belang-voor-spieren-en-functioneren/).
     target: |
-      ##### Personal advice protein intake
+      ##### Persoonlijk advies eiwit inname
 
-      The amount protein you are adviced to consume per day is **≥{protein_target} gram per day**.
-      This is based on your age, body height and weight and the recommendation
-      to consume at least 0.8 gram per kilogram adjusted body weight per day.
+      De hoeveel eiwit die u per dag geadviseerd wordt te eten
+      is: **≥{protein_target} gram per dag**.
+      Dit is berekend op basis van uw leeftijd, lengte en gewicht
+      en de aanbeveling van tenminste 0.8 gram per kilogram
+      gecorrigeerd lichaamsgewicht per dag.
     print: |
-      ##### Results
+      ##### Resultaten
 
-      You may download, save, or print the results of this screening result on the [Results Page](/#/print).
+      U kunt de resultaten van deze test
+      opslaan, bewaren, printen, en meenemen op de [Resultaten Pagina](/#/print).
 publications:
   title: Publicaties
-  view_article: See paper
+  view_article: Bekijk artikel
 print:
-  title: Protein Screener Results
+  title: Eiwit Screener Resultaten
   print: Print
   download: Download
-  your_answer: Your answer
+  your_answer: Uw antwoord
 
 # Session
 session:
-  your_id: 'Your session ID is: {session_id}'
+  your_id: 'Je sessie ID is: {session_id}'
 
 # Navigation
 nav:
-  continue: Continue
-  back: Go back
-  next: Next
-  previous: Previous
-  start_over: Start over
-  change: Change
+  continue: Ga door
+  back: Ga terug
+  next: Volgende
+  previous: Vorige
+  start_over: Begin opnieuw
+  change: wijzig
 
 # Quiz
 intro.text: |
-  The following questions are about your dietary habits. It is very important
-  that you give an honest response. We would like to know what you ate or drank
-  in the last 4 weeks (irrespective of week days, weekend days, at home or someplace
-  else). If the last 4 weeks were very special (for example you were sick or you
-  went on a vacation and this had a major influence on your usual diet), please
-  recall the 4 weeks before this period.
-bmi1:
-  text: Please enter your body measurements.
-info1:
-  text: In the following questions, we ask how much of a food product you ate
-N05b_0:
-  text: In the last 4 weeks, how many slices of bread did you on average eat
-    on a day that you ate bread?
-N15b_0:
-  text: In the last 4 weeks, how many glasses/cups of milk, buttermilk or soy milk
-    did you on average drink on a day that you drank this?
-N34b:
-  text: How much meat did you on average eat on a day that you ate meat with your
-    warm meal in the last 4 weeks?
-frequency1:
-  text: In the following questions, we will ask how often you ate a certain product
-N18a_0:
-  text: In the last 4 weeks how often did you yoghurt, quark, milk-based pudding,
-    or soy dessert?
-N14a_0:
-  text: In the last 4 weeks how often did you eat egg with either your breakfast,
-    lunch, evening meal, as a snack, or in a meal?
-N24a_0:
-  text: In the last 4 weeks how often did you eat pasta or noodles (like spaghetti,
-    macaroni, lasagna, chow mein, rice-based or wheat-based noodles)?
-N33a_0:
-  text: In the last 4 weeks how often did you eat fish with your bread meal, warm
-    meal, or as a snack? (Do NOT include shellfish).
-N62a_0:
-  text: In the last 4 weeks, how often did you eat nuts or peanuts as a snack?
-N08a_0:
-  text: In the last 4 weeks how often did you eat cheese or cheese spread on your
-    bread, bun, rusk, cracker, etc.?
-N08b_0:
-  text: How many slices of bread, bun, rusk, cracker, etc. with cheese or cheese spread
-    did you on average eat on a day that you ate cheese or cheese spread?
-less_than_one: Less than one or not applicable
-slice: "{count} slice ::: {count} slices"
-more_than_slices: "> {count} slice ::: > {count} slices"
-glass: "{count} glass ::: {count} glasses"
-more_than_glasses: "> {count} glass ::: > {count} glasses"
-no_meat: Not applicable, does not eat meat
-plate: "{fraction} plate"
-not_in_four_weeks: Not in these 4 weeks
-one_in_four_weeks: 1 day in 4 weeks
-two_three_in_four_weeks: 2-3 days in 4 weeks
-day_week: "{count} day/week ::: {count} days/week"
-question_number: Question {number}
+  De volgende vragen gaan over uw gebruikelijke voeding. Het is belangrijk dat
+  u eerlijk antwoord geeft. U wordt gevraagd aan te geven wat u de laatste 4 weken
+  gegeten en gedronken heeft: doordeweeks, in het weekend, thuis, op het werk
+  en op feestjes. Als u bijvoorbeeld door vakantie of ziekte anders dan
+  normaal gegeten heeft, dan gaat u uit van de 4 weken vóórdat u op vakantie
+  ging of ziek werd.
+bmi1.text: Vul hier uw persoonlijke gegevens in.
+info1.text: |
+  In de volgende vragen zullen we u vragen hoeveel van een voedingsmiddel u heeft
+  gegeten
+N05b_0.text: |
+  Hoeveel sneetjes brood heeft u in de afgelopen 4 weken gemiddeld per dag
+  gegeten op een dag dat u brood at?
+N15b_0.text: |
+  Hoeveel glazen/bekers melk, karnemelk of sojamelk/sojadrink heeft u in de
+  afgelopen 4 weken gemiddeld per dag gedronken op een dag dat u deze producten
+  nuttigde?
+N34b.text: |
+  Hoeveel vlees heeft u gemiddeld gegeten met de warme maaltijd in de
+  afgelopen 4 weken op een dag dat u vlees eet?
+frequency1.text: |
+  In de volgende vragen zullen we u vragen hoe vaak u een bepaald voedingsmiddel
+  heeft gegeten
+N18a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken een melk product zoals yoghurt,
+  kwark, pudding, vla, of soja dessert gegeten?
+N14a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken eieren gegeten bij uw ontbijt,
+  middag- of avondmaaltijd, als tussendoortje of verwerkt in gerechten?
+N24a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken deegwaren/pasta, zoals macaroni,
+  spaghetti, lasagne, bami, mie, mihoen etc. gegeten?
+N33a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken vis gegeten bij uw broodmaaltijd,
+  warme maaltijd of als tussendoortje? Let op: schaal- en schelpdieren niet
+  meetellen.
+N62a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken noten of pinda’s als tussendoortje
+  gegeten?
+N08a_0.text: |
+  Hoe vaak heeft u in de afgelopen 4 weken kaas of smeerkaas gegeten op uw
+  brood, broodjes, beschuiten, crackers etc.?
+N08b_0.text: |
+  Hoeveel sneden brood/crackers/bolletjes etc. met kaas of smeerkaas heeft u
+  in de afgelopen 4 weken gemiddeld per dag gegeten op een dag dat u brood met
+  kaas of smeerkaas at?
+less_than_one: Minder dan één of niet van toepassing
+slice: '{count} snee ::: {count} sneden'
+more_than_slices: '> {count} snee ::: > {count} sneden'
+glass: '{count} glas ::: {count} glazen'
+more_than_glasses: '> {count} glas ::: > {count} glazen'
+no_meat: 'Niet van toepassing, eet geen vlees'
+plate: '{fraction} bord'
+not_in_four_weeks: Deze 4 weken niet
+one_in_four_weeks: 1 dag per 4 weken
+two_three_in_four_weeks: 2-3 dagen per 4 weken
+day_week: '{count} dag per week ::: {count} dagen per week'
+question_number: 'Vraag {number}'
 age:
-  label: Age
-  placeholder: Please enter your age.
-  invalid: Please enter a valid age.
-  append: year
+  label: Leeftijd
+  placeholder: Wat is uw leeftijd?
+  invalid: Dit is geen valide antwoord.
+  append: jaar
 weight:
-  label: Weight
-  placeholder: Please enter your weight in kilograms.
-  invalid: Please enter a valid weight.
+  label: Gewicht
+  placeholder: Wat is uw gewicht in kilogram?
+  invalid: Dit is geen valide antwoord.
   append: kg
 length:
-  label: Length
-  placeholder: Please enter your length in centimeters.
-  invalid: Please enter a valid length.
+  label: Lengte
+  placeholder: Wat is uw lengte in centimeters
+  invalid: Dit is geen valide antwoord.
   append: cm
