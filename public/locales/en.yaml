@@ -3,7 +3,7 @@ values:
   shrinkageFactor: 0.92
   weightAdjustedFactor: 0.105
   cutoff: 0.3
-  proteinTarget: 1.0
+  proteinTarget: 0.8
   targetList:
     - proteinTarget: 0.8
     - proteinTarget: 1.0
@@ -14,15 +14,15 @@ home:
   proversion_link: Click here for the version for older adults
   clientversion: This is the Protein screener for older adults.
   clientversion_link: Click here for the version for health care professionals and researchers
-  title: Welcome to the Protein Screener (Pro55+)
+  title: Welcome to the Protein Screener
   professionals: |
-    The Protein Screener (Pro55+) is a short questionnaire that can be used to
+    The Protein Screener is a short questionnaire that can be used to
     estimate the chance on a low protein intake (<0.8, <1.0, or <1.2 gram /per kilogram
     adjusted body weight/day) in older adults (55+ year).
-    *The Protein screener (Pro55+) is developed by the Vrije Universiteit Amsterdam
+    *The Protein screener is developed by the Vrije Universiteit Amsterdam
     (the Netherlands). [See publications](/#/publications)*
     
-    You can use the Protein Screener (Pro55+) here for free. After completing
+    You can use the Protein Screener here for free. After completing
     the questions, you will immediately see the chance (0-100%) on a low protein intake
     and advice how to apply chance this in research and practice.
            
@@ -31,11 +31,13 @@ home:
     a full nutritional assessment performed by a dietitian.
   clients: |
     Consuming **sufficient** protein is important to preserve muscle and bone mass. 
-    From the age of 50 we graduately lose muscle mass. This loss can be recuced
+    From the age of 50 we graduately lose muscle mass. This loss can be reduced
     by consuming sufficient protein with our food and by regular physical activity.
     By filling in this questionnaire you will get an estimate
     on whether or not your current protein intake may be too low. 
     This questionnaire is developed for adults aged 55 years and older.
+    This questionnaire is not suited for adults who received dietary advice
+    regarding protein intake from a health care professional. 
 
     After filling out this short questionnaire consisting of 13 questions, you will immediately see:
  
@@ -80,7 +82,9 @@ results:
   clients:
     low: |
       **We estimate that your current protein intake is *lower* than recommended** based
-      on your age, body height and weight ({age} year, {length}cm, {weight}kg).
+      on your age, body height and weight ({age} year, {length}cm, {weight}kg)
+      and the recommendation to consume at least 0.8 gram per kilogram
+      adjusted body weight per day.
 
       We would advice you to discuss this information with for example a dietitian.
       A dietitian can perform a more precise measurement of your actual protein intake.
@@ -88,15 +92,18 @@ results:
       your personal preferences, on how to consume more protein with your diet. 
     adequate: |
       We estimate that your current protein intake is **sufficient** based
-      on your age, body height and weight ({age} year, {length}cm, {weight}kg).
+      on your age, body height and weight ({age} year, {length}cm, {weight}kg)
+      and the recommendation to consume at least 0.8 gram per kilogram
+      adjusted body weight per day.
 
       We would advice you to fill out the Protein Screener again when there is
       a change in your dietary habits.
     target: |
       ##### Personal advice protein intake
 
-      De amount protein you are adviced to consume per day,
-      based on your age, body height and weight is: **≥{protein_target} gram per day**.
+      The amount protein you are adviced to consume per day is **≥{protein_target} gram per day**.
+      This is based on your age, body height and weight and the recommendation
+      to consume at least 0.8 gram per kilogram adjusted body weight per day.
     print: |
       ##### Results
 
@@ -192,4 +199,6 @@ length:
   label: Length
   placeholder: Please enter your length in centimeters.
   invalid: Please enter a valid length.
+  append: cm
+er a valid length.
   append: cm
