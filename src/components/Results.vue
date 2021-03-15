@@ -17,7 +17,6 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import axios from 'axios'
 import ClientResults from './results/ClientResults'
 import ProfessionalResults from './results/ProfessionalResults'
 import DebugResults from './results/DebugResults'
@@ -29,19 +28,7 @@ export default {
     DebugResults
   },
   mounted () {
-    // send results to api
-    axios.post(this.storeResultsEndpoint, {
-      unique_id: this.unique_id,
-      reg_id: this.reg_id,
-      pred_prob: this.predprob,
-      answers: this.answers
-    })
-      .then(function (response) {
-        // console.log(response)
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
+    this.storeResults()
   },
   computed: {
     ...mapGetters({
@@ -59,7 +46,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      prevQuestion: 'quiz/prevQuestion'
+      prevQuestion: 'quiz/prevQuestion',
+      storeResults: 'quiz/storeResults'
     }),
     startOver () {
       this.$store.commit('quiz/resetAnswers')

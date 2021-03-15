@@ -38,6 +38,21 @@ export const initQuiz = ({ commit, rootGetters }) => {
     })
 }
 
+export const storeResults = ({ commit, rootGetters }) => {
+  axios.post(rootGetters['config/storeResultsEndpoint'], {
+    unique_id: rootGetters['quiz/unique_id'],
+    reg_id: rootGetters['quiz/reg_id'],
+    pred_prob: rootGetters['quiz/predprob'],
+    answers: rootGetters['quiz/answers']
+  })
+    .then(function (response) {
+      // console.log(response)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
+
 export const nextQuestion = ({ commit, state }) => {
   commit('setQuestionNumber', state.currentQuestionNumber + 1)
   commit('updateCurrentQuestion')
