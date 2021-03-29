@@ -31,7 +31,7 @@ home:
     a full nutritional assessment performed by a dietitian.
   clients: |
     Consuming **sufficient** protein is important to preserve muscle and bone mass. 
-    From the age of 50 we graduately lose muscle mass. This loss can be reduced
+    From the age of 50 we gradually lose muscle mass. This loss can be reduced
     by consuming sufficient protein with our food and by regular physical activity.
     By filling in this questionnaire you will get an estimate
     on whether or not your current protein intake may be too low. 
@@ -86,7 +86,7 @@ results:
       and the recommendation to consume at least 0.8 gram per kilogram
       adjusted body weight per day.
 
-      We would advice you to discuss this information with for example a dietitian.
+      We advise you to discuss this information with for example a dietitian.
       A dietitian can perform a more precise measurement of your actual protein intake.
       He/she can also provide you with nutritional advice and/or tips, depending on
       your personal preferences, on how to consume more protein with your diet. 
@@ -96,12 +96,12 @@ results:
       and the recommendation to consume at least 0.8 gram per kilogram
       adjusted body weight per day.
 
-      We would advice you to fill out the Protein Screener again when there is
+      We advise you to fill out the Protein Screener again when there is
       a change in your dietary habits.
     target: |
       ##### Personal advice protein intake
 
-      The amount protein you are adviced to consume per day is **≥{protein_target} gram per day**.
+      The amount protein you are advised to consume per day is **≥{protein_target} gram per day**.
       This is based on your age, body height and weight and the recommendation
       to consume at least 0.8 gram per kilogram adjusted body weight per day.
     print: |
