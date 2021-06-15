@@ -1,0 +1,196 @@
+values:
+  intercept: 19.361
+  shrinkageFactor: 0.92
+  weightAdjustedFactor: 0.105
+  cutoff: 0.3
+  proteinTarget: 1.0
+  targetList:
+    - proteinTarget: 0.8
+    - proteinTarget: 1.0
+    - proteinTarget: 1.2
+home:
+  button: Zum Screener
+  proversion: Dies ist der Protein Screener für Therapeuten und Wissenschaftler.
+  proversion_link: Für die Version für ältere Menschen klicken Sie hier
+  clientversion: Dies ist der Protein Screener für ältere Menschen.
+  clientversion_link: Für die Version für Therapeuten und Wissenschaftler klicken Sie hier
+  title: Willkommen beim Protein Screener
+  professionals: |
+    Der Protein Screener ist ein kurzer Fragebogen, der genutzt werden kann, um 
+    die Wahrscheinlichkeit einer niedrigen Proteinzufuhr (<0,8, <1,0, or <1,2 Gramm/Kilogramm
+    adjustiertem Körpergewicht/Tag) bei älteren Menschen (65+ Jahre) abzuschätzen.
+    *Der Protein Screener wurde von der Vrije Universiteit Amsterdam
+    (die Niederlande) entwickelt. [Siehe Veröffentlichungen](/#/Veröffentlichungen)*
+    
+    Sie können den Protein Screener hier kostenlos nutzen. Nach Beantwortung
+    der Fragen, erhalten Sie sofort die Wahrscheinlichkeit (0-100%) für eine niedrige Proteinzufuhr
+    sowie Ratschläge zur Verwendung des Ergebnisses in Forschung und Praxis.
+           
+    Bei einem hohen Risiko für eine niedrige Proteinzufuhr, empfehlen wir, eine
+    genauere Erfassung der tatsächlichen Proteinzufuhr, beispielsweise mittels
+    ausführlichem Ernährungsassessment durch eine Ernährungsfachkraft.
+  clients: |
+    Der **ausreichende** Verzehr von Protein ist wichtig für die Erhaltung von Muskel- und Knochenmasse. 
+    Ab einem Alter von 50 Jahren verlieren wir sukzessive Muskelmasse. Dieser Verlust kann durch
+    eine ausreichende Proteinzufuhr über die Nahrung und regelmäßige körperliche Aktivität reduziert werden.
+    Wenn Sie diesen Fragebogen ausfüllen, erhalten Sie eine Einschätzung,
+    ob ihre aktuelle Proteinzufuhr zu niedrig ist oder nicht. 
+    Dieser Fragebogen wurde für Erwachsene ab 65 Jahren entwickelt.
+    Dieser Fragebogen eignet sich nicht für Personen, die Ernährungsempfehlungen
+    bezüglich ihrer Proteinzufuhr durch einen Therapeuten erhalten haben. 
+    Nach dem Ausfüllen dieses kurzen Fragebogens mit 13 Fragen, erhalten Sie sofort:
+ 
+    1. Eine Abschätzung, ob Ihre aktuelle Proteinzufuhr zu niedrig ist oder nicht
+    2. Eine Information wieviel Gramm Protein Sie basierend auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht pro Tag verzehren sollten
+    3. Ratschläge, wo Sie weitere Informationen zur Proteinzufuhr finden  
+
+    *Der Protein Screener (Pro55+) wurde von der Vrije Universiteit Amsterdam (die Niederlande) entwickelt.
+    [Siehe Veröffentlichungen](/#/Veröffentlichungen)*
+results:
+  professionals:
+    probability: 'Vorhergesagte Wahrscheinlichkeit: {Prozent}%'
+    explanation: |
+      ##### Erklärung zur Verwendung der vorhergesagten Wahrscheinlicheit
+      - Eine vorhergesagte Wahrscheinlichkeit von mehr als 40% wird als hohes Risiko für
+      eine Proteinzufuhr von < 0,8 Gramm/Kilogramm (adjustiertem) Körpergewicht/Tag angesehen
+      - Eine vorhergesagte Wahrscheinlichkeit von mehr als 30% wird als hohes Risiko für
+      eine Proteinzufuhr < 1,0 Gramm/Kilogramm (adjustiertem) Körpergewicht/Tag angesehen
+      - Eine vorhergesagte Wahrscheinlichkeit von mehr als 20% wird als hohes Risiko für
+      eine Proteinzufuhr < 1,2 Gramm/Kilogramm (adjustiertem) Körpergewicht/Tag angesehen
+    
+    target: Persönliche Empfehlung für die Proteinzufuhr
+    target_list: |
+      Basierend auf dem Referenzwert ≥{Referenzwert} Gramm/Kilogramm (adjustiertem) Körpergewicht/Tag
+      lautet Ihre persönliche Empfehlung für die Proteinzufuhr: ≥{Protein_Ziel} Gramm/Tag.
+    health_advise: |
+      ##### Empfehlung für die Nutzung im Gesundheitswesen
+     
+      Bei einem hohen Risiko für eine niedrige Proteinzufuhr empfehlen wir, eine
+      genauere Erfassung der tatsächlichen Proteinzufuhr, besipielsweise mittels
+      Ernährungsassessment durch eine Ernährungsfachkraft oder die Nutzung
+      eines internet-basierten Instruments, um die Nahrungszufuhr über mindestens 3 Tage zu protokollieren.
+    research_advise: |
+      ##### Empfehlung für die wissenschaftliche Nutzung:
+        
+      Abhängig vom Forschungszweck, können (unterschiedliche) Grenzwerte
+      für die vorhergesagte Wahrscheinlichkeit gewählt werden. Zum Beispiel, resultiert ein niedrigerer Grenzwert in
+      einer höheren Sensitivität beim Screening hinsichtlich einer niedrigen Proteinzufuhr, aber auch
+      in einer höheren Wahrscheinlichkeit für falsch positive Screeningergebnisse.
+      [Siehe Veröffentlichungen](/#/Veröffentlichungen)
+  clients:
+    low: |
+      **Wir schätzen, dass Ihre derzeitige Proteinzufuhr *niedriger* ist als empfohlen**, basierend
+      auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({Alter}Jahre, {Größe}cm, {Gewicht}kg)
+      sowie der Empfehlung mindestens 1,0 Gramm pro Kilogramm
+      adjustiertem Körpergewicht pro Tag zu verzehren.
+      Wir raten Ihnen, dieses Ergebnis beispielsweise mit einer Ernährungsfachkraft zu diskutieren.
+      Eine Ernährungsfachkraft macht eine genauere Erfassung der tatsächlichen Proteinzufuhr.
+      Er/Sie kann Ihnen unter Berücksichtigung Ihrer persönlichen Präferenzen auch Empfehlungen und/oder Tipps geben,
+      wie Sie mehr Protein über Ihre normale Ernährung verzehren können. 
+    adequate: |
+      Wir schätzen, dass Ihre derzeitige Proteinzufuhr **ausreichend** ist basierend
+      auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({Alter}Jahre, {Größe}cm, {Gewicht}kg)
+      sowie der Empfehlung mindestens 1,0 Gramm pro Kilogramm
+      adjustiertem Körpergewicht pro Tag zu verzehren.
+      Wir empfehlen Ihnen den Protein Screener nochmals auszufüllen, wenn sich
+      Ihre Ernährungsgewohnheiten verändern.
+    target: |
+      ##### Individuelle Empfehlung für die Proteinzufuhr
+      Die für Sie empfohlene tägliche Proteinmenge ist **≥{Protein_Ziel} Gramm pro Tag**.
+      Dies basiert auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht und der Empfehlung
+      mindestens 1,0 Gramm pro Kilogramm adjustiertem Körpergewicht pro Tag zu verzehren.
+    print: |
+      ##### Results
+      Sie können das Ergebnis dieses Screenings herunterladen, speichern und drucken über die [Ergebnis Seite](/#/drucken).
+publications:
+  title: Veröffentlichungen
+  view_article: Siehe Artikel
+print:
+  title: Protein Screener Ergebnisse
+  print: Drucken
+  download: Download
+  your_answer: Ihre Antwort
+
+# Session
+session:
+  your_id: 'Ihre Sitzungs ID ist: {Sitzungs_id}'
+
+# Navigation
+nav:
+  continue: Fortfahren
+  back: Zurückgehen
+  next: Weiter
+  previous: Zurück
+  start_over: Neu starten
+  change: Ändern
+
+# Quiz
+intro.text: |
+  Die folgenden Fragen betreffen Ihre Ernährungsgewohnheiten. Es ist sehr wichtig,
+  dass Sie diese ehrlich beantworten. Wir möchten gerne von Ihnen wissen, was Sie in den letzten 4 Wochen
+  gegessen und getrunken haben (unabhängig von Wochen- oder Wochenendtagen, zu Hause oder an anderen
+  Orten). Wenn die letzten 4 Wochen sehr speziell waren (z.B. Sie waren krank oder
+  im Urlaub und das hatte einen großen Einfluss auf Ihre übliche Ernährung), dann
+  berichten Sie bitte über die 4 Wochen vor dieser Phase.
+bmi1:
+  text: Bitte geben Sie Ihre Körpermaße an.
+info1:
+  text: In den folgenden Fragen möchten wir wissen, wie viel Sie von einem Lebensmittel gegessen haben
+N05b_0:
+  text: In den letzten 4 Wochen, wie viele Scheiben Brot haben Sie an einem durchschnittlichen Tag gegessen,
+   an dem Sie Brot verzehrt haben?
+N15b_0:
+  text: In den letzten 4 Wochen, wie viele Gläser/Tassen Milch, Buttermilch oder Sojamilch
+    haben Sie an einem durchschnittlichen Tag getrunken, an dem es diese Produkte gab?
+N34b:
+  text: In den letzten 4 Wochen, wie viel Fleisch haben Sie durchschnittlich an einem Tag gegessen, an dem
+    es zur warmen Mahlzeit Fleisch gab?
+frequency1:
+  text: In den folgenden Fragen möchten wir wissen, wie häufig Sie ein bestimmtes Lebensmittel gegessen haben.
+N18a_0:
+  text: In den letzten 4 Wochen, wie häufig haben Sie Joghurt, Quark, Pudding auf Milchbasis
+    oder ein Sojadessert gegessen?
+N14a_0:
+  text: In den letzten 4 Wochen, wie häufig haben Sie Eier entweder zum Frühstück,
+    zum Mittagessen, zum Abendessen, als Zwischenmahlzeit oder in einem Gericht gegessen?
+N24a_0:
+  text: In den letzten 4 Wochen, wie häufig haben Sie Nudeln (wie Spaghetti,
+    Makkaroni, Lasagne, gebratene Nudeln, Reis- oder Weizennudeln) gegessen?
+N33a_0:
+  text: In den letzten 4 Wochen, wie häufig haben Sie Fisch zu Ihrer Brotzeit, als warme
+    Mahlzeit oder als Zwischenmahlzeit gegessen? (Schließen Sie Schalentieren NICHT ein).
+N62a_0:
+  text: In den letzten 4 Wochen, wie häufig haben Sie Nüsse oder Erdnüsse als Snack gegessen?
+N08a_0:
+  text: In den letzten 4 Wochen, wie häufig haben Sie Käse oder Streichkäse auf Ihrem
+    Brot, Brötchen, Zwieback oder Cracker, etc. gegessen?
+N08b_0:
+  text: An Tagen an denen Sie Käse oder Streichkäse verzehren, wie viele Scheiben/Portionen
+    Brot, Brötchen, Zwieback oder Cracker, etc. mit Käse oder Streichkäse essen Sie durchschnittlich?
+less_than_one: Weniger als eine oder nicht zutreffend
+slice: "{Anzahl} Scheibe ::: {Anzahl} Scheiben"
+more_than_slices: "> {Anzahl} Scheibe ::: > {Anzahl} Scheiben"
+glass: "{Anzahl} Glas ::: {Anzahl} Gläser"
+more_than_glasses: "> {Anzahl} Glas ::: > {Anzahl} Gläser"
+no_meat: Nicht zutreffend, isst kein Fleisch
+plate: "{Anteil} Teller"
+not_in_four_weeks: Keinmal in 4 Wochen
+one_in_four_weeks: An 1 Tag in 4 Wochen
+two_three_in_four_weeks: An 2-3 Tagen in 4 Wochen
+day_week: "{Anzahl} Tag/Woche ::: {Anzahl} Tage/Woche"
+question_number: Frage {Nummer}
+age:
+  label: Alter
+  placeholder: Bitte geben Sie Ihr Alter ein.
+  invalid: Bitte geben Sie ein gültiges Alter an.
+  append: Jahre
+weight:
+  label: Gewicht
+  placeholder: Bitte geben Sie Ihr Gewicht in Kilogramm ein.
+  invalid: Bitte geben Sie ein gültiges Gewicht ein.
+  append: kg
+length:
+  label: Größe
+  placeholder: Bitte geben Sie Ihre Größe in Zentimeter ein.
+  invalid: Bitte geben Sie eine gültige Größe ein.
+  append: cm
