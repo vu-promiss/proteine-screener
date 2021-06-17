@@ -20,7 +20,7 @@ home:
     die Wahrscheinlichkeit einer niedrigen Proteinzufuhr (<0,8, <1,0, or <1,2 Gramm/Kilogramm
     adjustiertem Körpergewicht/Tag) bei älteren Menschen (65+ Jahre) abzuschätzen.
     *Der Protein Screener wurde von der Vrije Universiteit Amsterdam
-    (die Niederlande) entwickelt. [Siehe Veröffentlichungen](/#/Veröffentlichungen)*
+    (die Niederlande) entwickelt. [Siehe Veröffentlichungen](/#/publications)*
     
     Sie können den Protein Screener hier kostenlos nutzen. Nach Beantwortung
     der Fragen, erhalten Sie sofort die Wahrscheinlichkeit (0-100%) für eine niedrige Proteinzufuhr
@@ -34,10 +34,10 @@ home:
     Ab einem Alter von 50 Jahren verlieren wir sukzessive Muskelmasse. Dieser Verlust kann durch
     eine ausreichende Proteinzufuhr über die Nahrung und regelmäßige körperliche Aktivität reduziert werden.
     Wenn Sie diesen Fragebogen ausfüllen, erhalten Sie eine Einschätzung,
-    ob ihre aktuelle Proteinzufuhr zu niedrig ist oder nicht. 
+    ob Ihre aktuelle Proteinzufuhr zu niedrig ist oder nicht. 
     Dieser Fragebogen wurde für Erwachsene ab 65 Jahren entwickelt.
     Dieser Fragebogen eignet sich nicht für Personen, die Ernährungsempfehlungen
-    bezüglich ihrer Proteinzufuhr durch einen Therapeuten erhalten haben. 
+    bezüglich Ihrer Proteinzufuhr durch einen Therapeuten erhalten haben. 
     Nach dem Ausfüllen dieses kurzen Fragebogens mit 13 Fragen, erhalten Sie sofort:
  
     1. Eine Abschätzung, ob Ihre aktuelle Proteinzufuhr zu niedrig ist oder nicht
@@ -45,10 +45,10 @@ home:
     3. Ratschläge, wo Sie weitere Informationen zur Proteinzufuhr finden  
 
     *Der Protein Screener (Pro55+) wurde von der Vrije Universiteit Amsterdam (die Niederlande) entwickelt.
-    [Siehe Veröffentlichungen](/#/Veröffentlichungen)*
+    [Siehe Veröffentlichungen](/#/publications)*
 results:
   professionals:
-    probability: 'Vorhergesagte Wahrscheinlichkeit: {Prozent}%'
+    probability: 'Vorhergesagte Wahrscheinlichkeit: {percentage}%'
     explanation: |
       ##### Erklärung zur Verwendung der vorhergesagten Wahrscheinlicheit
       - Eine vorhergesagte Wahrscheinlichkeit von mehr als 40% wird als hohes Risiko für
@@ -60,8 +60,8 @@ results:
     
     target: Persönliche Empfehlung für die Proteinzufuhr
     target_list: |
-      Basierend auf dem Referenzwert ≥{Referenzwert} Gramm/Kilogramm (adjustiertem) Körpergewicht/Tag
-      lautet Ihre persönliche Empfehlung für die Proteinzufuhr: ≥{Protein_Ziel} Gramm/Tag.
+      Basierend auf dem Referenzwert ≥{norm} Gramm/Kilogramm (adjustiertem) Körpergewicht/Tag
+      lautet Ihre persönliche Empfehlung für die Proteinzufuhr: ≥{protein_target} Gramm/Tag.
     health_advise: |
       ##### Empfehlung für die Nutzung im Gesundheitswesen
      
@@ -76,11 +76,11 @@ results:
       für die vorhergesagte Wahrscheinlichkeit gewählt werden. Zum Beispiel, resultiert ein niedrigerer Grenzwert in
       einer höheren Sensitivität beim Screening hinsichtlich einer niedrigen Proteinzufuhr, aber auch
       in einer höheren Wahrscheinlichkeit für falsch positive Screeningergebnisse.
-      [Siehe Veröffentlichungen](/#/Veröffentlichungen)
+      [Siehe Veröffentlichungen](/#/publications)
   clients:
     low: |
       **Wir schätzen, dass Ihre derzeitige Proteinzufuhr *niedriger* ist als empfohlen**, basierend
-      auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({Alter}Jahre, {Größe}cm, {Gewicht}kg)
+      auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({age}Jahre, {length}cm, {weight}kg)
       sowie der Empfehlung mindestens 1,0 Gramm pro Kilogramm
       adjustiertem Körpergewicht pro Tag zu verzehren.
       Wir raten Ihnen, dieses Ergebnis beispielsweise mit einer Ernährungsfachkraft zu diskutieren.
@@ -89,19 +89,19 @@ results:
       wie Sie mehr Protein über Ihre normale Ernährung verzehren können. 
     adequate: |
       Wir schätzen, dass Ihre derzeitige Proteinzufuhr **ausreichend** ist basierend
-      auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({Alter}Jahre, {Größe}cm, {Gewicht}kg)
+      auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({age}Jahre, {length}cm, {weight}kg)
       sowie der Empfehlung mindestens 1,0 Gramm pro Kilogramm
       adjustiertem Körpergewicht pro Tag zu verzehren.
       Wir empfehlen Ihnen den Protein Screener nochmals auszufüllen, wenn sich
       Ihre Ernährungsgewohnheiten verändern.
     target: |
       ##### Individuelle Empfehlung für die Proteinzufuhr
-      Die für Sie empfohlene tägliche Proteinmenge ist **≥{Protein_Ziel} Gramm pro Tag**.
+      Die für Sie empfohlene tägliche Proteinmenge ist **≥{protein_target} Gramm pro Tag**.
       Dies basiert auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht und der Empfehlung
       mindestens 1,0 Gramm pro Kilogramm adjustiertem Körpergewicht pro Tag zu verzehren.
     print: |
       ##### Results
-      Sie können das Ergebnis dieses Screenings herunterladen, speichern und drucken über die [Ergebnis Seite](/#/drucken).
+      Sie können das Ergebnis dieses Screenings herunterladen, speichern und drucken über die [Ergebnis Seite](/#/print).
 publications:
   title: Veröffentlichungen
   view_article: Siehe Artikel
@@ -113,7 +113,7 @@ print:
 
 # Session
 session:
-  your_id: 'Ihre Sitzungs ID ist: {Sitzungs_id}'
+  your_id: 'Ihre Sitzungs ID ist: {session_id}'
 
 # Navigation
 nav:
@@ -168,17 +168,17 @@ N08b_0:
   text: An Tagen an denen Sie Käse oder Streichkäse verzehren, wie viele Scheiben/Portionen
     Brot, Brötchen, Zwieback oder Cracker, etc. mit Käse oder Streichkäse essen Sie durchschnittlich?
 less_than_one: Weniger als eine oder nicht zutreffend
-slice: "{Anzahl} Scheibe ::: {Anzahl} Scheiben"
-more_than_slices: "> {Anzahl} Scheibe ::: > {Anzahl} Scheiben"
-glass: "{Anzahl} Glas ::: {Anzahl} Gläser"
-more_than_glasses: "> {Anzahl} Glas ::: > {Anzahl} Gläser"
+slice: "{count} Scheibe ::: {count} Scheiben"
+more_than_slices: "> {count} Scheibe ::: > {count} Scheiben"
+glass: "{count} Glas ::: {count} Gläser"
+more_than_glasses: "> {count} Glas ::: > {count} Gläser"
 no_meat: Nicht zutreffend, isst kein Fleisch
-plate: "{Anteil} Teller"
+plate: "{fraction} Teller"
 not_in_four_weeks: Keinmal in 4 Wochen
 one_in_four_weeks: An 1 Tag in 4 Wochen
 two_three_in_four_weeks: An 2-3 Tagen in 4 Wochen
-day_week: "{Anzahl} Tag/Woche ::: {Anzahl} Tage/Woche"
-question_number: Frage {Nummer}
+day_week: "{count} Tag/Woche ::: {count} Tage/Woche"
+question_number: Frage {number}
 age:
   label: Alter
   placeholder: Bitte geben Sie Ihr Alter ein.
