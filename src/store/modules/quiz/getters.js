@@ -1,4 +1,5 @@
 /* eslint camelcase: "off" */
+/* eslint no-eval: "off" */
 
 export const unique_id = (state) => state.unique_id
 
@@ -111,7 +112,16 @@ export const predprob = (state, getters, rootState, rootGetters) => {
 }
 
 export const proteinTarget = (state, getters, rootState, rootGetters) => {
-  return Math.round(getters.weightAdjusted * rootGetters['config/proteinTarget'])
+  let proteinTargetPerAgeCohort = rootGetters['config/proteinTargetPerAgeCohort']
+  let proteinTarget = 0
+  // Check age against agecohort
+  proteinTargetPerAgeCohort.forEach(item => {
+    let cohort = item.cohort.replaceAll('age', state.answers.age)
+    if (eval(cohort)) {
+      proteinTarget = item.proteinTarget
+    }
+  })
+  return Math.round(getters.weightAdjusted * proteinTarget)
 }
 
 export const renderQuizResults = (state) => {

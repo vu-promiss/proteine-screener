@@ -1,0 +1,15 @@
+# BMI Questions
+- id: bmi1
+  type: bmi
+
+# amount bread with cheese
+- id: N08b_0
+  type: question
+  answers: slices
+  recode:
+    - comparison: "answer == 3"
+      factor: 2
+      weight: 0.654
+    - comparison: "answer >= 4"
+      factor: 2
+      weight: 1.214

@@ -11,5 +11,6 @@ export default {
   shrinkageFactor: 0,
   weightAdjustedFactor: 0,
   stakeholder: '',
-  proteinTarget: 0
+  proteinTarget: 0,
+  proteinTargetPerAgeCohort: []
 }

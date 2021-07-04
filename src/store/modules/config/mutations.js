@@ -27,4 +27,5 @@ export const setLocaleData = (state, locale) => {
   state.weightAdjustedFactor = localeData.weightAdjustedFactor
   state.proteinTarget = localeData.proteinTarget
   state.targetList = localeData.targetList
+  state.proteinTargetPerAgeCohort = localeData.proteinTargetPerAgeCohort
 }

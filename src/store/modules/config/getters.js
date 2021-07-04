@@ -34,6 +34,6 @@ export const stakeholder = (state) => state.stakeholder
 
 export const publications = (state) => state.publications
 
-export const proteinTarget = (state) => state.proteinTarget
+export const proteinTargetPerAgeCohort = (state) => state.proteinTargetPerAgeCohort
 
 export const targetList = (state) => state.targetList
