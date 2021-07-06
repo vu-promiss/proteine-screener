@@ -111,7 +111,7 @@ export const predprob = (state, getters, rootState, rootGetters) => {
   return 1 / (1 + Math.exp(-z))
 }
 
-export const proteinTarget = (state, getters, rootState, rootGetters) => {
+export const proteinTargetForAge = (state, getters, rootState, rootGetters) => {
   let proteinTargetPerAgeCohort = rootGetters['config/proteinTargetPerAgeCohort']
   let proteinTarget = 0
   // Check age against agecohort
@@ -121,7 +121,11 @@ export const proteinTarget = (state, getters, rootState, rootGetters) => {
       proteinTarget = item.proteinTarget
     }
   })
-  return Math.round(getters.weightAdjusted * proteinTarget)
+  return proteinTarget
+}
+
+export const proteinTargetForAgeAndWeight = (state, getters) => {
+  return Math.round(getters.weightAdjusted * getters.proteinTargetForAge)
 }
 
 export const renderQuizResults = (state) => {
