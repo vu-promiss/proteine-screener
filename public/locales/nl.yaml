@@ -4,7 +4,8 @@ values:
   weightAdjustedFactor: 0.106
   cutoff: 0.3
   proteinTargetPerAgeCohort:
-    - {cohort: "age > 0", proteinTarget: 0.8}
+    - {cohort: "age < 65", proteinTarget: 0.8}
+    - {cohort: "age >= 65", proteinTarget: 0.8}
   targetList:
     - proteinTarget: 0.8
     - proteinTarget: 1.0
