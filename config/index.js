@@ -30,6 +30,10 @@ module.exports = {
       '/*.yaml': {
         target: 'http://localhost:8800',
         changeOrigin: true
+      },
+      '/documents/*.pdf': {
+        target: 'http://localhost:8800',
+        changeOrigin: true
       }
     },
 
