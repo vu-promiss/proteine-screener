@@ -83,7 +83,7 @@ results:
     low: |
       **Wir schätzen, dass Ihre derzeitige Proteinzufuhr *niedriger* ist als empfohlen**, basierend
       auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({age}Jahre, {length}cm, {weight}kg)
-      sowie der Empfehlung mindestens 1,0 Gramm pro Kilogramm
+      sowie der Empfehlung mindestens {target} Gramm pro Kilogramm
       adjustiertem Körpergewicht pro Tag zu verzehren.
       Wir raten Ihnen, dieses Ergebnis beispielsweise mit einer Ernährungsfachkraft zu diskutieren.
       Eine Ernährungsfachkraft macht eine genauere Erfassung der tatsächlichen Proteinzufuhr.
@@ -92,7 +92,7 @@ results:
     adequate: |
       Wir schätzen, dass Ihre derzeitige Proteinzufuhr **ausreichend** ist basierend
       auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht ({age}Jahre, {length}cm, {weight}kg)
-      sowie der Empfehlung mindestens 1,0 Gramm pro Kilogramm
+      sowie der Empfehlung mindestens {target} Gramm pro Kilogramm
       adjustiertem Körpergewicht pro Tag zu verzehren.
       Wir empfehlen Ihnen den Protein Screener nochmals auszufüllen, wenn sich
       Ihre Ernährungsgewohnheiten verändern.
@@ -100,7 +100,7 @@ results:
       ##### Individuelle Empfehlung für die Proteinzufuhr
       Die für Sie empfohlene tägliche Proteinmenge ist **≥{protein_target} Gramm pro Tag**.
       Dies basiert auf Ihrem Alter, Ihrer Körpergröße und Ihrem Gewicht und der Empfehlung
-      mindestens 1,0 Gramm pro Kilogramm adjustiertem Körpergewicht pro Tag zu verzehren.
+      mindestens {target} Gramm pro Kilogramm adjustiertem Körpergewicht pro Tag zu verzehren.
     print: |
       ##### Results
       Sie können das Ergebnis dieses Screenings herunterladen, speichern und drucken über die [Ergebnis Seite](/#/print).

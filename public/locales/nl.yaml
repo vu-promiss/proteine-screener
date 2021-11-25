@@ -90,7 +90,7 @@ results:
     low: |
       **Wij schatten uw eiwitinname in als *lager* dan wordt geadviseerd** op basis
       van uw leeftijd, lengte en gewicht ({age} jaar, {length}cm, {weight}kg) en rekening
-      houdend met de aanbeveling van tenminste 0.8 gram per kilogram gecorrigeerd
+      houdend met de aanbeveling van tenminste {target} gram per kilogram gecorrigeerd
       lichaamsgewicht per dag.
 
       Wij adviseren u deze informatie te bespreken met bijvoorbeeld een
@@ -103,7 +103,7 @@ results:
     adequate: |
       Wij schatten uw eiwitinname in als **voldoende** op basis van uw leeftijd,
       lengte en gewicht ({age} jaar, {length}cm, {weight}kg) en rekening
-      houdend met de aanbeveling van tenminste 0.8 gram per kilogram gecorrigeerd
+      houdend met de aanbeveling van tenminste {target} gram per kilogram gecorrigeerd
       lichaamsgewicht per dag.
 
       Wij adviseren u de Eiwit Screener nogmaals in te vullen als er iets

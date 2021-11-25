@@ -79,14 +79,14 @@ results:
   clients:
     low: |
       **Arviomme mukaan nykyinen proteiinin saantisi on **suositeltua matalampi**
-      ikä, kehon pituus ja paino ({age} vuotta, {length} cm, {weight} kg) sekä saantisuositus vähintään 1,2 grammaa päivässä per kehon painokilo huomioon ottaen.
+      ikä, kehon pituus ja paino ({age} vuotta, {length} cm, {weight} kg) sekä saantisuositus vähintään {target} grammaa päivässä per kehon painokilo huomioon ottaen.
       Suosittelemme keskustelemaan tästä terveydenhuollon ammattilaisen kanssa.
       Voit pyytää häneltä tarkempaa arviota todellisesta proteiinin saannistasi,
       sekä vinkkejä proteiinin saannin lisäämiseen.
  
     adequate: |
       Arviomme mukaan nykyinen proteiinin saantisi on **riittävä**
-      ikä, kehon pituus ja paino ({age} vuotta, {length} cm, {weight} kg) sekä saantisuositus vähintään 1,2 grammaa päivässä per kehon painokilo huomioon ottaen.
+      ikä, kehon pituus ja paino ({age} vuotta, {length} cm, {weight} kg) sekä saantisuositus vähintään {target} grammaa päivässä per kehon painokilo huomioon ottaen.
       Suosittelemme täyttämään proteiinilaskurin uudelleen, mikäli
       ruokailutottumukset muuttuvat.
     target: |

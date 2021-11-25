@@ -85,7 +85,7 @@ results:
     low: |
       **We estimate that your current protein intake is *lower* than recommended** based
       on your age, body height and weight ({age} year, {length}cm, {weight}kg)
-      and the recommendation to consume at least 0.8 gram per kilogram
+      and the recommendation to consume at least {target} gram per kilogram
       adjusted body weight per day.
 
       We advise you to discuss this information with for example a dietitian.
@@ -95,7 +95,7 @@ results:
     adequate: |
       We estimate that your current protein intake is **sufficient** based
       on your age, body height and weight ({age} year, {length}cm, {weight}kg)
-      and the recommendation to consume at least 0.8 gram per kilogram
+      and the recommendation to consume at least {target} gram per kilogram
       adjusted body weight per day.
 
       We advise you to fill out the Protein Screener again when there is
