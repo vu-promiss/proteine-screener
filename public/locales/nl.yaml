@@ -118,7 +118,7 @@ results:
       De hoeveel eiwit die u per dag geadviseerd wordt te eten
       is: **≥{protein_target} gram per dag**.
       Dit is berekend op basis van uw leeftijd, lengte en gewicht
-      en de aanbeveling van tenminste 0.8 gram per kilogram
+      en de aanbeveling van tenminste {target} gram per kilogram
       gecorrigeerd lichaamsgewicht per dag.
 
       Download de [Eiwitwijzer](/documents/Eiwitwijzer.pdf)

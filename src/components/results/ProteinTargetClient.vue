@@ -1,5 +1,5 @@
 <template lang="html">
-      <b-alert show variant="info" v-html="renderLocale('results.clients.target', {protein_target: proteinTargetForAgeAndWeight})"/>
+      <b-alert show variant="info" v-html="renderLocale('results.clients.target', {protein_target: proteinTargetForAgeAndWeight, target: proteinTargetForAge})"/>
 </template>
 
 <script>

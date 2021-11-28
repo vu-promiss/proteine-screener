@@ -91,7 +91,7 @@ results:
       ruokailutottumukset muuttuvat.
     target: |
       ##### Suositeltu proteiinin saanti
-      Sinulle suositeltu päivittäinen proteiinin saanti on **≥{protein_target} grammaa päivässä**. Tämä perustuu ikääsi, kehon pituuteen ja painoon sekä suositukseen saada proteiinia vähintään 1,2 grammaa päivässä kehon painokiloa kohden.
+      Sinulle suositeltu päivittäinen proteiinin saanti on **≥{protein_target} grammaa päivässä**. Tämä perustuu ikääsi, kehon pituuteen ja painoon sekä suositukseen saada proteiinia vähintään {target} grammaa päivässä kehon painokiloa kohden.
     print: |
       ##### Tulokset
       Voit ladata, tallentaa tai tulostaa saamasi tulokset [Tulokset sivu](/#/print).

@@ -105,7 +105,7 @@ results:
 
       The amount protein you are advised to consume per day is **≥{protein_target} gram per day**.
       This is based on your age, body height and weight and the recommendation
-      to consume at least 0.8 gram per kilogram adjusted body weight per day.
+      to consume at least {target} gram per kilogram adjusted body weight per day.
     print: |
       ##### Results
 
