@@ -1,7 +1,7 @@
 values:
   intercept: 19.361
   shrinkageFactor: 0.92
-  weightAdjustedFactor: 0.105
+  weightAdjustedFactor: 0.106
   cutoff: 0.3
   proteinTargetPerAgeCohort:
     - {cohort: "age < 65", proteinTarget: 0.8}
